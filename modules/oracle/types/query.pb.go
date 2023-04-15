@@ -12,7 +12,7 @@ import (
 	_ "github.com/gogo/protobuf/gogoproto"
 	grpc1 "github.com/gogo/protobuf/grpc"
 	proto "github.com/gogo/protobuf/proto"
-	types1 "github.com/irisnet/irismod/modules/service/types"
+	types1 "github.com/furynet/furymod/modules/service/types"
 	_ "google.golang.org/genproto/googleapis/api/annotations"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
@@ -331,7 +331,7 @@ type FeedContext struct {
 	ServiceFeeCap     github_com_cosmos_cosmos_sdk_types.Coins `protobuf:"bytes,6,rep,name=service_fee_cap,json=serviceFeeCap,proto3,castrepeated=github.com/cosmos/cosmos-sdk/types.Coins" json:"service_fee_cap" yaml:"service_fee_cap"`
 	RepeatedFrequency uint64                                   `protobuf:"varint,7,opt,name=repeated_frequency,json=repeatedFrequency,proto3" json:"repeated_frequency,omitempty" yaml:"repeated_frequency"`
 	ResponseThreshold uint32                                   `protobuf:"varint,8,opt,name=response_threshold,json=responseThreshold,proto3" json:"response_threshold,omitempty" yaml:"response_threshold"`
-	State             types1.RequestContextState               `protobuf:"varint,9,opt,name=state,proto3,enum=irismod.service.RequestContextState" json:"state,omitempty"`
+	State             types1.RequestContextState               `protobuf:"varint,9,opt,name=state,proto3,enum=furymod.service.RequestContextState" json:"state,omitempty"`
 }
 
 func (m *FeedContext) Reset()      { *m = FeedContext{} }
@@ -430,13 +430,13 @@ func (m *FeedContext) GetState() types1.RequestContextState {
 }
 
 func init() {
-	proto.RegisterType((*QueryFeedRequest)(nil), "irismod.oracle.QueryFeedRequest")
-	proto.RegisterType((*QueryFeedResponse)(nil), "irismod.oracle.QueryFeedResponse")
-	proto.RegisterType((*QueryFeedsRequest)(nil), "irismod.oracle.QueryFeedsRequest")
-	proto.RegisterType((*QueryFeedsResponse)(nil), "irismod.oracle.QueryFeedsResponse")
-	proto.RegisterType((*QueryFeedValueRequest)(nil), "irismod.oracle.QueryFeedValueRequest")
-	proto.RegisterType((*QueryFeedValueResponse)(nil), "irismod.oracle.QueryFeedValueResponse")
-	proto.RegisterType((*FeedContext)(nil), "irismod.oracle.FeedContext")
+	proto.RegisterType((*QueryFeedRequest)(nil), "furymod.oracle.QueryFeedRequest")
+	proto.RegisterType((*QueryFeedResponse)(nil), "furymod.oracle.QueryFeedResponse")
+	proto.RegisterType((*QueryFeedsRequest)(nil), "furymod.oracle.QueryFeedsRequest")
+	proto.RegisterType((*QueryFeedsResponse)(nil), "furymod.oracle.QueryFeedsResponse")
+	proto.RegisterType((*QueryFeedValueRequest)(nil), "furymod.oracle.QueryFeedValueRequest")
+	proto.RegisterType((*QueryFeedValueResponse)(nil), "furymod.oracle.QueryFeedValueResponse")
+	proto.RegisterType((*FeedContext)(nil), "furymod.oracle.FeedContext")
 }
 
 func init() { proto.RegisterFile("oracle/query.proto", fileDescriptor_562b782cb9ac197e) }
@@ -525,7 +525,7 @@ func NewQueryClient(cc grpc1.ClientConn) QueryClient {
 
 func (c *queryClient) Feed(ctx context.Context, in *QueryFeedRequest, opts ...grpc.CallOption) (*QueryFeedResponse, error) {
 	out := new(QueryFeedResponse)
-	err := c.cc.Invoke(ctx, "/irismod.oracle.Query/Feed", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.oracle.Query/Feed", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -534,7 +534,7 @@ func (c *queryClient) Feed(ctx context.Context, in *QueryFeedRequest, opts ...gr
 
 func (c *queryClient) Feeds(ctx context.Context, in *QueryFeedsRequest, opts ...grpc.CallOption) (*QueryFeedsResponse, error) {
 	out := new(QueryFeedsResponse)
-	err := c.cc.Invoke(ctx, "/irismod.oracle.Query/Feeds", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.oracle.Query/Feeds", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -543,7 +543,7 @@ func (c *queryClient) Feeds(ctx context.Context, in *QueryFeedsRequest, opts ...
 
 func (c *queryClient) FeedValue(ctx context.Context, in *QueryFeedValueRequest, opts ...grpc.CallOption) (*QueryFeedValueResponse, error) {
 	out := new(QueryFeedValueResponse)
-	err := c.cc.Invoke(ctx, "/irismod.oracle.Query/FeedValue", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.oracle.Query/FeedValue", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -588,7 +588,7 @@ func _Query_Feed_Handler(srv interface{}, ctx context.Context, dec func(interfac
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.oracle.Query/Feed",
+		FullMethod: "/furymod.oracle.Query/Feed",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).Feed(ctx, req.(*QueryFeedRequest))
@@ -606,7 +606,7 @@ func _Query_Feeds_Handler(srv interface{}, ctx context.Context, dec func(interfa
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.oracle.Query/Feeds",
+		FullMethod: "/furymod.oracle.Query/Feeds",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).Feeds(ctx, req.(*QueryFeedsRequest))
@@ -624,7 +624,7 @@ func _Query_FeedValue_Handler(srv interface{}, ctx context.Context, dec func(int
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.oracle.Query/FeedValue",
+		FullMethod: "/furymod.oracle.Query/FeedValue",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).FeedValue(ctx, req.(*QueryFeedValueRequest))
@@ -633,7 +633,7 @@ func _Query_FeedValue_Handler(srv interface{}, ctx context.Context, dec func(int
 }
 
 var _Query_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "irismod.oracle.Query",
+	ServiceName: "furymod.oracle.Query",
 	HandlerType: (*QueryServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

@@ -9,9 +9,9 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/irisnet/irismod/modules/oracle/types"
-	"github.com/irisnet/irismod/modules/service/exported"
-	servicetypes "github.com/irisnet/irismod/modules/service/types"
+	"github.com/furynet/furymod/modules/oracle/types"
+	"github.com/furynet/furymod/modules/service/exported"
+	servicetypes "github.com/furynet/furymod/modules/service/types"
 )
 
 // GetFeed returns the feed by the feed name

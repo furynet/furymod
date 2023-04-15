@@ -1,5 +1,5 @@
 syntax = "proto3";
-package irismod.token;
+package furymod.token;
 
 import "cosmos/base/v1beta1/coin.proto";
 import "cosmos_proto/cosmos.proto";
@@ -9,29 +9,29 @@ import "google/api/annotations.proto";
 import "google/protobuf/any.proto";
 import "token/token.proto";
 
-option go_package = "github.com/irisnet/irismod/modules/token/types";
+option go_package = "github.com/furynet/furymod/modules/token/types";
 
 // Query creates service with token as RPC
 service Query {
   // Token returns token with token name
   rpc Token(QueryTokenRequest) returns (QueryTokenResponse) {
-    option (google.api.http).get = "/irismod/token/tokens/{denom}";
+    option (google.api.http).get = "/furymod/token/tokens/{denom}";
   }
   // Tokens returns the token list
   rpc Tokens(QueryTokensRequest) returns (QueryTokensResponse) {
-    option (google.api.http).get = "/irismod/token/tokens";
+    option (google.api.http).get = "/furymod/token/tokens";
   }
   // Fees returns the fees to issue or mint a token
   rpc Fees(QueryFeesRequest) returns (QueryFeesResponse) {
-    option (google.api.http).get = "/irismod/token/tokens/{symbol}/fees";
+    option (google.api.http).get = "/furymod/token/tokens/{symbol}/fees";
   }
   // Params queries the token parameters
   rpc Params(QueryParamsRequest) returns (QueryParamsResponse) {
-    option (google.api.http).get = "/irismod/token/params";
+    option (google.api.http).get = "/furymod/token/params";
   }
   // TotalBurn queries all the burnt coins
   rpc TotalBurn(QueryTotalBurnRequest) returns (QueryTotalBurnResponse) {
-    option (google.api.http).get = "/irismod/token/total_burn";
+    option (google.api.http).get = "/furymod/token/total_burn";
   }
 }
 

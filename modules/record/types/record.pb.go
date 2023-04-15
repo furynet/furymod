@@ -105,8 +105,8 @@ func (m *Record) XXX_DiscardUnknown() {
 var xxx_messageInfo_Record proto.InternalMessageInfo
 
 func init() {
-	proto.RegisterType((*Content)(nil), "irismod.record.Content")
-	proto.RegisterType((*Record)(nil), "irismod.record.Record")
+	proto.RegisterType((*Content)(nil), "furymod.record.Content")
+	proto.RegisterType((*Record)(nil), "furymod.record.Record")
 }
 
 func init() { proto.RegisterFile("record/record.proto", fileDescriptor_197cabccbeb2a7b7) }

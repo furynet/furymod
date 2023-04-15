@@ -7,8 +7,8 @@ import (
 
 	"github.com/cosmos/cosmos-sdk/codec"
 
-	"github.com/irisnet/irismod/modules/token/keeper"
-	"github.com/irisnet/irismod/modules/token/types"
+	"github.com/furynet/furymod/modules/token/keeper"
+	"github.com/furynet/furymod/modules/token/types"
 )
 
 func (suite *KeeperTestSuite) TestQueryToken() {

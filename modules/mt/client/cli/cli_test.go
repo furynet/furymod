@@ -14,10 +14,10 @@ import (
 	"github.com/cosmos/cosmos-sdk/testutil/network"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	mtcli "github.com/irisnet/irismod/modules/mt/client/cli"
-	mttestutil "github.com/irisnet/irismod/modules/mt/client/testutil"
-	mttypes "github.com/irisnet/irismod/modules/mt/types"
-	"github.com/irisnet/irismod/simapp"
+	mtcli "github.com/furynet/furymod/modules/mt/client/cli"
+	mttestutil "github.com/furynet/furymod/modules/mt/client/testutil"
+	mttypes "github.com/furynet/furymod/modules/mt/types"
+	"github.com/furynet/furymod/simapp"
 )
 
 type IntegrationTestSuite struct {

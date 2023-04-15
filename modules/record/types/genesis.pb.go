@@ -69,7 +69,7 @@ func (m *GenesisState) GetRecords() []Record {
 }
 
 func init() {
-	proto.RegisterType((*GenesisState)(nil), "irismod.record.GenesisState")
+	proto.RegisterType((*GenesisState)(nil), "furymod.record.GenesisState")
 }
 
 func init() { proto.RegisterFile("record/genesis.proto", fileDescriptor_52264db0d556ce5e) }

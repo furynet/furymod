@@ -1,5 +1,5 @@
 syntax = "proto3";
-package irismod.oracle;
+package furymod.oracle;
 
 import "oracle/oracle.proto";
 import "service/service.proto";
@@ -8,23 +8,23 @@ import "google/api/annotations.proto";
 import "cosmos/base/v1beta1/coin.proto";
 import "cosmos/base/query/v1beta1/pagination.proto";
 
-option go_package = "github.com/irisnet/irismod/modules/oracle/types";
+option go_package = "github.com/furynet/furymod/modules/oracle/types";
 
 // Query creates service with guardian as rpc
 service Query {
   // Feed queries the feed
   rpc Feed(QueryFeedRequest) returns (QueryFeedResponse) {
-    option (google.api.http).get = "/irismod/oracle/feeds/{feed_name}";
+    option (google.api.http).get = "/furymod/oracle/feeds/{feed_name}";
   }
 
   // Feeds queries the feed list
   rpc Feeds(QueryFeedsRequest) returns (QueryFeedsResponse) {
-    option (google.api.http).get = "/irismod/oracle/feeds";
+    option (google.api.http).get = "/furymod/oracle/feeds";
   }
 
   // FeedValue queries the feed value
   rpc FeedValue(QueryFeedValueRequest) returns (QueryFeedValueResponse) {
-    option (google.api.http).get = "/irismod/oracle/feeds/{feed_name}/values";
+    option (google.api.http).get = "/furymod/oracle/feeds/{feed_name}/values";
   }
 }
 
@@ -76,5 +76,5 @@ message FeedContext {
       [ (gogoproto.moretags) = "yaml:\"repeated_frequency\"" ];
   uint32 response_threshold = 8
       [ (gogoproto.moretags) = "yaml:\"response_threshold\"" ];
-  irismod.service.RequestContextState state = 9;
+  furymod.service.RequestContextState state = 9;
 }

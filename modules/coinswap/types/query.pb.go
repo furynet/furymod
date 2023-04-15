@@ -314,11 +314,11 @@ func (m *PoolInfo) GetFee() string {
 }
 
 func init() {
-	proto.RegisterType((*QueryLiquidityPoolRequest)(nil), "irismod.coinswap.QueryLiquidityPoolRequest")
-	proto.RegisterType((*QueryLiquidityPoolResponse)(nil), "irismod.coinswap.QueryLiquidityPoolResponse")
-	proto.RegisterType((*QueryLiquidityPoolsRequest)(nil), "irismod.coinswap.QueryLiquidityPoolsRequest")
-	proto.RegisterType((*QueryLiquidityPoolsResponse)(nil), "irismod.coinswap.QueryLiquidityPoolsResponse")
-	proto.RegisterType((*PoolInfo)(nil), "irismod.coinswap.PoolInfo")
+	proto.RegisterType((*QueryLiquidityPoolRequest)(nil), "furymod.coinswap.QueryLiquidityPoolRequest")
+	proto.RegisterType((*QueryLiquidityPoolResponse)(nil), "furymod.coinswap.QueryLiquidityPoolResponse")
+	proto.RegisterType((*QueryLiquidityPoolsRequest)(nil), "furymod.coinswap.QueryLiquidityPoolsRequest")
+	proto.RegisterType((*QueryLiquidityPoolsResponse)(nil), "furymod.coinswap.QueryLiquidityPoolsResponse")
+	proto.RegisterType((*PoolInfo)(nil), "furymod.coinswap.PoolInfo")
 }
 
 func init() { proto.RegisterFile("coinswap/query.proto", fileDescriptor_2cabf8423404f12f) }
@@ -391,7 +391,7 @@ func NewQueryClient(cc grpc1.ClientConn) QueryClient {
 
 func (c *queryClient) LiquidityPool(ctx context.Context, in *QueryLiquidityPoolRequest, opts ...grpc.CallOption) (*QueryLiquidityPoolResponse, error) {
 	out := new(QueryLiquidityPoolResponse)
-	err := c.cc.Invoke(ctx, "/irismod.coinswap.Query/LiquidityPool", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.coinswap.Query/LiquidityPool", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -400,7 +400,7 @@ func (c *queryClient) LiquidityPool(ctx context.Context, in *QueryLiquidityPoolR
 
 func (c *queryClient) LiquidityPools(ctx context.Context, in *QueryLiquidityPoolsRequest, opts ...grpc.CallOption) (*QueryLiquidityPoolsResponse, error) {
 	out := new(QueryLiquidityPoolsResponse)
-	err := c.cc.Invoke(ctx, "/irismod.coinswap.Query/LiquidityPools", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.coinswap.Query/LiquidityPools", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -441,7 +441,7 @@ func _Query_LiquidityPool_Handler(srv interface{}, ctx context.Context, dec func
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.coinswap.Query/LiquidityPool",
+		FullMethod: "/furymod.coinswap.Query/LiquidityPool",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).LiquidityPool(ctx, req.(*QueryLiquidityPoolRequest))
@@ -459,7 +459,7 @@ func _Query_LiquidityPools_Handler(srv interface{}, ctx context.Context, dec fun
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.coinswap.Query/LiquidityPools",
+		FullMethod: "/furymod.coinswap.Query/LiquidityPools",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).LiquidityPools(ctx, req.(*QueryLiquidityPoolsRequest))
@@ -468,7 +468,7 @@ func _Query_LiquidityPools_Handler(srv interface{}, ctx context.Context, dec fun
 }
 
 var _Query_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "irismod.coinswap.Query",
+	ServiceName: "furymod.coinswap.Query",
 	HandlerType: (*QueryServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

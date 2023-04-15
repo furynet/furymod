@@ -93,7 +93,7 @@ func (m *GenesisState) GetSequence() uint64 {
 }
 
 func init() {
-	proto.RegisterType((*GenesisState)(nil), "irismod.coinswap.GenesisState")
+	proto.RegisterType((*GenesisState)(nil), "furymod.coinswap.GenesisState")
 }
 
 func init() { proto.RegisterFile("coinswap/genesis.proto", fileDescriptor_2ec819868131a4f8) }

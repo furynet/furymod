@@ -5,8 +5,8 @@ import (
 	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
 	govv1beta1 "github.com/cosmos/cosmos-sdk/x/gov/types/v1beta1"
 
-	"github.com/irisnet/irismod/modules/farm/keeper"
-	"github.com/irisnet/irismod/modules/farm/types"
+	"github.com/furynet/furymod/modules/farm/keeper"
+	"github.com/furynet/furymod/modules/farm/types"
 )
 
 // NewHandler creates an sdk.Handler for all the farm type messages

@@ -510,16 +510,16 @@ func (m *QueryTotalBurnResponse) GetBurnedCoins() []types1.Coin {
 }
 
 func init() {
-	proto.RegisterType((*QueryTokenRequest)(nil), "irismod.token.QueryTokenRequest")
-	proto.RegisterType((*QueryTokenResponse)(nil), "irismod.token.QueryTokenResponse")
-	proto.RegisterType((*QueryTokensRequest)(nil), "irismod.token.QueryTokensRequest")
-	proto.RegisterType((*QueryTokensResponse)(nil), "irismod.token.QueryTokensResponse")
-	proto.RegisterType((*QueryFeesRequest)(nil), "irismod.token.QueryFeesRequest")
-	proto.RegisterType((*QueryFeesResponse)(nil), "irismod.token.QueryFeesResponse")
-	proto.RegisterType((*QueryParamsRequest)(nil), "irismod.token.QueryParamsRequest")
-	proto.RegisterType((*QueryParamsResponse)(nil), "irismod.token.QueryParamsResponse")
-	proto.RegisterType((*QueryTotalBurnRequest)(nil), "irismod.token.QueryTotalBurnRequest")
-	proto.RegisterType((*QueryTotalBurnResponse)(nil), "irismod.token.QueryTotalBurnResponse")
+	proto.RegisterType((*QueryTokenRequest)(nil), "furymod.token.QueryTokenRequest")
+	proto.RegisterType((*QueryTokenResponse)(nil), "furymod.token.QueryTokenResponse")
+	proto.RegisterType((*QueryTokensRequest)(nil), "furymod.token.QueryTokensRequest")
+	proto.RegisterType((*QueryTokensResponse)(nil), "furymod.token.QueryTokensResponse")
+	proto.RegisterType((*QueryFeesRequest)(nil), "furymod.token.QueryFeesRequest")
+	proto.RegisterType((*QueryFeesResponse)(nil), "furymod.token.QueryFeesResponse")
+	proto.RegisterType((*QueryParamsRequest)(nil), "furymod.token.QueryParamsRequest")
+	proto.RegisterType((*QueryParamsResponse)(nil), "furymod.token.QueryParamsResponse")
+	proto.RegisterType((*QueryTotalBurnRequest)(nil), "furymod.token.QueryTotalBurnRequest")
+	proto.RegisterType((*QueryTotalBurnResponse)(nil), "furymod.token.QueryTotalBurnResponse")
 }
 
 func init() { proto.RegisterFile("token/query.proto", fileDescriptor_ec043bcd18c4056e) }
@@ -611,7 +611,7 @@ func NewQueryClient(cc grpc1.ClientConn) QueryClient {
 
 func (c *queryClient) Token(ctx context.Context, in *QueryTokenRequest, opts ...grpc.CallOption) (*QueryTokenResponse, error) {
 	out := new(QueryTokenResponse)
-	err := c.cc.Invoke(ctx, "/irismod.token.Query/Token", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.token.Query/Token", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -620,7 +620,7 @@ func (c *queryClient) Token(ctx context.Context, in *QueryTokenRequest, opts ...
 
 func (c *queryClient) Tokens(ctx context.Context, in *QueryTokensRequest, opts ...grpc.CallOption) (*QueryTokensResponse, error) {
 	out := new(QueryTokensResponse)
-	err := c.cc.Invoke(ctx, "/irismod.token.Query/Tokens", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.token.Query/Tokens", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -629,7 +629,7 @@ func (c *queryClient) Tokens(ctx context.Context, in *QueryTokensRequest, opts .
 
 func (c *queryClient) Fees(ctx context.Context, in *QueryFeesRequest, opts ...grpc.CallOption) (*QueryFeesResponse, error) {
 	out := new(QueryFeesResponse)
-	err := c.cc.Invoke(ctx, "/irismod.token.Query/Fees", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.token.Query/Fees", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -638,7 +638,7 @@ func (c *queryClient) Fees(ctx context.Context, in *QueryFeesRequest, opts ...gr
 
 func (c *queryClient) Params(ctx context.Context, in *QueryParamsRequest, opts ...grpc.CallOption) (*QueryParamsResponse, error) {
 	out := new(QueryParamsResponse)
-	err := c.cc.Invoke(ctx, "/irismod.token.Query/Params", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.token.Query/Params", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -647,7 +647,7 @@ func (c *queryClient) Params(ctx context.Context, in *QueryParamsRequest, opts .
 
 func (c *queryClient) TotalBurn(ctx context.Context, in *QueryTotalBurnRequest, opts ...grpc.CallOption) (*QueryTotalBurnResponse, error) {
 	out := new(QueryTotalBurnResponse)
-	err := c.cc.Invoke(ctx, "/irismod.token.Query/TotalBurn", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.token.Query/TotalBurn", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -702,7 +702,7 @@ func _Query_Token_Handler(srv interface{}, ctx context.Context, dec func(interfa
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.token.Query/Token",
+		FullMethod: "/furymod.token.Query/Token",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).Token(ctx, req.(*QueryTokenRequest))
@@ -720,7 +720,7 @@ func _Query_Tokens_Handler(srv interface{}, ctx context.Context, dec func(interf
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.token.Query/Tokens",
+		FullMethod: "/furymod.token.Query/Tokens",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).Tokens(ctx, req.(*QueryTokensRequest))
@@ -738,7 +738,7 @@ func _Query_Fees_Handler(srv interface{}, ctx context.Context, dec func(interfac
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.token.Query/Fees",
+		FullMethod: "/furymod.token.Query/Fees",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).Fees(ctx, req.(*QueryFeesRequest))
@@ -756,7 +756,7 @@ func _Query_Params_Handler(srv interface{}, ctx context.Context, dec func(interf
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.token.Query/Params",
+		FullMethod: "/furymod.token.Query/Params",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).Params(ctx, req.(*QueryParamsRequest))
@@ -774,7 +774,7 @@ func _Query_TotalBurn_Handler(srv interface{}, ctx context.Context, dec func(int
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.token.Query/TotalBurn",
+		FullMethod: "/furymod.token.Query/TotalBurn",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).TotalBurn(ctx, req.(*QueryTotalBurnRequest))
@@ -783,7 +783,7 @@ func _Query_TotalBurn_Handler(srv interface{}, ctx context.Context, dec func(int
 }
 
 var _Query_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "irismod.token.Query",
+	ServiceName: "furymod.token.Query",
 	HandlerType: (*QueryServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

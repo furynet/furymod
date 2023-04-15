@@ -1314,32 +1314,32 @@ func (m *QueryParamsResponse) GetRes() *query.PageResponse {
 }
 
 func init() {
-	proto.RegisterType((*QueryDefinitionRequest)(nil), "irismod.service.QueryDefinitionRequest")
-	proto.RegisterType((*QueryDefinitionResponse)(nil), "irismod.service.QueryDefinitionResponse")
-	proto.RegisterType((*QueryBindingRequest)(nil), "irismod.service.QueryBindingRequest")
-	proto.RegisterType((*QueryBindingResponse)(nil), "irismod.service.QueryBindingResponse")
-	proto.RegisterType((*QueryBindingsRequest)(nil), "irismod.service.QueryBindingsRequest")
-	proto.RegisterType((*QueryBindingsResponse)(nil), "irismod.service.QueryBindingsResponse")
-	proto.RegisterType((*QueryWithdrawAddressRequest)(nil), "irismod.service.QueryWithdrawAddressRequest")
-	proto.RegisterType((*QueryWithdrawAddressResponse)(nil), "irismod.service.QueryWithdrawAddressResponse")
-	proto.RegisterType((*QueryRequestContextRequest)(nil), "irismod.service.QueryRequestContextRequest")
-	proto.RegisterType((*QueryRequestContextResponse)(nil), "irismod.service.QueryRequestContextResponse")
-	proto.RegisterType((*QueryRequestRequest)(nil), "irismod.service.QueryRequestRequest")
-	proto.RegisterType((*QueryRequestResponse)(nil), "irismod.service.QueryRequestResponse")
-	proto.RegisterType((*QueryRequestsRequest)(nil), "irismod.service.QueryRequestsRequest")
-	proto.RegisterType((*QueryRequestsResponse)(nil), "irismod.service.QueryRequestsResponse")
-	proto.RegisterType((*QueryRequestsByReqCtxRequest)(nil), "irismod.service.QueryRequestsByReqCtxRequest")
-	proto.RegisterType((*QueryRequestsByReqCtxResponse)(nil), "irismod.service.QueryRequestsByReqCtxResponse")
-	proto.RegisterType((*QueryResponseRequest)(nil), "irismod.service.QueryResponseRequest")
-	proto.RegisterType((*QueryResponseResponse)(nil), "irismod.service.QueryResponseResponse")
-	proto.RegisterType((*QueryResponsesRequest)(nil), "irismod.service.QueryResponsesRequest")
-	proto.RegisterType((*QueryResponsesResponse)(nil), "irismod.service.QueryResponsesResponse")
-	proto.RegisterType((*QueryEarnedFeesRequest)(nil), "irismod.service.QueryEarnedFeesRequest")
-	proto.RegisterType((*QueryEarnedFeesResponse)(nil), "irismod.service.QueryEarnedFeesResponse")
-	proto.RegisterType((*QuerySchemaRequest)(nil), "irismod.service.QuerySchemaRequest")
-	proto.RegisterType((*QuerySchemaResponse)(nil), "irismod.service.QuerySchemaResponse")
-	proto.RegisterType((*QueryParamsRequest)(nil), "irismod.service.QueryParamsRequest")
-	proto.RegisterType((*QueryParamsResponse)(nil), "irismod.service.QueryParamsResponse")
+	proto.RegisterType((*QueryDefinitionRequest)(nil), "furymod.service.QueryDefinitionRequest")
+	proto.RegisterType((*QueryDefinitionResponse)(nil), "furymod.service.QueryDefinitionResponse")
+	proto.RegisterType((*QueryBindingRequest)(nil), "furymod.service.QueryBindingRequest")
+	proto.RegisterType((*QueryBindingResponse)(nil), "furymod.service.QueryBindingResponse")
+	proto.RegisterType((*QueryBindingsRequest)(nil), "furymod.service.QueryBindingsRequest")
+	proto.RegisterType((*QueryBindingsResponse)(nil), "furymod.service.QueryBindingsResponse")
+	proto.RegisterType((*QueryWithdrawAddressRequest)(nil), "furymod.service.QueryWithdrawAddressRequest")
+	proto.RegisterType((*QueryWithdrawAddressResponse)(nil), "furymod.service.QueryWithdrawAddressResponse")
+	proto.RegisterType((*QueryRequestContextRequest)(nil), "furymod.service.QueryRequestContextRequest")
+	proto.RegisterType((*QueryRequestContextResponse)(nil), "furymod.service.QueryRequestContextResponse")
+	proto.RegisterType((*QueryRequestRequest)(nil), "furymod.service.QueryRequestRequest")
+	proto.RegisterType((*QueryRequestResponse)(nil), "furymod.service.QueryRequestResponse")
+	proto.RegisterType((*QueryRequestsRequest)(nil), "furymod.service.QueryRequestsRequest")
+	proto.RegisterType((*QueryRequestsResponse)(nil), "furymod.service.QueryRequestsResponse")
+	proto.RegisterType((*QueryRequestsByReqCtxRequest)(nil), "furymod.service.QueryRequestsByReqCtxRequest")
+	proto.RegisterType((*QueryRequestsByReqCtxResponse)(nil), "furymod.service.QueryRequestsByReqCtxResponse")
+	proto.RegisterType((*QueryResponseRequest)(nil), "furymod.service.QueryResponseRequest")
+	proto.RegisterType((*QueryResponseResponse)(nil), "furymod.service.QueryResponseResponse")
+	proto.RegisterType((*QueryResponsesRequest)(nil), "furymod.service.QueryResponsesRequest")
+	proto.RegisterType((*QueryResponsesResponse)(nil), "furymod.service.QueryResponsesResponse")
+	proto.RegisterType((*QueryEarnedFeesRequest)(nil), "furymod.service.QueryEarnedFeesRequest")
+	proto.RegisterType((*QueryEarnedFeesResponse)(nil), "furymod.service.QueryEarnedFeesResponse")
+	proto.RegisterType((*QuerySchemaRequest)(nil), "furymod.service.QuerySchemaRequest")
+	proto.RegisterType((*QuerySchemaResponse)(nil), "furymod.service.QuerySchemaResponse")
+	proto.RegisterType((*QueryParamsRequest)(nil), "furymod.service.QueryParamsRequest")
+	proto.RegisterType((*QueryParamsResponse)(nil), "furymod.service.QueryParamsResponse")
 }
 
 func init() { proto.RegisterFile("service/query.proto", fileDescriptor_d141bb1b35a55f92) }
@@ -1481,7 +1481,7 @@ func NewQueryClient(cc grpc1.ClientConn) QueryClient {
 
 func (c *queryClient) Definition(ctx context.Context, in *QueryDefinitionRequest, opts ...grpc.CallOption) (*QueryDefinitionResponse, error) {
 	out := new(QueryDefinitionResponse)
-	err := c.cc.Invoke(ctx, "/irismod.service.Query/Definition", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.service.Query/Definition", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -1490,7 +1490,7 @@ func (c *queryClient) Definition(ctx context.Context, in *QueryDefinitionRequest
 
 func (c *queryClient) Binding(ctx context.Context, in *QueryBindingRequest, opts ...grpc.CallOption) (*QueryBindingResponse, error) {
 	out := new(QueryBindingResponse)
-	err := c.cc.Invoke(ctx, "/irismod.service.Query/Binding", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.service.Query/Binding", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -1499,7 +1499,7 @@ func (c *queryClient) Binding(ctx context.Context, in *QueryBindingRequest, opts
 
 func (c *queryClient) Bindings(ctx context.Context, in *QueryBindingsRequest, opts ...grpc.CallOption) (*QueryBindingsResponse, error) {
 	out := new(QueryBindingsResponse)
-	err := c.cc.Invoke(ctx, "/irismod.service.Query/Bindings", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.service.Query/Bindings", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -1508,7 +1508,7 @@ func (c *queryClient) Bindings(ctx context.Context, in *QueryBindingsRequest, op
 
 func (c *queryClient) WithdrawAddress(ctx context.Context, in *QueryWithdrawAddressRequest, opts ...grpc.CallOption) (*QueryWithdrawAddressResponse, error) {
 	out := new(QueryWithdrawAddressResponse)
-	err := c.cc.Invoke(ctx, "/irismod.service.Query/WithdrawAddress", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.service.Query/WithdrawAddress", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -1517,7 +1517,7 @@ func (c *queryClient) WithdrawAddress(ctx context.Context, in *QueryWithdrawAddr
 
 func (c *queryClient) RequestContext(ctx context.Context, in *QueryRequestContextRequest, opts ...grpc.CallOption) (*QueryRequestContextResponse, error) {
 	out := new(QueryRequestContextResponse)
-	err := c.cc.Invoke(ctx, "/irismod.service.Query/RequestContext", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.service.Query/RequestContext", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -1526,7 +1526,7 @@ func (c *queryClient) RequestContext(ctx context.Context, in *QueryRequestContex
 
 func (c *queryClient) Request(ctx context.Context, in *QueryRequestRequest, opts ...grpc.CallOption) (*QueryRequestResponse, error) {
 	out := new(QueryRequestResponse)
-	err := c.cc.Invoke(ctx, "/irismod.service.Query/Request", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.service.Query/Request", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -1535,7 +1535,7 @@ func (c *queryClient) Request(ctx context.Context, in *QueryRequestRequest, opts
 
 func (c *queryClient) Requests(ctx context.Context, in *QueryRequestsRequest, opts ...grpc.CallOption) (*QueryRequestsResponse, error) {
 	out := new(QueryRequestsResponse)
-	err := c.cc.Invoke(ctx, "/irismod.service.Query/Requests", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.service.Query/Requests", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -1544,7 +1544,7 @@ func (c *queryClient) Requests(ctx context.Context, in *QueryRequestsRequest, op
 
 func (c *queryClient) RequestsByReqCtx(ctx context.Context, in *QueryRequestsByReqCtxRequest, opts ...grpc.CallOption) (*QueryRequestsByReqCtxResponse, error) {
 	out := new(QueryRequestsByReqCtxResponse)
-	err := c.cc.Invoke(ctx, "/irismod.service.Query/RequestsByReqCtx", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.service.Query/RequestsByReqCtx", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -1553,7 +1553,7 @@ func (c *queryClient) RequestsByReqCtx(ctx context.Context, in *QueryRequestsByR
 
 func (c *queryClient) Response(ctx context.Context, in *QueryResponseRequest, opts ...grpc.CallOption) (*QueryResponseResponse, error) {
 	out := new(QueryResponseResponse)
-	err := c.cc.Invoke(ctx, "/irismod.service.Query/Response", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.service.Query/Response", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -1562,7 +1562,7 @@ func (c *queryClient) Response(ctx context.Context, in *QueryResponseRequest, op
 
 func (c *queryClient) Responses(ctx context.Context, in *QueryResponsesRequest, opts ...grpc.CallOption) (*QueryResponsesResponse, error) {
 	out := new(QueryResponsesResponse)
-	err := c.cc.Invoke(ctx, "/irismod.service.Query/Responses", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.service.Query/Responses", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -1571,7 +1571,7 @@ func (c *queryClient) Responses(ctx context.Context, in *QueryResponsesRequest, 
 
 func (c *queryClient) EarnedFees(ctx context.Context, in *QueryEarnedFeesRequest, opts ...grpc.CallOption) (*QueryEarnedFeesResponse, error) {
 	out := new(QueryEarnedFeesResponse)
-	err := c.cc.Invoke(ctx, "/irismod.service.Query/EarnedFees", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.service.Query/EarnedFees", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -1580,7 +1580,7 @@ func (c *queryClient) EarnedFees(ctx context.Context, in *QueryEarnedFeesRequest
 
 func (c *queryClient) Schema(ctx context.Context, in *QuerySchemaRequest, opts ...grpc.CallOption) (*QuerySchemaResponse, error) {
 	out := new(QuerySchemaResponse)
-	err := c.cc.Invoke(ctx, "/irismod.service.Query/Schema", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.service.Query/Schema", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -1589,7 +1589,7 @@ func (c *queryClient) Schema(ctx context.Context, in *QuerySchemaRequest, opts .
 
 func (c *queryClient) Params(ctx context.Context, in *QueryParamsRequest, opts ...grpc.CallOption) (*QueryParamsResponse, error) {
 	out := new(QueryParamsResponse)
-	err := c.cc.Invoke(ctx, "/irismod.service.Query/Params", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.service.Query/Params", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -1684,7 +1684,7 @@ func _Query_Definition_Handler(srv interface{}, ctx context.Context, dec func(in
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.service.Query/Definition",
+		FullMethod: "/furymod.service.Query/Definition",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).Definition(ctx, req.(*QueryDefinitionRequest))
@@ -1702,7 +1702,7 @@ func _Query_Binding_Handler(srv interface{}, ctx context.Context, dec func(inter
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.service.Query/Binding",
+		FullMethod: "/furymod.service.Query/Binding",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).Binding(ctx, req.(*QueryBindingRequest))
@@ -1720,7 +1720,7 @@ func _Query_Bindings_Handler(srv interface{}, ctx context.Context, dec func(inte
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.service.Query/Bindings",
+		FullMethod: "/furymod.service.Query/Bindings",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).Bindings(ctx, req.(*QueryBindingsRequest))
@@ -1738,7 +1738,7 @@ func _Query_WithdrawAddress_Handler(srv interface{}, ctx context.Context, dec fu
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.service.Query/WithdrawAddress",
+		FullMethod: "/furymod.service.Query/WithdrawAddress",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).WithdrawAddress(ctx, req.(*QueryWithdrawAddressRequest))
@@ -1756,7 +1756,7 @@ func _Query_RequestContext_Handler(srv interface{}, ctx context.Context, dec fun
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.service.Query/RequestContext",
+		FullMethod: "/furymod.service.Query/RequestContext",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).RequestContext(ctx, req.(*QueryRequestContextRequest))
@@ -1774,7 +1774,7 @@ func _Query_Request_Handler(srv interface{}, ctx context.Context, dec func(inter
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.service.Query/Request",
+		FullMethod: "/furymod.service.Query/Request",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).Request(ctx, req.(*QueryRequestRequest))
@@ -1792,7 +1792,7 @@ func _Query_Requests_Handler(srv interface{}, ctx context.Context, dec func(inte
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.service.Query/Requests",
+		FullMethod: "/furymod.service.Query/Requests",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).Requests(ctx, req.(*QueryRequestsRequest))
@@ -1810,7 +1810,7 @@ func _Query_RequestsByReqCtx_Handler(srv interface{}, ctx context.Context, dec f
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.service.Query/RequestsByReqCtx",
+		FullMethod: "/furymod.service.Query/RequestsByReqCtx",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).RequestsByReqCtx(ctx, req.(*QueryRequestsByReqCtxRequest))
@@ -1828,7 +1828,7 @@ func _Query_Response_Handler(srv interface{}, ctx context.Context, dec func(inte
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.service.Query/Response",
+		FullMethod: "/furymod.service.Query/Response",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).Response(ctx, req.(*QueryResponseRequest))
@@ -1846,7 +1846,7 @@ func _Query_Responses_Handler(srv interface{}, ctx context.Context, dec func(int
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.service.Query/Responses",
+		FullMethod: "/furymod.service.Query/Responses",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).Responses(ctx, req.(*QueryResponsesRequest))
@@ -1864,7 +1864,7 @@ func _Query_EarnedFees_Handler(srv interface{}, ctx context.Context, dec func(in
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.service.Query/EarnedFees",
+		FullMethod: "/furymod.service.Query/EarnedFees",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).EarnedFees(ctx, req.(*QueryEarnedFeesRequest))
@@ -1882,7 +1882,7 @@ func _Query_Schema_Handler(srv interface{}, ctx context.Context, dec func(interf
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.service.Query/Schema",
+		FullMethod: "/furymod.service.Query/Schema",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).Schema(ctx, req.(*QuerySchemaRequest))
@@ -1900,7 +1900,7 @@ func _Query_Params_Handler(srv interface{}, ctx context.Context, dec func(interf
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.service.Query/Params",
+		FullMethod: "/furymod.service.Query/Params",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).Params(ctx, req.(*QueryParamsRequest))
@@ -1909,7 +1909,7 @@ func _Query_Params_Handler(srv interface{}, ctx context.Context, dec func(interf
 }
 
 var _Query_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "irismod.service.Query",
+	ServiceName: "furymod.service.Query",
 	HandlerType: (*QueryServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

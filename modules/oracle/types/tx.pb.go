@@ -535,14 +535,14 @@ func (m *MsgEditFeedResponse) XXX_DiscardUnknown() {
 var xxx_messageInfo_MsgEditFeedResponse proto.InternalMessageInfo
 
 func init() {
-	proto.RegisterType((*MsgCreateFeed)(nil), "irismod.oracle.MsgCreateFeed")
-	proto.RegisterType((*MsgCreateFeedResponse)(nil), "irismod.oracle.MsgCreateFeedResponse")
-	proto.RegisterType((*MsgStartFeed)(nil), "irismod.oracle.MsgStartFeed")
-	proto.RegisterType((*MsgStartFeedResponse)(nil), "irismod.oracle.MsgStartFeedResponse")
-	proto.RegisterType((*MsgPauseFeed)(nil), "irismod.oracle.MsgPauseFeed")
-	proto.RegisterType((*MsgPauseFeedResponse)(nil), "irismod.oracle.MsgPauseFeedResponse")
-	proto.RegisterType((*MsgEditFeed)(nil), "irismod.oracle.MsgEditFeed")
-	proto.RegisterType((*MsgEditFeedResponse)(nil), "irismod.oracle.MsgEditFeedResponse")
+	proto.RegisterType((*MsgCreateFeed)(nil), "furymod.oracle.MsgCreateFeed")
+	proto.RegisterType((*MsgCreateFeedResponse)(nil), "furymod.oracle.MsgCreateFeedResponse")
+	proto.RegisterType((*MsgStartFeed)(nil), "furymod.oracle.MsgStartFeed")
+	proto.RegisterType((*MsgStartFeedResponse)(nil), "furymod.oracle.MsgStartFeedResponse")
+	proto.RegisterType((*MsgPauseFeed)(nil), "furymod.oracle.MsgPauseFeed")
+	proto.RegisterType((*MsgPauseFeedResponse)(nil), "furymod.oracle.MsgPauseFeedResponse")
+	proto.RegisterType((*MsgEditFeed)(nil), "furymod.oracle.MsgEditFeed")
+	proto.RegisterType((*MsgEditFeedResponse)(nil), "furymod.oracle.MsgEditFeedResponse")
 }
 
 func init() { proto.RegisterFile("oracle/tx.proto", fileDescriptor_cb5390096518ffda) }
@@ -631,7 +631,7 @@ func NewMsgClient(cc grpc1.ClientConn) MsgClient {
 
 func (c *msgClient) CreateFeed(ctx context.Context, in *MsgCreateFeed, opts ...grpc.CallOption) (*MsgCreateFeedResponse, error) {
 	out := new(MsgCreateFeedResponse)
-	err := c.cc.Invoke(ctx, "/irismod.oracle.Msg/CreateFeed", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.oracle.Msg/CreateFeed", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -640,7 +640,7 @@ func (c *msgClient) CreateFeed(ctx context.Context, in *MsgCreateFeed, opts ...g
 
 func (c *msgClient) EditFeed(ctx context.Context, in *MsgEditFeed, opts ...grpc.CallOption) (*MsgEditFeedResponse, error) {
 	out := new(MsgEditFeedResponse)
-	err := c.cc.Invoke(ctx, "/irismod.oracle.Msg/EditFeed", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.oracle.Msg/EditFeed", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -649,7 +649,7 @@ func (c *msgClient) EditFeed(ctx context.Context, in *MsgEditFeed, opts ...grpc.
 
 func (c *msgClient) StartFeed(ctx context.Context, in *MsgStartFeed, opts ...grpc.CallOption) (*MsgStartFeedResponse, error) {
 	out := new(MsgStartFeedResponse)
-	err := c.cc.Invoke(ctx, "/irismod.oracle.Msg/StartFeed", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.oracle.Msg/StartFeed", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -658,7 +658,7 @@ func (c *msgClient) StartFeed(ctx context.Context, in *MsgStartFeed, opts ...grp
 
 func (c *msgClient) PauseFeed(ctx context.Context, in *MsgPauseFeed, opts ...grpc.CallOption) (*MsgPauseFeedResponse, error) {
 	out := new(MsgPauseFeedResponse)
-	err := c.cc.Invoke(ctx, "/irismod.oracle.Msg/PauseFeed", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.oracle.Msg/PauseFeed", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -708,7 +708,7 @@ func _Msg_CreateFeed_Handler(srv interface{}, ctx context.Context, dec func(inte
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.oracle.Msg/CreateFeed",
+		FullMethod: "/furymod.oracle.Msg/CreateFeed",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).CreateFeed(ctx, req.(*MsgCreateFeed))
@@ -726,7 +726,7 @@ func _Msg_EditFeed_Handler(srv interface{}, ctx context.Context, dec func(interf
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.oracle.Msg/EditFeed",
+		FullMethod: "/furymod.oracle.Msg/EditFeed",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).EditFeed(ctx, req.(*MsgEditFeed))
@@ -744,7 +744,7 @@ func _Msg_StartFeed_Handler(srv interface{}, ctx context.Context, dec func(inter
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.oracle.Msg/StartFeed",
+		FullMethod: "/furymod.oracle.Msg/StartFeed",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).StartFeed(ctx, req.(*MsgStartFeed))
@@ -762,7 +762,7 @@ func _Msg_PauseFeed_Handler(srv interface{}, ctx context.Context, dec func(inter
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.oracle.Msg/PauseFeed",
+		FullMethod: "/furymod.oracle.Msg/PauseFeed",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).PauseFeed(ctx, req.(*MsgPauseFeed))
@@ -771,7 +771,7 @@ func _Msg_PauseFeed_Handler(srv interface{}, ctx context.Context, dec func(inter
 }
 
 var _Msg_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "irismod.oracle.Msg",
+	ServiceName: "furymod.oracle.Msg",
 	HandlerType: (*MsgServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

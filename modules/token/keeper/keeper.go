@@ -12,7 +12,7 @@ import (
 	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
 	paramstypes "github.com/cosmos/cosmos-sdk/x/params/types"
 
-	"github.com/irisnet/irismod/modules/token/types"
+	"github.com/furynet/furymod/modules/token/types"
 )
 
 type Keeper struct {
@@ -51,7 +51,7 @@ func NewKeeper(
 
 // Logger returns a module-specific logger.
 func (k Keeper) Logger(ctx sdk.Context) log.Logger {
-	return ctx.Logger().With("module", fmt.Sprintf("irismod/%s", types.ModuleName))
+	return ctx.Logger().With("module", fmt.Sprintf("furymod/%s", types.ModuleName))
 }
 
 // IssueToken issues a new token

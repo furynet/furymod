@@ -13,10 +13,10 @@ import (
 	"github.com/cosmos/cosmos-sdk/testutil/rest"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	farmcli "github.com/irisnet/irismod/modules/farm/client/cli"
-	"github.com/irisnet/irismod/modules/farm/client/testutil"
-	farmtypes "github.com/irisnet/irismod/modules/farm/types"
-	"github.com/irisnet/irismod/simapp"
+	farmcli "github.com/furynet/furymod/modules/farm/client/cli"
+	"github.com/furynet/furymod/modules/farm/client/testutil"
+	farmtypes "github.com/furynet/furymod/modules/farm/types"
+	"github.com/furynet/furymod/simapp"
 )
 
 type IntegrationTestSuite struct {
@@ -58,7 +58,7 @@ func (s *IntegrationTestSuite) TestRest() {
 	// ---------------------------------------------------------------------------
 
 	creator := val.Address
-	description := "iris-atom farm pool"
+	description := "grid-atom farm pool"
 	startHeight := s.LatestHeight() + 1
 	rewardPerBlock := sdk.NewCoins(sdk.NewCoin(s.cfg.BondDenom, sdk.NewInt(10)))
 	lpTokenDenom := s.cfg.BondDenom
@@ -109,7 +109,7 @@ func (s *IntegrationTestSuite) TestRest() {
 	}
 
 	respType = proto.Message(&farmtypes.QueryFarmPoolsResponse{})
-	queryPoolURL := fmt.Sprintf("%s/irismod/farm/pools", baseURL)
+	queryPoolURL := fmt.Sprintf("%s/furymod/farm/pools", baseURL)
 	resp, err := rest.GetRequest(queryPoolURL)
 
 	s.Require().NoError(err)
@@ -140,7 +140,7 @@ func (s *IntegrationTestSuite) TestRest() {
 	}
 
 	queryFarmerRespType := proto.Message(&farmtypes.QueryFarmerResponse{})
-	queryFarmInfoURL := fmt.Sprintf("%s/irismod/farm/farmers/%s", baseURL, creator.String())
+	queryFarmInfoURL := fmt.Sprintf("%s/furymod/farm/farmers/%s", baseURL, creator.String())
 	resp, err = rest.GetRequest(queryFarmInfoURL)
 	s.Require().NoError(err)
 	s.Require().NoError(clientCtx.Codec.UnmarshalJSON(resp, queryFarmerRespType))

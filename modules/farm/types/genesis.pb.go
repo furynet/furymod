@@ -100,7 +100,7 @@ func (m *GenesisState) GetEscrow() []EscrowInfo {
 }
 
 func init() {
-	proto.RegisterType((*GenesisState)(nil), "irismod.farm.GenesisState")
+	proto.RegisterType((*GenesisState)(nil), "furymod.farm.GenesisState")
 }
 
 func init() { proto.RegisterFile("farm/genesis.proto", fileDescriptor_627ae982f0dd0bc7) }

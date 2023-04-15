@@ -14,7 +14,7 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/version"
 
-	"github.com/irisnet/irismod/modules/oracle/types"
+	"github.com/furynet/furymod/modules/oracle/types"
 )
 
 // NewTxCmd returns the transaction commands for the oracle module.
@@ -41,13 +41,13 @@ func GetCmdCreateFeed() *cobra.Command {
 		Use:   "create",
 		Short: `Create a new feed, the feed will be in "paused" state`,
 		Example: fmt.Sprintf(
-			`%s tx oracle create --chain-id=<chain-id> --from=<key-name> --fees=0.3iris `+
+			`%s tx oracle create --chain-id=<chain-id> --from=<key-name> --fees=0.3fury `+
 				`--feed-name="test-feed" `+
 				`--latest-history=10 `+
 				`--service-name="test-service" `+
 				`--input=<request data or path/to/input.json> `+
 				`--providers=<provide1_address>,<provider2_address> `+
-				`--service-fee-cap=1iris `+
+				`--service-fee-cap=1fury `+
 				`--timeout=2 `+
 				`--threshold=1 `+
 				`--frequency=12 `+
@@ -184,7 +184,7 @@ func GetCmdStartFeed() *cobra.Command {
 		Short: `Start a feed in "paused" state.`,
 		Args:  cobra.ExactArgs(1),
 		Example: fmt.Sprintf(
-			`%s tx oracle start <feed-name> --chain-id=<chain-id> --from=<key-name> --fees=0.3iris`,
+			`%s tx oracle start <feed-name> --chain-id=<chain-id> --from=<key-name> --fees=0.3fury`,
 			version.AppName,
 		),
 		RunE: func(cmd *cobra.Command, args []string) error {
@@ -217,7 +217,7 @@ func GetCmdPauseFeed() *cobra.Command {
 		Short: `Pause a feed in "running" state`,
 		Args:  cobra.ExactArgs(1),
 		Example: fmt.Sprintf(
-			`%s tx oracle pause <feed-name> --chain-id=<chain-id> --from=<key-name> --fees=0.3iris`,
+			`%s tx oracle pause <feed-name> --chain-id=<chain-id> --from=<key-name> --fees=0.3fury`,
 			version.AppName,
 		),
 		RunE: func(cmd *cobra.Command, args []string) error {
@@ -250,10 +250,10 @@ func GetCmdEditFeed() *cobra.Command {
 		Short: "Modify the feed information and update service invocation parameters by feed creator.",
 		Args:  cobra.ExactArgs(1),
 		Example: fmt.Sprintf(
-			`%s tx oracle edit <feed-name> --chain-id=<chain-id> --from=<key-name> --fees=0.3iris `+
+			`%s tx oracle edit <feed-name> --chain-id=<chain-id> --from=<key-name> --fees=0.3fury `+
 				`--latest-history=10 `+
 				`--providers=<provide1_address>,<provider2_address> `+
-				`--service-fee-cap=1iris `+
+				`--service-fee-cap=1fury `+
 				`--timeout=2 `+
 				`--frequency=10 `+
 				`--threshold=5 `,

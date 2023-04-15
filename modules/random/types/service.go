@@ -5,8 +5,8 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/irisnet/irismod/modules/oracle/types"
-	servicetypes "github.com/irisnet/irismod/modules/service/types"
+	"github.com/furynet/furymod/modules/oracle/types"
+	servicetypes "github.com/furynet/furymod/modules/service/types"
 )
 
 const (
@@ -19,14 +19,14 @@ const (
 		"input": {
 			"$schema": "http://json-schema.org/draft-04/schema#",
 			"title": "random-seed-input-body",
-			"description": "IRIS Hub Random Seed Input Body Schema",
+			"description": "GRID Hub Random Seed Input Body Schema",
 			"type": "object",
 			"additionalProperties": false
 		},
 		"output": {
 			"$schema": "http://json-schema.org/draft-04/schema#",
 			"title": "random-seed-output-body",
-			"description": "IRIS Hub Random Seed Output Body Schema",
+			"description": "GRID Hub Random Seed Output Body Schema",
 			"type": "object",
 			"properties": {
 				"seed": {

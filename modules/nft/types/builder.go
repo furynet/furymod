@@ -15,7 +15,7 @@ import (
 )
 
 const (
-	Namespace          = "irismod:"
+	Namespace          = "furymod:"
 	KeyMediaFieldValue = "value"
 )
 

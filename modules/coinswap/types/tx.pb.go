@@ -432,16 +432,16 @@ func (m *MsgSwapCoinResponse) XXX_DiscardUnknown() {
 var xxx_messageInfo_MsgSwapCoinResponse proto.InternalMessageInfo
 
 func init() {
-	proto.RegisterType((*MsgAddLiquidity)(nil), "irismod.coinswap.MsgAddLiquidity")
-	proto.RegisterType((*MsgAddLiquidityResponse)(nil), "irismod.coinswap.MsgAddLiquidityResponse")
-	proto.RegisterType((*MsgAddUnilateralLiquidity)(nil), "irismod.coinswap.MsgAddUnilateralLiquidity")
-	proto.RegisterType((*MsgAddUnilateralLiquidityResponse)(nil), "irismod.coinswap.MsgAddUnilateralLiquidityResponse")
-	proto.RegisterType((*MsgRemoveLiquidity)(nil), "irismod.coinswap.MsgRemoveLiquidity")
-	proto.RegisterType((*MsgRemoveLiquidityResponse)(nil), "irismod.coinswap.MsgRemoveLiquidityResponse")
-	proto.RegisterType((*MsgRemoveUnilateralLiquidity)(nil), "irismod.coinswap.MsgRemoveUnilateralLiquidity")
-	proto.RegisterType((*MsgRemoveUnilateralLiquidityResponse)(nil), "irismod.coinswap.MsgRemoveUnilateralLiquidityResponse")
-	proto.RegisterType((*MsgSwapOrder)(nil), "irismod.coinswap.MsgSwapOrder")
-	proto.RegisterType((*MsgSwapCoinResponse)(nil), "irismod.coinswap.MsgSwapCoinResponse")
+	proto.RegisterType((*MsgAddLiquidity)(nil), "furymod.coinswap.MsgAddLiquidity")
+	proto.RegisterType((*MsgAddLiquidityResponse)(nil), "furymod.coinswap.MsgAddLiquidityResponse")
+	proto.RegisterType((*MsgAddUnilateralLiquidity)(nil), "furymod.coinswap.MsgAddUnilateralLiquidity")
+	proto.RegisterType((*MsgAddUnilateralLiquidityResponse)(nil), "furymod.coinswap.MsgAddUnilateralLiquidityResponse")
+	proto.RegisterType((*MsgRemoveLiquidity)(nil), "furymod.coinswap.MsgRemoveLiquidity")
+	proto.RegisterType((*MsgRemoveLiquidityResponse)(nil), "furymod.coinswap.MsgRemoveLiquidityResponse")
+	proto.RegisterType((*MsgRemoveUnilateralLiquidity)(nil), "furymod.coinswap.MsgRemoveUnilateralLiquidity")
+	proto.RegisterType((*MsgRemoveUnilateralLiquidityResponse)(nil), "furymod.coinswap.MsgRemoveUnilateralLiquidityResponse")
+	proto.RegisterType((*MsgSwapOrder)(nil), "furymod.coinswap.MsgSwapOrder")
+	proto.RegisterType((*MsgSwapCoinResponse)(nil), "furymod.coinswap.MsgSwapCoinResponse")
 }
 
 func init() { proto.RegisterFile("coinswap/tx.proto", fileDescriptor_f3a5860d70ca9b75) }
@@ -545,7 +545,7 @@ func NewMsgClient(cc grpc1.ClientConn) MsgClient {
 
 func (c *msgClient) AddLiquidity(ctx context.Context, in *MsgAddLiquidity, opts ...grpc.CallOption) (*MsgAddLiquidityResponse, error) {
 	out := new(MsgAddLiquidityResponse)
-	err := c.cc.Invoke(ctx, "/irismod.coinswap.Msg/AddLiquidity", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.coinswap.Msg/AddLiquidity", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -554,7 +554,7 @@ func (c *msgClient) AddLiquidity(ctx context.Context, in *MsgAddLiquidity, opts 
 
 func (c *msgClient) AddUnilateralLiquidity(ctx context.Context, in *MsgAddUnilateralLiquidity, opts ...grpc.CallOption) (*MsgAddUnilateralLiquidityResponse, error) {
 	out := new(MsgAddUnilateralLiquidityResponse)
-	err := c.cc.Invoke(ctx, "/irismod.coinswap.Msg/AddUnilateralLiquidity", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.coinswap.Msg/AddUnilateralLiquidity", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -563,7 +563,7 @@ func (c *msgClient) AddUnilateralLiquidity(ctx context.Context, in *MsgAddUnilat
 
 func (c *msgClient) RemoveLiquidity(ctx context.Context, in *MsgRemoveLiquidity, opts ...grpc.CallOption) (*MsgRemoveLiquidityResponse, error) {
 	out := new(MsgRemoveLiquidityResponse)
-	err := c.cc.Invoke(ctx, "/irismod.coinswap.Msg/RemoveLiquidity", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.coinswap.Msg/RemoveLiquidity", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -572,7 +572,7 @@ func (c *msgClient) RemoveLiquidity(ctx context.Context, in *MsgRemoveLiquidity,
 
 func (c *msgClient) RemoveUnilateralLiquidity(ctx context.Context, in *MsgRemoveUnilateralLiquidity, opts ...grpc.CallOption) (*MsgRemoveUnilateralLiquidityResponse, error) {
 	out := new(MsgRemoveUnilateralLiquidityResponse)
-	err := c.cc.Invoke(ctx, "/irismod.coinswap.Msg/RemoveUnilateralLiquidity", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.coinswap.Msg/RemoveUnilateralLiquidity", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -581,7 +581,7 @@ func (c *msgClient) RemoveUnilateralLiquidity(ctx context.Context, in *MsgRemove
 
 func (c *msgClient) SwapCoin(ctx context.Context, in *MsgSwapOrder, opts ...grpc.CallOption) (*MsgSwapCoinResponse, error) {
 	out := new(MsgSwapCoinResponse)
-	err := c.cc.Invoke(ctx, "/irismod.coinswap.Msg/SwapCoin", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.coinswap.Msg/SwapCoin", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -641,7 +641,7 @@ func _Msg_AddLiquidity_Handler(srv interface{}, ctx context.Context, dec func(in
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.coinswap.Msg/AddLiquidity",
+		FullMethod: "/furymod.coinswap.Msg/AddLiquidity",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).AddLiquidity(ctx, req.(*MsgAddLiquidity))
@@ -659,7 +659,7 @@ func _Msg_AddUnilateralLiquidity_Handler(srv interface{}, ctx context.Context, d
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.coinswap.Msg/AddUnilateralLiquidity",
+		FullMethod: "/furymod.coinswap.Msg/AddUnilateralLiquidity",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).AddUnilateralLiquidity(ctx, req.(*MsgAddUnilateralLiquidity))
@@ -677,7 +677,7 @@ func _Msg_RemoveLiquidity_Handler(srv interface{}, ctx context.Context, dec func
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.coinswap.Msg/RemoveLiquidity",
+		FullMethod: "/furymod.coinswap.Msg/RemoveLiquidity",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).RemoveLiquidity(ctx, req.(*MsgRemoveLiquidity))
@@ -695,7 +695,7 @@ func _Msg_RemoveUnilateralLiquidity_Handler(srv interface{}, ctx context.Context
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.coinswap.Msg/RemoveUnilateralLiquidity",
+		FullMethod: "/furymod.coinswap.Msg/RemoveUnilateralLiquidity",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).RemoveUnilateralLiquidity(ctx, req.(*MsgRemoveUnilateralLiquidity))
@@ -713,7 +713,7 @@ func _Msg_SwapCoin_Handler(srv interface{}, ctx context.Context, dec func(interf
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.coinswap.Msg/SwapCoin",
+		FullMethod: "/furymod.coinswap.Msg/SwapCoin",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).SwapCoin(ctx, req.(*MsgSwapOrder))
@@ -722,7 +722,7 @@ func _Msg_SwapCoin_Handler(srv interface{}, ctx context.Context, dec func(interf
 }
 
 var _Msg_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "irismod.coinswap.Msg",
+	ServiceName: "furymod.coinswap.Msg",
 	HandlerType: (*MsgServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

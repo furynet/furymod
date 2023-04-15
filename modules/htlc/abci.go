@@ -7,13 +7,13 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/irisnet/irismod/modules/htlc/keeper"
-	"github.com/irisnet/irismod/modules/htlc/types"
+	"github.com/furynet/furymod/modules/htlc/keeper"
+	"github.com/furynet/furymod/modules/htlc/types"
 )
 
 // BeginBlocker handles block beginning logic for HTLC
 func BeginBlocker(ctx sdk.Context, k keeper.Keeper) {
-	ctx = ctx.WithLogger(ctx.Logger().With("handler", "beginBlock").With("module", "irismod/htlc"))
+	ctx = ctx.WithLogger(ctx.Logger().With("handler", "beginBlock").With("module", "furymod/htlc"))
 
 	currentBlockHeight := uint64(ctx.BlockHeight())
 	k.IterateHTLCExpiredQueueByHeight(

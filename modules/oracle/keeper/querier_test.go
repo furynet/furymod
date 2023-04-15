@@ -5,9 +5,9 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/irisnet/irismod/modules/oracle/keeper"
-	"github.com/irisnet/irismod/modules/oracle/types"
-	"github.com/irisnet/irismod/modules/service/exported"
+	"github.com/furynet/furymod/modules/oracle/keeper"
+	"github.com/furynet/furymod/modules/oracle/types"
+	"github.com/furynet/furymod/modules/service/exported"
 )
 
 func (suite *KeeperTestSuite) TestNewQuerier() {

@@ -571,16 +571,16 @@ func (m *LockedInfo) GetPendingReward() github_com_cosmos_cosmos_sdk_types.Coins
 }
 
 func init() {
-	proto.RegisterType((*QueryFarmPoolsRequest)(nil), "irismod.farm.QueryFarmPoolsRequest")
-	proto.RegisterType((*FarmPoolEntry)(nil), "irismod.farm.FarmPoolEntry")
-	proto.RegisterType((*QueryFarmPoolsResponse)(nil), "irismod.farm.QueryFarmPoolsResponse")
-	proto.RegisterType((*QueryFarmPoolRequest)(nil), "irismod.farm.QueryFarmPoolRequest")
-	proto.RegisterType((*QueryFarmPoolResponse)(nil), "irismod.farm.QueryFarmPoolResponse")
-	proto.RegisterType((*QueryFarmerRequest)(nil), "irismod.farm.QueryFarmerRequest")
-	proto.RegisterType((*QueryFarmerResponse)(nil), "irismod.farm.QueryFarmerResponse")
-	proto.RegisterType((*QueryParamsRequest)(nil), "irismod.farm.QueryParamsRequest")
-	proto.RegisterType((*QueryParamsResponse)(nil), "irismod.farm.QueryParamsResponse")
-	proto.RegisterType((*LockedInfo)(nil), "irismod.farm.LockedInfo")
+	proto.RegisterType((*QueryFarmPoolsRequest)(nil), "furymod.farm.QueryFarmPoolsRequest")
+	proto.RegisterType((*FarmPoolEntry)(nil), "furymod.farm.FarmPoolEntry")
+	proto.RegisterType((*QueryFarmPoolsResponse)(nil), "furymod.farm.QueryFarmPoolsResponse")
+	proto.RegisterType((*QueryFarmPoolRequest)(nil), "furymod.farm.QueryFarmPoolRequest")
+	proto.RegisterType((*QueryFarmPoolResponse)(nil), "furymod.farm.QueryFarmPoolResponse")
+	proto.RegisterType((*QueryFarmerRequest)(nil), "furymod.farm.QueryFarmerRequest")
+	proto.RegisterType((*QueryFarmerResponse)(nil), "furymod.farm.QueryFarmerResponse")
+	proto.RegisterType((*QueryParamsRequest)(nil), "furymod.farm.QueryParamsRequest")
+	proto.RegisterType((*QueryParamsResponse)(nil), "furymod.farm.QueryParamsResponse")
+	proto.RegisterType((*LockedInfo)(nil), "furymod.farm.LockedInfo")
 }
 
 func init() { proto.RegisterFile("farm/query.proto", fileDescriptor_3e51f119660179f9) }
@@ -673,7 +673,7 @@ func NewQueryClient(cc grpc1.ClientConn) QueryClient {
 
 func (c *queryClient) FarmPools(ctx context.Context, in *QueryFarmPoolsRequest, opts ...grpc.CallOption) (*QueryFarmPoolsResponse, error) {
 	out := new(QueryFarmPoolsResponse)
-	err := c.cc.Invoke(ctx, "/irismod.farm.Query/FarmPools", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.farm.Query/FarmPools", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -682,7 +682,7 @@ func (c *queryClient) FarmPools(ctx context.Context, in *QueryFarmPoolsRequest, 
 
 func (c *queryClient) FarmPool(ctx context.Context, in *QueryFarmPoolRequest, opts ...grpc.CallOption) (*QueryFarmPoolResponse, error) {
 	out := new(QueryFarmPoolResponse)
-	err := c.cc.Invoke(ctx, "/irismod.farm.Query/FarmPool", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.farm.Query/FarmPool", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -691,7 +691,7 @@ func (c *queryClient) FarmPool(ctx context.Context, in *QueryFarmPoolRequest, op
 
 func (c *queryClient) Farmer(ctx context.Context, in *QueryFarmerRequest, opts ...grpc.CallOption) (*QueryFarmerResponse, error) {
 	out := new(QueryFarmerResponse)
-	err := c.cc.Invoke(ctx, "/irismod.farm.Query/Farmer", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.farm.Query/Farmer", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -700,7 +700,7 @@ func (c *queryClient) Farmer(ctx context.Context, in *QueryFarmerRequest, opts .
 
 func (c *queryClient) Params(ctx context.Context, in *QueryParamsRequest, opts ...grpc.CallOption) (*QueryParamsResponse, error) {
 	out := new(QueryParamsResponse)
-	err := c.cc.Invoke(ctx, "/irismod.farm.Query/Params", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.farm.Query/Params", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -747,7 +747,7 @@ func _Query_FarmPools_Handler(srv interface{}, ctx context.Context, dec func(int
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.farm.Query/FarmPools",
+		FullMethod: "/furymod.farm.Query/FarmPools",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).FarmPools(ctx, req.(*QueryFarmPoolsRequest))
@@ -765,7 +765,7 @@ func _Query_FarmPool_Handler(srv interface{}, ctx context.Context, dec func(inte
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.farm.Query/FarmPool",
+		FullMethod: "/furymod.farm.Query/FarmPool",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).FarmPool(ctx, req.(*QueryFarmPoolRequest))
@@ -783,7 +783,7 @@ func _Query_Farmer_Handler(srv interface{}, ctx context.Context, dec func(interf
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.farm.Query/Farmer",
+		FullMethod: "/furymod.farm.Query/Farmer",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).Farmer(ctx, req.(*QueryFarmerRequest))
@@ -801,7 +801,7 @@ func _Query_Params_Handler(srv interface{}, ctx context.Context, dec func(interf
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.farm.Query/Params",
+		FullMethod: "/furymod.farm.Query/Params",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).Params(ctx, req.(*QueryParamsRequest))
@@ -810,7 +810,7 @@ func _Query_Params_Handler(srv interface{}, ctx context.Context, dec func(interf
 }
 
 var _Query_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "irismod.farm.Query",
+	ServiceName: "furymod.farm.Query",
 	HandlerType: (*QueryServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

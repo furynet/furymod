@@ -357,11 +357,11 @@ func RegisterQueryHandlerClient(ctx context.Context, mux *runtime.ServeMux, clie
 }
 
 var (
-	pattern_Query_Feed_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3}, []string{"irismod", "oracle", "feeds", "feed_name"}, "", runtime.AssumeColonVerbOpt(false)))
+	pattern_Query_Feed_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3}, []string{"furymod", "oracle", "feeds", "feed_name"}, "", runtime.AssumeColonVerbOpt(false)))
 
-	pattern_Query_Feeds_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2}, []string{"irismod", "oracle", "feeds"}, "", runtime.AssumeColonVerbOpt(false)))
+	pattern_Query_Feeds_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2}, []string{"furymod", "oracle", "feeds"}, "", runtime.AssumeColonVerbOpt(false)))
 
-	pattern_Query_FeedValue_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3, 2, 4}, []string{"irismod", "oracle", "feeds", "feed_name", "values"}, "", runtime.AssumeColonVerbOpt(false)))
+	pattern_Query_FeedValue_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3, 2, 4}, []string{"furymod", "oracle", "feeds", "feed_name", "values"}, "", runtime.AssumeColonVerbOpt(false)))
 )
 
 var (

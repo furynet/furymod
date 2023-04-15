@@ -6,8 +6,8 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/irisnet/irismod/modules/random/keeper"
-	"github.com/irisnet/irismod/modules/random/types"
+	"github.com/furynet/furymod/modules/random/keeper"
+	"github.com/furynet/furymod/modules/random/types"
 )
 
 // BeginBlocker handles block beginning logic for random

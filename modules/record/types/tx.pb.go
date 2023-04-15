@@ -106,8 +106,8 @@ func (m *MsgCreateRecordResponse) XXX_DiscardUnknown() {
 var xxx_messageInfo_MsgCreateRecordResponse proto.InternalMessageInfo
 
 func init() {
-	proto.RegisterType((*MsgCreateRecord)(nil), "irismod.record.MsgCreateRecord")
-	proto.RegisterType((*MsgCreateRecordResponse)(nil), "irismod.record.MsgCreateRecordResponse")
+	proto.RegisterType((*MsgCreateRecord)(nil), "furymod.record.MsgCreateRecord")
+	proto.RegisterType((*MsgCreateRecordResponse)(nil), "furymod.record.MsgCreateRecordResponse")
 }
 
 func init() { proto.RegisterFile("record/tx.proto", fileDescriptor_81225f4a7a6988bf) }
@@ -193,7 +193,7 @@ func NewMsgClient(cc grpc1.ClientConn) MsgClient {
 
 func (c *msgClient) CreateRecord(ctx context.Context, in *MsgCreateRecord, opts ...grpc.CallOption) (*MsgCreateRecordResponse, error) {
 	out := new(MsgCreateRecordResponse)
-	err := c.cc.Invoke(ctx, "/irismod.record.Msg/CreateRecord", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.record.Msg/CreateRecord", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -228,7 +228,7 @@ func _Msg_CreateRecord_Handler(srv interface{}, ctx context.Context, dec func(in
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.record.Msg/CreateRecord",
+		FullMethod: "/furymod.record.Msg/CreateRecord",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).CreateRecord(ctx, req.(*MsgCreateRecord))
@@ -237,7 +237,7 @@ func _Msg_CreateRecord_Handler(srv interface{}, ctx context.Context, dec func(in
 }
 
 var _Msg_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "irismod.record.Msg",
+	ServiceName: "furymod.record.Msg",
 	HandlerType: (*MsgServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

@@ -20,11 +20,11 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	banktestutil "github.com/cosmos/cosmos-sdk/x/bank/client/testutil"
 
-	servicecli "github.com/irisnet/irismod/modules/service/client/cli"
-	servicetestutil "github.com/irisnet/irismod/modules/service/client/testutil"
-	"github.com/irisnet/irismod/modules/service/types"
-	servicetypes "github.com/irisnet/irismod/modules/service/types"
-	"github.com/irisnet/irismod/simapp"
+	servicecli "github.com/furynet/furymod/modules/service/client/cli"
+	servicetestutil "github.com/furynet/furymod/modules/service/client/testutil"
+	"github.com/furynet/furymod/modules/service/types"
+	servicetypes "github.com/furynet/furymod/modules/service/types"
+	"github.com/furynet/furymod/simapp"
 )
 
 type IntegrationTestSuite struct {
@@ -120,7 +120,7 @@ func (s *IntegrationTestSuite) TestService() {
 	s.Require().Equal(expectedCode, txResp.Code)
 
 	//------test GetCmdQueryServiceDefinition()-------------
-	url := fmt.Sprintf("%s/irismod/service/definitions/%s", baseURL, serviceName)
+	url := fmt.Sprintf("%s/furymod/service/definitions/%s", baseURL, serviceName)
 	resp, err := rest.GetRequest(url)
 	respType = proto.Message(&servicetypes.QueryDefinitionResponse{})
 	s.Require().NoError(err)
@@ -150,7 +150,7 @@ func (s *IntegrationTestSuite) TestService() {
 	s.Require().Equal(expectedCode, txResp.Code)
 
 	//------test GetCmdQueryServiceBinding()-------------
-	url = fmt.Sprintf("%s/irismod/service/bindings/%s/%s", baseURL, serviceName, provider.String())
+	url = fmt.Sprintf("%s/furymod/service/bindings/%s/%s", baseURL, serviceName, provider.String())
 	resp, err = rest.GetRequest(url)
 	respType = proto.Message(&servicetypes.QueryBindingResponse{})
 	s.Require().NoError(err)
@@ -160,7 +160,7 @@ func (s *IntegrationTestSuite) TestService() {
 	s.Require().Equal(provider.String(), serviceBindingResp.ServiceBinding.Provider)
 
 	//------test GetCmdQueryServiceBindings()-------------
-	url = fmt.Sprintf("%s/irismod/service/bindings/%s", baseURL, serviceName)
+	url = fmt.Sprintf("%s/furymod/service/bindings/%s", baseURL, serviceName)
 	resp, err = rest.GetRequest(url)
 	respType = proto.Message(&servicetypes.QueryBindingsResponse{})
 	s.Require().NoError(err)
@@ -182,7 +182,7 @@ func (s *IntegrationTestSuite) TestService() {
 	txResp = respType.(*sdk.TxResponse)
 	s.Require().Equal(expectedCode, txResp.Code)
 
-	url = fmt.Sprintf("%s/irismod/service/bindings/%s/%s", baseURL, serviceName, provider.String())
+	url = fmt.Sprintf("%s/furymod/service/bindings/%s/%s", baseURL, serviceName, provider.String())
 	resp, err = rest.GetRequest(url)
 	respType = proto.Message(&servicetypes.QueryBindingResponse{})
 	s.Require().NoError(err)
@@ -204,7 +204,7 @@ func (s *IntegrationTestSuite) TestService() {
 	txResp = respType.(*sdk.TxResponse)
 	s.Require().Equal(expectedCode, txResp.Code)
 
-	url = fmt.Sprintf("%s/irismod/service/bindings/%s/%s", baseURL, serviceName, provider.String())
+	url = fmt.Sprintf("%s/furymod/service/bindings/%s/%s", baseURL, serviceName, provider.String())
 	resp, err = rest.GetRequest(url)
 	respType = proto.Message(&servicetypes.QueryBindingResponse{})
 	s.Require().NoError(err)
@@ -228,7 +228,7 @@ func (s *IntegrationTestSuite) TestService() {
 	txResp = respType.(*sdk.TxResponse)
 	s.Require().Equal(expectedCode, txResp.Code)
 
-	url = fmt.Sprintf("%s/irismod/service/bindings/%s/%s", baseURL, serviceName, provider.String())
+	url = fmt.Sprintf("%s/furymod/service/bindings/%s/%s", baseURL, serviceName, provider.String())
 	resp, err = rest.GetRequest(url)
 	respType = proto.Message(&servicetypes.QueryBindingResponse{})
 	s.Require().NoError(err)
@@ -305,7 +305,7 @@ func (s *IntegrationTestSuite) TestService() {
 	s.Require().Equal(requestContextId, compactRequest.RequestContextId)
 
 	//------test GetCmdQueryServiceRequests()-------------
-	url = fmt.Sprintf("%s/irismod/service/requests/%s/%s", baseURL, serviceName, provider.String())
+	url = fmt.Sprintf("%s/furymod/service/requests/%s/%s", baseURL, serviceName, provider.String())
 	resp, err = rest.GetRequest(url)
 	respType = proto.Message(&servicetypes.QueryRequestsResponse{})
 	s.Require().NoError(err)
@@ -334,7 +334,7 @@ func (s *IntegrationTestSuite) TestService() {
 	s.Require().Equal(expectedCode, txResp.Code)
 
 	//------test GetCmdQueryEarnedFees()-------------
-	url = fmt.Sprintf("%s/irismod/service/fees/%s", baseURL, provider.String())
+	url = fmt.Sprintf("%s/furymod/service/fees/%s", baseURL, provider.String())
 	resp, err = rest.GetRequest(url)
 	respType = proto.Message(&servicetypes.QueryEarnedFeesResponse{})
 	s.Require().NoError(err)

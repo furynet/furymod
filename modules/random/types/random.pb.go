@@ -172,8 +172,8 @@ func (m *Request) GetServiceContextID() string {
 }
 
 func init() {
-	proto.RegisterType((*Random)(nil), "irismod.random.Random")
-	proto.RegisterType((*Request)(nil), "irismod.random.Request")
+	proto.RegisterType((*Random)(nil), "furymod.random.Random")
+	proto.RegisterType((*Request)(nil), "furymod.random.Request")
 }
 
 func init() { proto.RegisterFile("random/random.proto", fileDescriptor_e5da2919a686585f) }

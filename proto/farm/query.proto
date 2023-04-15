@@ -1,5 +1,5 @@
 syntax = "proto3";
-package irismod.farm;
+package furymod.farm;
 
 import "cosmos/base/v1beta1/coin.proto";
 import "cosmos/base/query/v1beta1/pagination.proto";
@@ -7,24 +7,24 @@ import "gogoproto/gogo.proto";
 import "google/api/annotations.proto";
 import "farm/farm.proto";
 
-option go_package = "github.com/irisnet/irismod/modules/farm/types";
+option go_package = "github.com/furynet/furymod/modules/farm/types";
 
 service Query {
   rpc FarmPools(QueryFarmPoolsRequest) returns (QueryFarmPoolsResponse) {
-    option (google.api.http).get = "/irismod/farm/pools";
+    option (google.api.http).get = "/furymod/farm/pools";
   }
 
   rpc FarmPool(QueryFarmPoolRequest) returns (QueryFarmPoolResponse) {
-    option (google.api.http).get = "/irismod/farm/pool/{id}";
+    option (google.api.http).get = "/furymod/farm/pool/{id}";
   }
 
   rpc Farmer(QueryFarmerRequest) returns (QueryFarmerResponse) {
-    option (google.api.http).get = "/irismod/farm/farmers/{farmer}";
+    option (google.api.http).get = "/furymod/farm/farmers/{farmer}";
   }
 
   // Params queries the htlc parameters
   rpc Params(QueryParamsRequest) returns (QueryParamsResponse) {
-    option (google.api.http).get = "/irismod/farm/params";
+    option (google.api.http).get = "/furymod/farm/params";
   }
 }
 

@@ -14,8 +14,8 @@ import (
 	simtypes "github.com/cosmos/cosmos-sdk/types/simulation"
 	"github.com/cosmos/cosmos-sdk/x/simulation"
 
-	"github.com/irisnet/irismod/modules/record/types"
-	irishelpers "github.com/irisnet/irismod/simapp/helpers"
+	"github.com/furynet/furymod/modules/record/types"
+	furyhelpers "github.com/furynet/furymod/simapp/helpers"
 )
 
 // Simulation operation weights constants
@@ -75,7 +75,7 @@ func SimulateCreateRecord(ak types.AccountKeeper, bk types.BankKeeper) simtypes.
 			return simtypes.NoOpMsg(types.ModuleName, types.EventTypeCreateRecord, err.Error()), nil, err
 		}
 		txConfig := simappparams.MakeTestEncodingConfig().TxConfig
-		tx, _ := irishelpers.GenTx(
+		tx, _ := furyhelpers.GenTx(
 			r,
 			txConfig,
 			[]sdk.Msg{msg},

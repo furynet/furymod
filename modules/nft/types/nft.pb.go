@@ -311,13 +311,13 @@ func (m *Collection) XXX_DiscardUnknown() {
 var xxx_messageInfo_Collection proto.InternalMessageInfo
 
 func init() {
-	proto.RegisterType((*BaseNFT)(nil), "irismod.nft.BaseNFT")
-	proto.RegisterType((*NFTMetadata)(nil), "irismod.nft.NFTMetadata")
-	proto.RegisterType((*Denom)(nil), "irismod.nft.Denom")
-	proto.RegisterType((*DenomMetadata)(nil), "irismod.nft.DenomMetadata")
-	proto.RegisterType((*IDCollection)(nil), "irismod.nft.IDCollection")
-	proto.RegisterType((*Owner)(nil), "irismod.nft.Owner")
-	proto.RegisterType((*Collection)(nil), "irismod.nft.Collection")
+	proto.RegisterType((*BaseNFT)(nil), "furymod.nft.BaseNFT")
+	proto.RegisterType((*NFTMetadata)(nil), "furymod.nft.NFTMetadata")
+	proto.RegisterType((*Denom)(nil), "furymod.nft.Denom")
+	proto.RegisterType((*DenomMetadata)(nil), "furymod.nft.DenomMetadata")
+	proto.RegisterType((*IDCollection)(nil), "furymod.nft.IDCollection")
+	proto.RegisterType((*Owner)(nil), "furymod.nft.Owner")
+	proto.RegisterType((*Collection)(nil), "furymod.nft.Collection")
 }
 
 func init() { proto.RegisterFile("nft/nft.proto", fileDescriptor_fe8ab7e15b7f0646) }

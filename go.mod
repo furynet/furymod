@@ -1,6 +1,6 @@
 go 1.18
 
-module github.com/irisnet/irismod
+module github.com/furynet/furymod
 
 require (
 	cosmossdk.io/math v1.0.0-beta.3

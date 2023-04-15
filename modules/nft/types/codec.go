@@ -10,7 +10,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/types/msgservice"
 	proto "github.com/gogo/protobuf/proto"
 
-	"github.com/irisnet/irismod/modules/nft/exported"
+	"github.com/furynet/furymod/modules/nft/exported"
 )
 
 var (
@@ -26,15 +26,15 @@ func init() {
 
 // RegisterLegacyAminoCodec concrete types on codec
 func RegisterLegacyAminoCodec(cdc *codec.LegacyAmino) {
-	cdc.RegisterConcrete(&MsgIssueDenom{}, "irismod/nft/MsgIssueDenom", nil)
-	cdc.RegisterConcrete(&MsgTransferNFT{}, "irismod/nft/MsgTransferNFT", nil)
-	cdc.RegisterConcrete(&MsgEditNFT{}, "irismod/nft/MsgEditNFT", nil)
-	cdc.RegisterConcrete(&MsgMintNFT{}, "irismod/nft/MsgMintNFT", nil)
-	cdc.RegisterConcrete(&MsgBurnNFT{}, "irismod/nft/MsgBurnNFT", nil)
-	cdc.RegisterConcrete(&MsgTransferDenom{}, "irismod/nft/MsgTransferDenom", nil)
+	cdc.RegisterConcrete(&MsgIssueDenom{}, "furymod/nft/MsgIssueDenom", nil)
+	cdc.RegisterConcrete(&MsgTransferNFT{}, "furymod/nft/MsgTransferNFT", nil)
+	cdc.RegisterConcrete(&MsgEditNFT{}, "furymod/nft/MsgEditNFT", nil)
+	cdc.RegisterConcrete(&MsgMintNFT{}, "furymod/nft/MsgMintNFT", nil)
+	cdc.RegisterConcrete(&MsgBurnNFT{}, "furymod/nft/MsgBurnNFT", nil)
+	cdc.RegisterConcrete(&MsgTransferDenom{}, "furymod/nft/MsgTransferDenom", nil)
 
 	cdc.RegisterInterface((*exported.NFT)(nil), nil)
-	cdc.RegisterConcrete(&BaseNFT{}, "irismod/nft/BaseNFT", nil)
+	cdc.RegisterConcrete(&BaseNFT{}, "furymod/nft/BaseNFT", nil)
 }
 
 func RegisterInterfaces(registry types.InterfaceRegistry) {

@@ -1,10 +1,10 @@
 syntax = "proto3";
-package irismod.record;
+package furymod.record;
 
 import "record/record.proto";
 import "gogoproto/gogo.proto";
 
-option go_package = "github.com/irisnet/irismod/modules/record/types";
+option go_package = "github.com/furynet/furymod/modules/record/types";
 option (gogoproto.goproto_getters_all) = false;
 
 // Msg defines the oracle Msg service

@@ -21,21 +21,21 @@ func init() {
 
 // RegisterLegacyAminoCodec registers concrete types on codec
 func RegisterLegacyAminoCodec(cdc *codec.LegacyAmino) {
-	cdc.RegisterConcrete(&MsgDefineService{}, "irismod/service/MsgDefineService", nil)
-	cdc.RegisterConcrete(&MsgBindService{}, "irismod/service/MsgBindService", nil)
-	cdc.RegisterConcrete(&MsgUpdateServiceBinding{}, "irismod/service/MsgUpdateServiceBinding", nil)
-	cdc.RegisterConcrete(&MsgSetWithdrawAddress{}, "irismod/service/MsgSetWithdrawAddress", nil)
-	cdc.RegisterConcrete(&MsgDisableServiceBinding{}, "irismod/service/MsgDisableServiceBinding", nil)
-	cdc.RegisterConcrete(&MsgEnableServiceBinding{}, "irismod/service/MsgEnableServiceBinding", nil)
-	cdc.RegisterConcrete(&MsgRefundServiceDeposit{}, "irismod/service/MsgRefundServiceDeposit", nil)
+	cdc.RegisterConcrete(&MsgDefineService{}, "furymod/service/MsgDefineService", nil)
+	cdc.RegisterConcrete(&MsgBindService{}, "furymod/service/MsgBindService", nil)
+	cdc.RegisterConcrete(&MsgUpdateServiceBinding{}, "furymod/service/MsgUpdateServiceBinding", nil)
+	cdc.RegisterConcrete(&MsgSetWithdrawAddress{}, "furymod/service/MsgSetWithdrawAddress", nil)
+	cdc.RegisterConcrete(&MsgDisableServiceBinding{}, "furymod/service/MsgDisableServiceBinding", nil)
+	cdc.RegisterConcrete(&MsgEnableServiceBinding{}, "furymod/service/MsgEnableServiceBinding", nil)
+	cdc.RegisterConcrete(&MsgRefundServiceDeposit{}, "furymod/service/MsgRefundServiceDeposit", nil)
 
-	cdc.RegisterConcrete(&MsgCallService{}, "irismod/service/MsgCallService", nil)
-	cdc.RegisterConcrete(&MsgRespondService{}, "irismod/service/MsgRespondService", nil)
-	cdc.RegisterConcrete(&MsgPauseRequestContext{}, "irismod/service/MsgPauseRequestContext", nil)
-	cdc.RegisterConcrete(&MsgStartRequestContext{}, "irismod/service/MsgStartRequestContext", nil)
-	cdc.RegisterConcrete(&MsgKillRequestContext{}, "irismod/service/MsgKillRequestContext", nil)
-	cdc.RegisterConcrete(&MsgUpdateRequestContext{}, "irismod/service/MsgUpdateRequestContext", nil)
-	cdc.RegisterConcrete(&MsgWithdrawEarnedFees{}, "irismod/service/MsgWithdrawEarnedFees", nil)
+	cdc.RegisterConcrete(&MsgCallService{}, "furymod/service/MsgCallService", nil)
+	cdc.RegisterConcrete(&MsgRespondService{}, "furymod/service/MsgRespondService", nil)
+	cdc.RegisterConcrete(&MsgPauseRequestContext{}, "furymod/service/MsgPauseRequestContext", nil)
+	cdc.RegisterConcrete(&MsgStartRequestContext{}, "furymod/service/MsgStartRequestContext", nil)
+	cdc.RegisterConcrete(&MsgKillRequestContext{}, "furymod/service/MsgKillRequestContext", nil)
+	cdc.RegisterConcrete(&MsgUpdateRequestContext{}, "furymod/service/MsgUpdateRequestContext", nil)
+	cdc.RegisterConcrete(&MsgWithdrawEarnedFees{}, "furymod/service/MsgWithdrawEarnedFees", nil)
 }
 
 func RegisterInterfaces(registry types.InterfaceRegistry) {

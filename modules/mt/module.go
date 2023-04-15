@@ -19,10 +19,10 @@ import (
 	"github.com/cosmos/cosmos-sdk/types/module"
 	simtypes "github.com/cosmos/cosmos-sdk/types/simulation"
 
-	"github.com/irisnet/irismod/modules/mt/client/cli"
-	"github.com/irisnet/irismod/modules/mt/keeper"
-	"github.com/irisnet/irismod/modules/mt/simulation"
-	"github.com/irisnet/irismod/modules/mt/types"
+	"github.com/furynet/furymod/modules/mt/client/cli"
+	"github.com/furynet/furymod/modules/mt/keeper"
+	"github.com/furynet/furymod/modules/mt/simulation"
+	"github.com/furynet/furymod/modules/mt/types"
 )
 
 var (

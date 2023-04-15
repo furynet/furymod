@@ -275,12 +275,12 @@ func (m *CommunityPoolCreateFarmProposal) XXX_DiscardUnknown() {
 var xxx_messageInfo_CommunityPoolCreateFarmProposal proto.InternalMessageInfo
 
 func init() {
-	proto.RegisterType((*FarmPool)(nil), "irismod.farm.FarmPool")
-	proto.RegisterType((*RewardRule)(nil), "irismod.farm.RewardRule")
-	proto.RegisterType((*FarmInfo)(nil), "irismod.farm.FarmInfo")
-	proto.RegisterType((*Params)(nil), "irismod.farm.Params")
-	proto.RegisterType((*EscrowInfo)(nil), "irismod.farm.EscrowInfo")
-	proto.RegisterType((*CommunityPoolCreateFarmProposal)(nil), "irismod.farm.CommunityPoolCreateFarmProposal")
+	proto.RegisterType((*FarmPool)(nil), "furymod.farm.FarmPool")
+	proto.RegisterType((*RewardRule)(nil), "furymod.farm.RewardRule")
+	proto.RegisterType((*FarmInfo)(nil), "furymod.farm.FarmInfo")
+	proto.RegisterType((*Params)(nil), "furymod.farm.Params")
+	proto.RegisterType((*EscrowInfo)(nil), "furymod.farm.EscrowInfo")
+	proto.RegisterType((*CommunityPoolCreateFarmProposal)(nil), "furymod.farm.CommunityPoolCreateFarmProposal")
 }
 
 func init() { proto.RegisterFile("farm/farm.proto", fileDescriptor_a85c74c264ccc821) }

@@ -12,10 +12,10 @@ import (
 	"github.com/cosmos/cosmos-sdk/testutil/network"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	farmcli "github.com/irisnet/irismod/modules/farm/client/cli"
-	"github.com/irisnet/irismod/modules/farm/client/testutil"
-	farmtypes "github.com/irisnet/irismod/modules/farm/types"
-	"github.com/irisnet/irismod/simapp"
+	farmcli "github.com/furynet/furymod/modules/farm/client/cli"
+	"github.com/furynet/furymod/modules/farm/client/testutil"
+	farmtypes "github.com/furynet/furymod/modules/farm/types"
+	"github.com/furynet/furymod/simapp"
 )
 
 type IntegrationTestSuite struct {
@@ -56,7 +56,7 @@ func (s *IntegrationTestSuite) TestFarm() {
 	// ---------------------------------------------------------------------------
 
 	creator := val.Address
-	description := "iris-atom farm pool"
+	description := "grid-atom farm pool"
 	startHeight := s.LatestHeight() + 1
 	rewardPerBlock := sdk.NewCoins(sdk.NewCoin(s.cfg.BondDenom, sdk.NewInt(10)))
 	lpTokenDenom := s.cfg.BondDenom

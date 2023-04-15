@@ -14,13 +14,13 @@ import (
 	"github.com/cosmos/cosmos-sdk/testutil/network"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	oraclecli "github.com/irisnet/irismod/modules/oracle/client/cli"
-	oracletestutil "github.com/irisnet/irismod/modules/oracle/client/testutil"
-	oracletypes "github.com/irisnet/irismod/modules/oracle/types"
-	servicecli "github.com/irisnet/irismod/modules/service/client/cli"
-	servicetestutil "github.com/irisnet/irismod/modules/service/client/testutil"
-	servicetypes "github.com/irisnet/irismod/modules/service/types"
-	"github.com/irisnet/irismod/simapp"
+	oraclecli "github.com/furynet/furymod/modules/oracle/client/cli"
+	oracletestutil "github.com/furynet/furymod/modules/oracle/client/testutil"
+	oracletypes "github.com/furynet/furymod/modules/oracle/types"
+	servicecli "github.com/furynet/furymod/modules/service/client/cli"
+	servicetestutil "github.com/furynet/furymod/modules/service/client/testutil"
+	servicetypes "github.com/furynet/furymod/modules/service/types"
+	"github.com/furynet/furymod/simapp"
 )
 
 type IntegrationTestSuite struct {

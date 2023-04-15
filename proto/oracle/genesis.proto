@@ -1,11 +1,11 @@
 syntax = "proto3";
-package irismod.oracle;
+package furymod.oracle;
 
 import "oracle/oracle.proto";
 import "service/service.proto";
 import "gogoproto/gogo.proto";
 
-option go_package = "github.com/irisnet/irismod/modules/oracle/types";
+option go_package = "github.com/furynet/furymod/modules/oracle/types";
 
 // GenesisState defines the oracle module's genesis state
 message GenesisState {
@@ -14,6 +14,6 @@ message GenesisState {
 
 message FeedEntry {
   Feed feed = 1 [ (gogoproto.nullable) = false ];
-  irismod.service.RequestContextState state = 2;
+  furymod.service.RequestContextState state = 2;
   repeated FeedValue values = 3 [ (gogoproto.nullable) = false ];
 }

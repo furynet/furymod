@@ -9,10 +9,10 @@ import (
 	storetypes "github.com/cosmos/cosmos-sdk/store/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/irisnet/irismod/modules/nft/types"
+	"github.com/furynet/furymod/modules/nft/types"
 )
 
-// Migrate is used to migrate nft data from irismod/nft to x/nft
+// Migrate is used to migrate nft data from furymod/nft to x/nft
 func Migrate(ctx sdk.Context,
 	storeKey storetypes.StoreKey,
 	cdc codec.Codec,

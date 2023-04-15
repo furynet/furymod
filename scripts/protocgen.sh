@@ -17,5 +17,5 @@ done
 cd ..
 
 # move proto files to the right places
-cp -r github.com/irisnet/irismod/* ./
+cp -r github.com/furynet/furymod/* ./
 rm -rf github.com

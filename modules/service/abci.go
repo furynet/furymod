@@ -8,19 +8,19 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/irisnet/irismod/modules/service/keeper"
-	"github.com/irisnet/irismod/modules/service/types"
+	"github.com/furynet/furymod/modules/service/keeper"
+	"github.com/furynet/furymod/modules/service/types"
 )
 
 // BeginBlocker handles block beginning logic for service
 func BeginBlocker(ctx sdk.Context, k keeper.Keeper) {
-	ctx = ctx.WithLogger(ctx.Logger().With("handler", "endBlock").With("module", "irismod/service"))
+	ctx = ctx.WithLogger(ctx.Logger().With("handler", "endBlock").With("module", "furymod/service"))
 	k.SetInternalIndex(ctx, 0)
 }
 
 // EndBlocker handles block ending logic for service
 func EndBlocker(ctx sdk.Context, k keeper.Keeper) {
-	ctx = ctx.WithLogger(ctx.Logger().With("handler", "endBlock").With("module", "irismod/service"))
+	ctx = ctx.WithLogger(ctx.Logger().With("handler", "endBlock").With("module", "furymod/service"))
 
 	// handler for the active request on expired
 	expiredRequestHandler := func(requestID tmbytes.HexBytes, request types.Request) {

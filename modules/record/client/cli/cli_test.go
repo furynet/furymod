@@ -12,10 +12,10 @@ import (
 	"github.com/cosmos/cosmos-sdk/testutil/network"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	recordcli "github.com/irisnet/irismod/modules/record/client/cli"
-	recordtestutil "github.com/irisnet/irismod/modules/record/client/testutil"
-	recordtypes "github.com/irisnet/irismod/modules/record/types"
-	"github.com/irisnet/irismod/simapp"
+	recordcli "github.com/furynet/furymod/modules/record/client/cli"
+	recordtestutil "github.com/furynet/furymod/modules/record/client/testutil"
+	recordtypes "github.com/furynet/furymod/modules/record/types"
+	"github.com/furynet/furymod/simapp"
 )
 
 type IntegrationTestSuite struct {

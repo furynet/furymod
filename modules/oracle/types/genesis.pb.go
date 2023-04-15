@@ -7,7 +7,7 @@ import (
 	fmt "fmt"
 	_ "github.com/gogo/protobuf/gogoproto"
 	proto "github.com/gogo/protobuf/proto"
-	types "github.com/irisnet/irismod/modules/service/types"
+	types "github.com/furynet/furymod/modules/service/types"
 	io "io"
 	math "math"
 	math_bits "math/bits"
@@ -71,7 +71,7 @@ func (m *GenesisState) GetEntries() []FeedEntry {
 
 type FeedEntry struct {
 	Feed   Feed                      `protobuf:"bytes,1,opt,name=feed,proto3" json:"feed"`
-	State  types.RequestContextState `protobuf:"varint,2,opt,name=state,proto3,enum=irismod.service.RequestContextState" json:"state,omitempty"`
+	State  types.RequestContextState `protobuf:"varint,2,opt,name=state,proto3,enum=furymod.service.RequestContextState" json:"state,omitempty"`
 	Values []FeedValue               `protobuf:"bytes,3,rep,name=values,proto3" json:"values"`
 }
 
@@ -130,8 +130,8 @@ func (m *FeedEntry) GetValues() []FeedValue {
 }
 
 func init() {
-	proto.RegisterType((*GenesisState)(nil), "irismod.oracle.GenesisState")
-	proto.RegisterType((*FeedEntry)(nil), "irismod.oracle.FeedEntry")
+	proto.RegisterType((*GenesisState)(nil), "furymod.oracle.GenesisState")
+	proto.RegisterType((*FeedEntry)(nil), "furymod.oracle.FeedEntry")
 }
 
 func init() { proto.RegisterFile("oracle/genesis.proto", fileDescriptor_ce0b3a2b4a184fc3) }

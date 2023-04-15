@@ -16,10 +16,10 @@ import (
 	"github.com/cosmos/cosmos-sdk/testutil/network"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	tokencli "github.com/irisnet/irismod/modules/token/client/cli"
-	tokentestutil "github.com/irisnet/irismod/modules/token/client/testutil"
-	tokentypes "github.com/irisnet/irismod/modules/token/types"
-	"github.com/irisnet/irismod/simapp"
+	tokencli "github.com/furynet/furymod/modules/token/client/cli"
+	tokentestutil "github.com/furynet/furymod/modules/token/client/testutil"
+	tokentypes "github.com/furynet/furymod/modules/token/types"
+	"github.com/furynet/furymod/simapp"
 )
 
 type IntegrationTestSuite struct {

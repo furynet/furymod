@@ -400,13 +400,13 @@ func RegisterQueryHandlerClient(ctx context.Context, mux *runtime.ServeMux, clie
 }
 
 var (
-	pattern_Query_HTLC_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3}, []string{"irismod", "htlc", "htlcs", "id"}, "", runtime.AssumeColonVerbOpt(false)))
+	pattern_Query_HTLC_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3}, []string{"furymod", "htlc", "htlcs", "id"}, "", runtime.AssumeColonVerbOpt(false)))
 
-	pattern_Query_AssetSupply_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3}, []string{"irismod", "htlc", "supplies", "denom"}, "", runtime.AssumeColonVerbOpt(false)))
+	pattern_Query_AssetSupply_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3}, []string{"furymod", "htlc", "supplies", "denom"}, "", runtime.AssumeColonVerbOpt(false)))
 
-	pattern_Query_AssetSupplies_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2}, []string{"irismod", "htlc", "supplies"}, "", runtime.AssumeColonVerbOpt(false)))
+	pattern_Query_AssetSupplies_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2}, []string{"furymod", "htlc", "supplies"}, "", runtime.AssumeColonVerbOpt(false)))
 
-	pattern_Query_Params_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2}, []string{"irismod", "htlc", "params"}, "", runtime.AssumeColonVerbOpt(false)))
+	pattern_Query_Params_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2}, []string{"furymod", "htlc", "params"}, "", runtime.AssumeColonVerbOpt(false)))
 )
 
 var (

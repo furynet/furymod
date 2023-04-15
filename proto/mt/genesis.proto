@@ -1,10 +1,10 @@
 syntax = "proto3";
-package irismod.mt;
+package furymod.mt;
 
 import "gogoproto/gogo.proto";
 import "mt/mt.proto";
 
-option go_package = "github.com/irisnet/irismod/modules/mt/types";
+option go_package = "github.com/furynet/furymod/modules/mt/types";
 
 // GenesisState defines the MT module's genesis state
 message GenesisState {

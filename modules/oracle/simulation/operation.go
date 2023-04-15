@@ -12,9 +12,9 @@ import (
 	simtypes "github.com/cosmos/cosmos-sdk/types/simulation"
 	"github.com/cosmos/cosmos-sdk/x/simulation"
 
-	"github.com/irisnet/irismod/modules/oracle/keeper"
-	"github.com/irisnet/irismod/modules/oracle/types"
-	irishelpers "github.com/irisnet/irismod/simapp/helpers"
+	"github.com/furynet/furymod/modules/oracle/keeper"
+	"github.com/furynet/furymod/modules/oracle/types"
+	furyhelpers "github.com/furynet/furymod/simapp/helpers"
 )
 
 const (
@@ -128,7 +128,7 @@ func SimulateCreateFeed(k keeper.Keeper, ak types.AccountKeeper, bk types.BankKe
 		}
 
 		txConfig := simappparams.MakeTestEncodingConfig().TxConfig
-		tx, err := irishelpers.GenTx(
+		tx, err := furyhelpers.GenTx(
 			r,
 			txConfig,
 			[]sdk.Msg{msg},
@@ -311,7 +311,7 @@ func SimulateEditFeed(k keeper.Keeper, ak types.AccountKeeper, bk types.BankKeep
 		}
 
 		txConfig := simappparams.MakeTestEncodingConfig().TxConfig
-		tx, err := irishelpers.GenTx(
+		tx, err := furyhelpers.GenTx(
 			r,
 			txConfig,
 			[]sdk.Msg{msg},

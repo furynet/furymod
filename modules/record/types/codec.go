@@ -20,7 +20,7 @@ func init() {
 }
 
 func RegisterLegacyAminoCodec(cdc *codec.LegacyAmino) {
-	cdc.RegisterConcrete(&MsgCreateRecord{}, "irismod/record/MsgCreateRecord", nil)
+	cdc.RegisterConcrete(&MsgCreateRecord{}, "furymod/record/MsgCreateRecord", nil)
 }
 
 // RegisterInterfaces registers the interface

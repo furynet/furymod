@@ -1,9 +1,9 @@
 syntax = "proto3";
-package irismod.nft;
+package furymod.nft;
 
 import "gogoproto/gogo.proto";
 
-option go_package = "github.com/irisnet/irismod/modules/nft/types";
+option go_package = "github.com/furynet/furymod/modules/nft/types";
 option (gogoproto.goproto_getters_all) = false;
 
 // Msg defines the nft Msg service.

@@ -105,10 +105,10 @@ type HTLC struct {
 	Secret               string                                   `protobuf:"bytes,8,opt,name=secret,proto3" json:"secret,omitempty"`
 	Timestamp            uint64                                   `protobuf:"varint,9,opt,name=timestamp,proto3" json:"timestamp,omitempty"`
 	ExpirationHeight     uint64                                   `protobuf:"varint,10,opt,name=expiration_height,json=expirationHeight,proto3" json:"expiration_height,omitempty" yaml:"expiration_height"`
-	State                HTLCState                                `protobuf:"varint,11,opt,name=state,proto3,enum=irismod.htlc.HTLCState" json:"state,omitempty"`
+	State                HTLCState                                `protobuf:"varint,11,opt,name=state,proto3,enum=furymod.htlc.HTLCState" json:"state,omitempty"`
 	ClosedBlock          uint64                                   `protobuf:"varint,12,opt,name=closed_block,json=closedBlock,proto3" json:"closed_block,omitempty" yaml:"closed_block"`
 	Transfer             bool                                     `protobuf:"varint,13,opt,name=transfer,proto3" json:"transfer,omitempty"`
-	Direction            SwapDirection                            `protobuf:"varint,14,opt,name=direction,proto3,enum=irismod.htlc.SwapDirection" json:"direction,omitempty"`
+	Direction            SwapDirection                            `protobuf:"varint,14,opt,name=direction,proto3,enum=furymod.htlc.SwapDirection" json:"direction,omitempty"`
 }
 
 func (m *HTLC) Reset()         { *m = HTLC{} }
@@ -306,13 +306,13 @@ func (m *SupplyLimit) XXX_DiscardUnknown() {
 var xxx_messageInfo_SupplyLimit proto.InternalMessageInfo
 
 func init() {
-	proto.RegisterEnum("irismod.htlc.HTLCState", HTLCState_name, HTLCState_value)
-	proto.RegisterEnum("irismod.htlc.SwapDirection", SwapDirection_name, SwapDirection_value)
-	proto.RegisterType((*HTLC)(nil), "irismod.htlc.HTLC")
-	proto.RegisterType((*AssetSupply)(nil), "irismod.htlc.AssetSupply")
-	proto.RegisterType((*Params)(nil), "irismod.htlc.Params")
-	proto.RegisterType((*AssetParam)(nil), "irismod.htlc.AssetParam")
-	proto.RegisterType((*SupplyLimit)(nil), "irismod.htlc.SupplyLimit")
+	proto.RegisterEnum("furymod.htlc.HTLCState", HTLCState_name, HTLCState_value)
+	proto.RegisterEnum("furymod.htlc.SwapDirection", SwapDirection_name, SwapDirection_value)
+	proto.RegisterType((*HTLC)(nil), "furymod.htlc.HTLC")
+	proto.RegisterType((*AssetSupply)(nil), "furymod.htlc.AssetSupply")
+	proto.RegisterType((*Params)(nil), "furymod.htlc.Params")
+	proto.RegisterType((*AssetParam)(nil), "furymod.htlc.AssetParam")
+	proto.RegisterType((*SupplyLimit)(nil), "furymod.htlc.SupplyLimit")
 }
 
 func init() { proto.RegisterFile("htlc/htlc.proto", fileDescriptor_c03699801a204f8b) }

@@ -192,10 +192,10 @@ func (m *MsgClaimHTLCResponse) XXX_DiscardUnknown() {
 var xxx_messageInfo_MsgClaimHTLCResponse proto.InternalMessageInfo
 
 func init() {
-	proto.RegisterType((*MsgCreateHTLC)(nil), "irismod.htlc.MsgCreateHTLC")
-	proto.RegisterType((*MsgCreateHTLCResponse)(nil), "irismod.htlc.MsgCreateHTLCResponse")
-	proto.RegisterType((*MsgClaimHTLC)(nil), "irismod.htlc.MsgClaimHTLC")
-	proto.RegisterType((*MsgClaimHTLCResponse)(nil), "irismod.htlc.MsgClaimHTLCResponse")
+	proto.RegisterType((*MsgCreateHTLC)(nil), "furymod.htlc.MsgCreateHTLC")
+	proto.RegisterType((*MsgCreateHTLCResponse)(nil), "furymod.htlc.MsgCreateHTLCResponse")
+	proto.RegisterType((*MsgClaimHTLC)(nil), "furymod.htlc.MsgClaimHTLC")
+	proto.RegisterType((*MsgClaimHTLCResponse)(nil), "furymod.htlc.MsgClaimHTLCResponse")
 }
 
 func init() { proto.RegisterFile("htlc/tx.proto", fileDescriptor_07729a8273c903af) }
@@ -351,7 +351,7 @@ func NewMsgClient(cc grpc1.ClientConn) MsgClient {
 
 func (c *msgClient) CreateHTLC(ctx context.Context, in *MsgCreateHTLC, opts ...grpc.CallOption) (*MsgCreateHTLCResponse, error) {
 	out := new(MsgCreateHTLCResponse)
-	err := c.cc.Invoke(ctx, "/irismod.htlc.Msg/CreateHTLC", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.htlc.Msg/CreateHTLC", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -360,7 +360,7 @@ func (c *msgClient) CreateHTLC(ctx context.Context, in *MsgCreateHTLC, opts ...g
 
 func (c *msgClient) ClaimHTLC(ctx context.Context, in *MsgClaimHTLC, opts ...grpc.CallOption) (*MsgClaimHTLCResponse, error) {
 	out := new(MsgClaimHTLCResponse)
-	err := c.cc.Invoke(ctx, "/irismod.htlc.Msg/ClaimHTLC", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.htlc.Msg/ClaimHTLC", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -400,7 +400,7 @@ func _Msg_CreateHTLC_Handler(srv interface{}, ctx context.Context, dec func(inte
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.htlc.Msg/CreateHTLC",
+		FullMethod: "/furymod.htlc.Msg/CreateHTLC",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).CreateHTLC(ctx, req.(*MsgCreateHTLC))
@@ -418,7 +418,7 @@ func _Msg_ClaimHTLC_Handler(srv interface{}, ctx context.Context, dec func(inter
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.htlc.Msg/ClaimHTLC",
+		FullMethod: "/furymod.htlc.Msg/ClaimHTLC",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).ClaimHTLC(ctx, req.(*MsgClaimHTLC))
@@ -427,7 +427,7 @@ func _Msg_ClaimHTLC_Handler(srv interface{}, ctx context.Context, dec func(inter
 }
 
 var _Msg_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "irismod.htlc.Msg",
+	ServiceName: "furymod.htlc.Msg",
 	HandlerType: (*MsgServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

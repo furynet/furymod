@@ -101,9 +101,9 @@ func (m *GenesisState) GetRequestContexts() map[string]*RequestContext {
 }
 
 func init() {
-	proto.RegisterType((*GenesisState)(nil), "irismod.service.GenesisState")
-	proto.RegisterMapType((map[string]*RequestContext)(nil), "irismod.service.GenesisState.RequestContextsEntry")
-	proto.RegisterMapType((map[string]string)(nil), "irismod.service.GenesisState.WithdrawAddressesEntry")
+	proto.RegisterType((*GenesisState)(nil), "furymod.service.GenesisState")
+	proto.RegisterMapType((map[string]*RequestContext)(nil), "furymod.service.GenesisState.RequestContextsEntry")
+	proto.RegisterMapType((map[string]string)(nil), "furymod.service.GenesisState.WithdrawAddressesEntry")
 }
 
 func init() { proto.RegisterFile("service/genesis.proto", fileDescriptor_de239081d7e59627) }

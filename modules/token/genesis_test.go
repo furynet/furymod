@@ -10,9 +10,9 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/irisnet/irismod/modules/token"
-	"github.com/irisnet/irismod/modules/token/types"
-	"github.com/irisnet/irismod/simapp"
+	"github.com/furynet/furymod/modules/token"
+	"github.com/furynet/furymod/modules/token/types"
+	"github.com/furynet/furymod/simapp"
 )
 
 func TestExportGenesis(t *testing.T) {

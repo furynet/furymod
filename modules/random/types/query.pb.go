@@ -212,10 +212,10 @@ func (m *QueryRandomRequestQueueResponse) GetRequests() []Request {
 }
 
 func init() {
-	proto.RegisterType((*QueryRandomRequest)(nil), "irismod.random.QueryRandomRequest")
-	proto.RegisterType((*QueryRandomResponse)(nil), "irismod.random.QueryRandomResponse")
-	proto.RegisterType((*QueryRandomRequestQueueRequest)(nil), "irismod.random.QueryRandomRequestQueueRequest")
-	proto.RegisterType((*QueryRandomRequestQueueResponse)(nil), "irismod.random.QueryRandomRequestQueueResponse")
+	proto.RegisterType((*QueryRandomRequest)(nil), "furymod.random.QueryRandomRequest")
+	proto.RegisterType((*QueryRandomResponse)(nil), "furymod.random.QueryRandomResponse")
+	proto.RegisterType((*QueryRandomRequestQueueRequest)(nil), "furymod.random.QueryRandomRequestQueueRequest")
+	proto.RegisterType((*QueryRandomRequestQueueResponse)(nil), "furymod.random.QueryRandomRequestQueueResponse")
 }
 
 func init() { proto.RegisterFile("random/query.proto", fileDescriptor_0e7e1fe88061ff84) }
@@ -276,7 +276,7 @@ func NewQueryClient(cc grpc1.ClientConn) QueryClient {
 
 func (c *queryClient) Random(ctx context.Context, in *QueryRandomRequest, opts ...grpc.CallOption) (*QueryRandomResponse, error) {
 	out := new(QueryRandomResponse)
-	err := c.cc.Invoke(ctx, "/irismod.random.Query/Random", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.random.Query/Random", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -285,7 +285,7 @@ func (c *queryClient) Random(ctx context.Context, in *QueryRandomRequest, opts .
 
 func (c *queryClient) RandomRequestQueue(ctx context.Context, in *QueryRandomRequestQueueRequest, opts ...grpc.CallOption) (*QueryRandomRequestQueueResponse, error) {
 	out := new(QueryRandomRequestQueueResponse)
-	err := c.cc.Invoke(ctx, "/irismod.random.Query/RandomRequestQueue", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.random.Query/RandomRequestQueue", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -325,7 +325,7 @@ func _Query_Random_Handler(srv interface{}, ctx context.Context, dec func(interf
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.random.Query/Random",
+		FullMethod: "/furymod.random.Query/Random",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).Random(ctx, req.(*QueryRandomRequest))
@@ -343,7 +343,7 @@ func _Query_RandomRequestQueue_Handler(srv interface{}, ctx context.Context, dec
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.random.Query/RandomRequestQueue",
+		FullMethod: "/furymod.random.Query/RandomRequestQueue",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).RandomRequestQueue(ctx, req.(*QueryRandomRequestQueueRequest))
@@ -352,7 +352,7 @@ func _Query_RandomRequestQueue_Handler(srv interface{}, ctx context.Context, dec
 }
 
 var _Query_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "irismod.random.Query",
+	ServiceName: "furymod.random.Query",
 	HandlerType: (*QueryServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

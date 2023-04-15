@@ -1469,31 +1469,31 @@ func RegisterQueryHandlerClient(ctx context.Context, mux *runtime.ServeMux, clie
 }
 
 var (
-	pattern_Query_Definition_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3}, []string{"irismod", "service", "definitions", "service_name"}, "", runtime.AssumeColonVerbOpt(false)))
+	pattern_Query_Definition_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3}, []string{"furymod", "service", "definitions", "service_name"}, "", runtime.AssumeColonVerbOpt(false)))
 
-	pattern_Query_Binding_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3, 1, 0, 4, 1, 5, 4}, []string{"irismod", "service", "bindings", "service_name", "provider"}, "", runtime.AssumeColonVerbOpt(false)))
+	pattern_Query_Binding_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3, 1, 0, 4, 1, 5, 4}, []string{"furymod", "service", "bindings", "service_name", "provider"}, "", runtime.AssumeColonVerbOpt(false)))
 
-	pattern_Query_Bindings_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3}, []string{"irismod", "service", "bindings", "service_name"}, "", runtime.AssumeColonVerbOpt(false)))
+	pattern_Query_Bindings_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3}, []string{"furymod", "service", "bindings", "service_name"}, "", runtime.AssumeColonVerbOpt(false)))
 
-	pattern_Query_WithdrawAddress_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3, 2, 4}, []string{"irismod", "service", "owners", "owner", "withdraw-address"}, "", runtime.AssumeColonVerbOpt(false)))
+	pattern_Query_WithdrawAddress_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3, 2, 4}, []string{"furymod", "service", "owners", "owner", "withdraw-address"}, "", runtime.AssumeColonVerbOpt(false)))
 
-	pattern_Query_RequestContext_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3}, []string{"irismod", "service", "contexts", "request_context_id"}, "", runtime.AssumeColonVerbOpt(false)))
+	pattern_Query_RequestContext_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3}, []string{"furymod", "service", "contexts", "request_context_id"}, "", runtime.AssumeColonVerbOpt(false)))
 
-	pattern_Query_Request_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3}, []string{"irismod", "service", "requests", "request_id"}, "", runtime.AssumeColonVerbOpt(false)))
+	pattern_Query_Request_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3}, []string{"furymod", "service", "requests", "request_id"}, "", runtime.AssumeColonVerbOpt(false)))
 
-	pattern_Query_Requests_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3, 1, 0, 4, 1, 5, 4}, []string{"irismod", "service", "requests", "service_name", "provider"}, "", runtime.AssumeColonVerbOpt(false)))
+	pattern_Query_Requests_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3, 1, 0, 4, 1, 5, 4}, []string{"furymod", "service", "requests", "service_name", "provider"}, "", runtime.AssumeColonVerbOpt(false)))
 
-	pattern_Query_RequestsByReqCtx_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3, 1, 0, 4, 1, 5, 4}, []string{"irismod", "service", "requests", "request_context_id", "batch_counter"}, "", runtime.AssumeColonVerbOpt(false)))
+	pattern_Query_RequestsByReqCtx_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3, 1, 0, 4, 1, 5, 4}, []string{"furymod", "service", "requests", "request_context_id", "batch_counter"}, "", runtime.AssumeColonVerbOpt(false)))
 
-	pattern_Query_Response_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3}, []string{"irismod", "service", "responses", "request_id"}, "", runtime.AssumeColonVerbOpt(false)))
+	pattern_Query_Response_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3}, []string{"furymod", "service", "responses", "request_id"}, "", runtime.AssumeColonVerbOpt(false)))
 
-	pattern_Query_Responses_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3, 1, 0, 4, 1, 5, 4}, []string{"irismod", "service", "responses", "request_context_id", "batch_counter"}, "", runtime.AssumeColonVerbOpt(false)))
+	pattern_Query_Responses_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3, 1, 0, 4, 1, 5, 4}, []string{"furymod", "service", "responses", "request_context_id", "batch_counter"}, "", runtime.AssumeColonVerbOpt(false)))
 
-	pattern_Query_EarnedFees_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3}, []string{"irismod", "service", "fees", "provider"}, "", runtime.AssumeColonVerbOpt(false)))
+	pattern_Query_EarnedFees_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3}, []string{"furymod", "service", "fees", "provider"}, "", runtime.AssumeColonVerbOpt(false)))
 
-	pattern_Query_Schema_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3}, []string{"irismod", "service", "schemas", "schema_name"}, "", runtime.AssumeColonVerbOpt(false)))
+	pattern_Query_Schema_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3}, []string{"furymod", "service", "schemas", "schema_name"}, "", runtime.AssumeColonVerbOpt(false)))
 
-	pattern_Query_Params_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2}, []string{"irismod", "service", "params"}, "", runtime.AssumeColonVerbOpt(false)))
+	pattern_Query_Params_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2}, []string{"furymod", "service", "params"}, "", runtime.AssumeColonVerbOpt(false)))
 )
 
 var (

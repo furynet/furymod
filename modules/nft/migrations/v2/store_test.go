@@ -16,10 +16,10 @@ import (
 	storetypes "github.com/cosmos/cosmos-sdk/store/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/irisnet/irismod/modules/nft/keeper"
-	v2 "github.com/irisnet/irismod/modules/nft/migrations/v2"
-	"github.com/irisnet/irismod/modules/nft/types"
-	"github.com/irisnet/irismod/simapp"
+	"github.com/furynet/furymod/modules/nft/keeper"
+	v2 "github.com/furynet/furymod/modules/nft/migrations/v2"
+	"github.com/furynet/furymod/modules/nft/types"
+	"github.com/furynet/furymod/simapp"
 )
 
 func TestMigrate(t *testing.T) {

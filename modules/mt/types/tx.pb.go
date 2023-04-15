@@ -500,18 +500,18 @@ func (m *MsgBurnMTResponse) XXX_DiscardUnknown() {
 var xxx_messageInfo_MsgBurnMTResponse proto.InternalMessageInfo
 
 func init() {
-	proto.RegisterType((*MsgIssueDenom)(nil), "irismod.mt.MsgIssueDenom")
-	proto.RegisterType((*MsgIssueDenomResponse)(nil), "irismod.mt.MsgIssueDenomResponse")
-	proto.RegisterType((*MsgTransferDenom)(nil), "irismod.mt.MsgTransferDenom")
-	proto.RegisterType((*MsgTransferDenomResponse)(nil), "irismod.mt.MsgTransferDenomResponse")
-	proto.RegisterType((*MsgMintMT)(nil), "irismod.mt.MsgMintMT")
-	proto.RegisterType((*MsgMintMTResponse)(nil), "irismod.mt.MsgMintMTResponse")
-	proto.RegisterType((*MsgEditMT)(nil), "irismod.mt.MsgEditMT")
-	proto.RegisterType((*MsgEditMTResponse)(nil), "irismod.mt.MsgEditMTResponse")
-	proto.RegisterType((*MsgTransferMT)(nil), "irismod.mt.MsgTransferMT")
-	proto.RegisterType((*MsgTransferMTResponse)(nil), "irismod.mt.MsgTransferMTResponse")
-	proto.RegisterType((*MsgBurnMT)(nil), "irismod.mt.MsgBurnMT")
-	proto.RegisterType((*MsgBurnMTResponse)(nil), "irismod.mt.MsgBurnMTResponse")
+	proto.RegisterType((*MsgIssueDenom)(nil), "furymod.mt.MsgIssueDenom")
+	proto.RegisterType((*MsgIssueDenomResponse)(nil), "furymod.mt.MsgIssueDenomResponse")
+	proto.RegisterType((*MsgTransferDenom)(nil), "furymod.mt.MsgTransferDenom")
+	proto.RegisterType((*MsgTransferDenomResponse)(nil), "furymod.mt.MsgTransferDenomResponse")
+	proto.RegisterType((*MsgMintMT)(nil), "furymod.mt.MsgMintMT")
+	proto.RegisterType((*MsgMintMTResponse)(nil), "furymod.mt.MsgMintMTResponse")
+	proto.RegisterType((*MsgEditMT)(nil), "furymod.mt.MsgEditMT")
+	proto.RegisterType((*MsgEditMTResponse)(nil), "furymod.mt.MsgEditMTResponse")
+	proto.RegisterType((*MsgTransferMT)(nil), "furymod.mt.MsgTransferMT")
+	proto.RegisterType((*MsgTransferMTResponse)(nil), "furymod.mt.MsgTransferMTResponse")
+	proto.RegisterType((*MsgBurnMT)(nil), "furymod.mt.MsgBurnMT")
+	proto.RegisterType((*MsgBurnMTResponse)(nil), "furymod.mt.MsgBurnMTResponse")
 }
 
 func init() { proto.RegisterFile("mt/tx.proto", fileDescriptor_9ae9cb7caa6d098a) }
@@ -791,7 +791,7 @@ func NewMsgClient(cc grpc1.ClientConn) MsgClient {
 
 func (c *msgClient) IssueDenom(ctx context.Context, in *MsgIssueDenom, opts ...grpc.CallOption) (*MsgIssueDenomResponse, error) {
 	out := new(MsgIssueDenomResponse)
-	err := c.cc.Invoke(ctx, "/irismod.mt.Msg/IssueDenom", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.mt.Msg/IssueDenom", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -800,7 +800,7 @@ func (c *msgClient) IssueDenom(ctx context.Context, in *MsgIssueDenom, opts ...g
 
 func (c *msgClient) TransferDenom(ctx context.Context, in *MsgTransferDenom, opts ...grpc.CallOption) (*MsgTransferDenomResponse, error) {
 	out := new(MsgTransferDenomResponse)
-	err := c.cc.Invoke(ctx, "/irismod.mt.Msg/TransferDenom", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.mt.Msg/TransferDenom", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -809,7 +809,7 @@ func (c *msgClient) TransferDenom(ctx context.Context, in *MsgTransferDenom, opt
 
 func (c *msgClient) MintMT(ctx context.Context, in *MsgMintMT, opts ...grpc.CallOption) (*MsgMintMTResponse, error) {
 	out := new(MsgMintMTResponse)
-	err := c.cc.Invoke(ctx, "/irismod.mt.Msg/MintMT", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.mt.Msg/MintMT", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -818,7 +818,7 @@ func (c *msgClient) MintMT(ctx context.Context, in *MsgMintMT, opts ...grpc.Call
 
 func (c *msgClient) EditMT(ctx context.Context, in *MsgEditMT, opts ...grpc.CallOption) (*MsgEditMTResponse, error) {
 	out := new(MsgEditMTResponse)
-	err := c.cc.Invoke(ctx, "/irismod.mt.Msg/EditMT", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.mt.Msg/EditMT", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -827,7 +827,7 @@ func (c *msgClient) EditMT(ctx context.Context, in *MsgEditMT, opts ...grpc.Call
 
 func (c *msgClient) TransferMT(ctx context.Context, in *MsgTransferMT, opts ...grpc.CallOption) (*MsgTransferMTResponse, error) {
 	out := new(MsgTransferMTResponse)
-	err := c.cc.Invoke(ctx, "/irismod.mt.Msg/TransferMT", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.mt.Msg/TransferMT", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -836,7 +836,7 @@ func (c *msgClient) TransferMT(ctx context.Context, in *MsgTransferMT, opts ...g
 
 func (c *msgClient) BurnMT(ctx context.Context, in *MsgBurnMT, opts ...grpc.CallOption) (*MsgBurnMTResponse, error) {
 	out := new(MsgBurnMTResponse)
-	err := c.cc.Invoke(ctx, "/irismod.mt.Msg/BurnMT", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.mt.Msg/BurnMT", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -897,7 +897,7 @@ func _Msg_IssueDenom_Handler(srv interface{}, ctx context.Context, dec func(inte
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.mt.Msg/IssueDenom",
+		FullMethod: "/furymod.mt.Msg/IssueDenom",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).IssueDenom(ctx, req.(*MsgIssueDenom))
@@ -915,7 +915,7 @@ func _Msg_TransferDenom_Handler(srv interface{}, ctx context.Context, dec func(i
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.mt.Msg/TransferDenom",
+		FullMethod: "/furymod.mt.Msg/TransferDenom",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).TransferDenom(ctx, req.(*MsgTransferDenom))
@@ -933,7 +933,7 @@ func _Msg_MintMT_Handler(srv interface{}, ctx context.Context, dec func(interfac
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.mt.Msg/MintMT",
+		FullMethod: "/furymod.mt.Msg/MintMT",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).MintMT(ctx, req.(*MsgMintMT))
@@ -951,7 +951,7 @@ func _Msg_EditMT_Handler(srv interface{}, ctx context.Context, dec func(interfac
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.mt.Msg/EditMT",
+		FullMethod: "/furymod.mt.Msg/EditMT",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).EditMT(ctx, req.(*MsgEditMT))
@@ -969,7 +969,7 @@ func _Msg_TransferMT_Handler(srv interface{}, ctx context.Context, dec func(inte
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.mt.Msg/TransferMT",
+		FullMethod: "/furymod.mt.Msg/TransferMT",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).TransferMT(ctx, req.(*MsgTransferMT))
@@ -987,7 +987,7 @@ func _Msg_BurnMT_Handler(srv interface{}, ctx context.Context, dec func(interfac
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.mt.Msg/BurnMT",
+		FullMethod: "/furymod.mt.Msg/BurnMT",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).BurnMT(ctx, req.(*MsgBurnMT))
@@ -996,7 +996,7 @@ func _Msg_BurnMT_Handler(srv interface{}, ctx context.Context, dec func(interfac
 }
 
 var _Msg_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "irismod.mt.Msg",
+	ServiceName: "furymod.mt.Msg",
 	HandlerType: (*MsgServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

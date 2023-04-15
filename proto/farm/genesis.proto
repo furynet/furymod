@@ -1,10 +1,10 @@
 syntax = "proto3";
-package irismod.farm;
+package furymod.farm;
 
 import "gogoproto/gogo.proto";
 import "farm/farm.proto";
 
-option go_package = "github.com/irisnet/irismod/modules/farm/types";
+option go_package = "github.com/furynet/furymod/modules/farm/types";
 
 message GenesisState {
   Params params = 1 [ (gogoproto.nullable) = false ];

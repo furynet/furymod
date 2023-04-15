@@ -191,8 +191,8 @@ type RequestContext struct {
 	BatchResponseCount     uint32                                   `protobuf:"varint,13,opt,name=batch_response_count,json=batchResponseCount,proto3" json:"batch_response_count,omitempty" yaml:"batch_response_count"`
 	BatchResponseThreshold uint32                                   `protobuf:"varint,14,opt,name=batch_response_threshold,json=batchResponseThreshold,proto3" json:"batch_response_threshold,omitempty" yaml:"batch_response_threshold"`
 	ResponseThreshold      uint32                                   `protobuf:"varint,15,opt,name=response_threshold,json=responseThreshold,proto3" json:"response_threshold,omitempty" yaml:"response_threshold"`
-	BatchState             RequestContextBatchState                 `protobuf:"varint,16,opt,name=batch_state,json=batchState,proto3,enum=irismod.service.RequestContextBatchState" json:"batch_state,omitempty" yaml:"batch_state"`
-	State                  RequestContextState                      `protobuf:"varint,17,opt,name=state,proto3,enum=irismod.service.RequestContextState" json:"state,omitempty"`
+	BatchState             RequestContextBatchState                 `protobuf:"varint,16,opt,name=batch_state,json=batchState,proto3,enum=furymod.service.RequestContextBatchState" json:"batch_state,omitempty" yaml:"batch_state"`
+	State                  RequestContextState                      `protobuf:"varint,17,opt,name=state,proto3,enum=furymod.service.RequestContextState" json:"state,omitempty"`
 }
 
 func (m *RequestContext) Reset()         { *m = RequestContext{} }
@@ -527,18 +527,18 @@ func (m *Params) XXX_DiscardUnknown() {
 var xxx_messageInfo_Params proto.InternalMessageInfo
 
 func init() {
-	proto.RegisterEnum("irismod.service.RequestContextBatchState", RequestContextBatchState_name, RequestContextBatchState_value)
-	proto.RegisterEnum("irismod.service.RequestContextState", RequestContextState_name, RequestContextState_value)
-	proto.RegisterType((*ServiceDefinition)(nil), "irismod.service.ServiceDefinition")
-	proto.RegisterType((*ServiceBinding)(nil), "irismod.service.ServiceBinding")
-	proto.RegisterType((*RequestContext)(nil), "irismod.service.RequestContext")
-	proto.RegisterType((*Request)(nil), "irismod.service.Request")
-	proto.RegisterType((*CompactRequest)(nil), "irismod.service.CompactRequest")
-	proto.RegisterType((*Response)(nil), "irismod.service.Response")
-	proto.RegisterType((*Pricing)(nil), "irismod.service.Pricing")
-	proto.RegisterType((*PromotionByTime)(nil), "irismod.service.PromotionByTime")
-	proto.RegisterType((*PromotionByVolume)(nil), "irismod.service.PromotionByVolume")
-	proto.RegisterType((*Params)(nil), "irismod.service.Params")
+	proto.RegisterEnum("furymod.service.RequestContextBatchState", RequestContextBatchState_name, RequestContextBatchState_value)
+	proto.RegisterEnum("furymod.service.RequestContextState", RequestContextState_name, RequestContextState_value)
+	proto.RegisterType((*ServiceDefinition)(nil), "furymod.service.ServiceDefinition")
+	proto.RegisterType((*ServiceBinding)(nil), "furymod.service.ServiceBinding")
+	proto.RegisterType((*RequestContext)(nil), "furymod.service.RequestContext")
+	proto.RegisterType((*Request)(nil), "furymod.service.Request")
+	proto.RegisterType((*CompactRequest)(nil), "furymod.service.CompactRequest")
+	proto.RegisterType((*Response)(nil), "furymod.service.Response")
+	proto.RegisterType((*Pricing)(nil), "furymod.service.Pricing")
+	proto.RegisterType((*PromotionByTime)(nil), "furymod.service.PromotionByTime")
+	proto.RegisterType((*PromotionByVolume)(nil), "furymod.service.PromotionByVolume")
+	proto.RegisterType((*Params)(nil), "furymod.service.Params")
 }
 
 func init() { proto.RegisterFile("service/service.proto", fileDescriptor_e51e679f9ae460e2) }

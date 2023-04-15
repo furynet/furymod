@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/irisnet/irismod/modules/htlc"
-	"github.com/irisnet/irismod/modules/oracle"
-	"github.com/irisnet/irismod/modules/random"
-	"github.com/irisnet/irismod/modules/service"
+	"github.com/furynet/furymod/modules/htlc"
+	"github.com/furynet/furymod/modules/oracle"
+	"github.com/furynet/furymod/modules/random"
+	"github.com/furynet/furymod/modules/service"
 	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
 
 	servertypes "github.com/cosmos/cosmos-sdk/server/types"

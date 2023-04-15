@@ -12,13 +12,13 @@ import (
 	"github.com/cosmos/cosmos-sdk/testutil/rest"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	oraclecli "github.com/irisnet/irismod/modules/oracle/client/cli"
-	oracletestutil "github.com/irisnet/irismod/modules/oracle/client/testutil"
-	oracletypes "github.com/irisnet/irismod/modules/oracle/types"
-	servicecli "github.com/irisnet/irismod/modules/service/client/cli"
-	servicetestutil "github.com/irisnet/irismod/modules/service/client/testutil"
-	servicetypes "github.com/irisnet/irismod/modules/service/types"
-	"github.com/irisnet/irismod/simapp"
+	oraclecli "github.com/furynet/furymod/modules/oracle/client/cli"
+	oracletestutil "github.com/furynet/furymod/modules/oracle/client/testutil"
+	oracletypes "github.com/furynet/furymod/modules/oracle/types"
+	servicecli "github.com/furynet/furymod/modules/service/client/cli"
+	servicetestutil "github.com/furynet/furymod/modules/service/client/testutil"
+	servicetypes "github.com/furynet/furymod/modules/service/types"
+	"github.com/furynet/furymod/simapp"
 )
 
 type IntegrationTestSuite struct {
@@ -160,7 +160,7 @@ func (s *IntegrationTestSuite) TestOracle() {
 	s.Require().Equal(expectedCode, txResp.Code)
 
 	// ------test GetCmdQueryFeed()-------------
-	url := fmt.Sprintf("%s/irismod/oracle/feeds/%s", baseURL, feedName)
+	url := fmt.Sprintf("%s/furymod/oracle/feeds/%s", baseURL, feedName)
 	resp, err := rest.GetRequest(url)
 	s.Require().NoError(err)
 	respType = proto.Message(&oracletypes.QueryFeedResponse{})
@@ -171,7 +171,7 @@ func (s *IntegrationTestSuite) TestOracle() {
 	s.Require().Equal(servicetypes.PAUSED, feedResp.Feed.State)
 
 	// ------test GetCmdQueryFeeds()-------------
-	url = fmt.Sprintf("%s/irismod/oracle/feeds", baseURL)
+	url = fmt.Sprintf("%s/furymod/oracle/feeds", baseURL)
 	resp, err = rest.GetRequest(url)
 	s.Require().NoError(err)
 	respType = proto.Message(&oracletypes.QueryFeedsResponse{})
@@ -182,7 +182,7 @@ func (s *IntegrationTestSuite) TestOracle() {
 	s.Require().Equal(feedResp.Feed, feedsResp.Feeds[0])
 
 	// ------test GetCmdQueryFeedValue()-------------
-	url = fmt.Sprintf("%s/irismod/oracle/feeds/%s/values", baseURL, feedName)
+	url = fmt.Sprintf("%s/furymod/oracle/feeds/%s/values", baseURL, feedName)
 	resp, err = rest.GetRequest(url)
 	respType = proto.Message(&oracletypes.QueryFeedValueResponse{})
 	s.Require().NoError(err)

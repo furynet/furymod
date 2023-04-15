@@ -16,13 +16,13 @@ import (
 	"github.com/cosmos/cosmos-sdk/testutil/rest"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	randomcli "github.com/irisnet/irismod/modules/random/client/cli"
-	randomtestutil "github.com/irisnet/irismod/modules/random/client/testutil"
-	randomtypes "github.com/irisnet/irismod/modules/random/types"
-	servicecli "github.com/irisnet/irismod/modules/service/client/cli"
-	servicetestutil "github.com/irisnet/irismod/modules/service/client/testutil"
-	servicetypes "github.com/irisnet/irismod/modules/service/types"
-	"github.com/irisnet/irismod/simapp"
+	randomcli "github.com/furynet/furymod/modules/random/client/cli"
+	randomtestutil "github.com/furynet/furymod/modules/random/client/testutil"
+	randomtypes "github.com/furynet/furymod/modules/random/types"
+	servicecli "github.com/furynet/furymod/modules/service/client/cli"
+	servicetestutil "github.com/furynet/furymod/modules/service/client/testutil"
+	servicetypes "github.com/furynet/furymod/modules/service/types"
+	"github.com/furynet/furymod/simapp"
 )
 
 type IntegrationTestSuite struct {
@@ -122,7 +122,7 @@ func (s *IntegrationTestSuite) TestRandom() {
 	requestHeight := gjson.Get(txResp.RawLog, "0.events.1.attributes.2.value").Int()
 
 	// ------test GetCmdQueryRandomRequestQueue()-------------
-	url := fmt.Sprintf("%s/irismod/random/queue", baseURL)
+	url := fmt.Sprintf("%s/furymod/random/queue", baseURL)
 	resp, err := rest.GetRequest(url)
 	respType = proto.Message(&randomtypes.QueryRandomRequestQueueResponse{})
 	s.Require().NoError(err)
@@ -181,7 +181,7 @@ func (s *IntegrationTestSuite) TestRandom() {
 	s.Require().Equal(expectedCode, txResp.Code)
 
 	// ------test GetCmdQueryRandom()-------------
-	url = fmt.Sprintf("%s/irismod/random/randoms/%s", baseURL, requestID)
+	url = fmt.Sprintf("%s/furymod/random/randoms/%s", baseURL, requestID)
 	resp, err = rest.GetRequest(url)
 	respType = proto.Message(&randomtypes.QueryRandomResponse{})
 	s.Require().NoError(err)

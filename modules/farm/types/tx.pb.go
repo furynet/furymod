@@ -564,20 +564,20 @@ func (m *MsgHarvestResponse) XXX_DiscardUnknown() {
 var xxx_messageInfo_MsgHarvestResponse proto.InternalMessageInfo
 
 func init() {
-	proto.RegisterType((*MsgCreatePool)(nil), "irismod.farm.MsgCreatePool")
-	proto.RegisterType((*MsgCreatePoolWithCommunityPool)(nil), "irismod.farm.MsgCreatePoolWithCommunityPool")
-	proto.RegisterType((*MsgDestroyPool)(nil), "irismod.farm.MsgDestroyPool")
-	proto.RegisterType((*MsgAdjustPool)(nil), "irismod.farm.MsgAdjustPool")
-	proto.RegisterType((*MsgStake)(nil), "irismod.farm.MsgStake")
-	proto.RegisterType((*MsgUnstake)(nil), "irismod.farm.MsgUnstake")
-	proto.RegisterType((*MsgHarvest)(nil), "irismod.farm.MsgHarvest")
-	proto.RegisterType((*MsgCreatePoolResponse)(nil), "irismod.farm.MsgCreatePoolResponse")
-	proto.RegisterType((*MsgCreatePoolWithCommunityPoolResponse)(nil), "irismod.farm.MsgCreatePoolWithCommunityPoolResponse")
-	proto.RegisterType((*MsgDestroyPoolResponse)(nil), "irismod.farm.MsgDestroyPoolResponse")
-	proto.RegisterType((*MsgAdjustPoolResponse)(nil), "irismod.farm.MsgAdjustPoolResponse")
-	proto.RegisterType((*MsgStakeResponse)(nil), "irismod.farm.MsgStakeResponse")
-	proto.RegisterType((*MsgUnstakeResponse)(nil), "irismod.farm.MsgUnstakeResponse")
-	proto.RegisterType((*MsgHarvestResponse)(nil), "irismod.farm.MsgHarvestResponse")
+	proto.RegisterType((*MsgCreatePool)(nil), "furymod.farm.MsgCreatePool")
+	proto.RegisterType((*MsgCreatePoolWithCommunityPool)(nil), "furymod.farm.MsgCreatePoolWithCommunityPool")
+	proto.RegisterType((*MsgDestroyPool)(nil), "furymod.farm.MsgDestroyPool")
+	proto.RegisterType((*MsgAdjustPool)(nil), "furymod.farm.MsgAdjustPool")
+	proto.RegisterType((*MsgStake)(nil), "furymod.farm.MsgStake")
+	proto.RegisterType((*MsgUnstake)(nil), "furymod.farm.MsgUnstake")
+	proto.RegisterType((*MsgHarvest)(nil), "furymod.farm.MsgHarvest")
+	proto.RegisterType((*MsgCreatePoolResponse)(nil), "furymod.farm.MsgCreatePoolResponse")
+	proto.RegisterType((*MsgCreatePoolWithCommunityPoolResponse)(nil), "furymod.farm.MsgCreatePoolWithCommunityPoolResponse")
+	proto.RegisterType((*MsgDestroyPoolResponse)(nil), "furymod.farm.MsgDestroyPoolResponse")
+	proto.RegisterType((*MsgAdjustPoolResponse)(nil), "furymod.farm.MsgAdjustPoolResponse")
+	proto.RegisterType((*MsgStakeResponse)(nil), "furymod.farm.MsgStakeResponse")
+	proto.RegisterType((*MsgUnstakeResponse)(nil), "furymod.farm.MsgUnstakeResponse")
+	proto.RegisterType((*MsgHarvestResponse)(nil), "furymod.farm.MsgHarvestResponse")
 }
 
 func init() { proto.RegisterFile("farm/tx.proto", fileDescriptor_6b714bf6ff5a5095) }
@@ -924,7 +924,7 @@ func NewMsgClient(cc grpc1.ClientConn) MsgClient {
 
 func (c *msgClient) CreatePool(ctx context.Context, in *MsgCreatePool, opts ...grpc.CallOption) (*MsgCreatePoolResponse, error) {
 	out := new(MsgCreatePoolResponse)
-	err := c.cc.Invoke(ctx, "/irismod.farm.Msg/CreatePool", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.farm.Msg/CreatePool", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -933,7 +933,7 @@ func (c *msgClient) CreatePool(ctx context.Context, in *MsgCreatePool, opts ...g
 
 func (c *msgClient) CreatePoolWithCommunityPool(ctx context.Context, in *MsgCreatePoolWithCommunityPool, opts ...grpc.CallOption) (*MsgCreatePoolWithCommunityPoolResponse, error) {
 	out := new(MsgCreatePoolWithCommunityPoolResponse)
-	err := c.cc.Invoke(ctx, "/irismod.farm.Msg/CreatePoolWithCommunityPool", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.farm.Msg/CreatePoolWithCommunityPool", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -942,7 +942,7 @@ func (c *msgClient) CreatePoolWithCommunityPool(ctx context.Context, in *MsgCrea
 
 func (c *msgClient) DestroyPool(ctx context.Context, in *MsgDestroyPool, opts ...grpc.CallOption) (*MsgDestroyPoolResponse, error) {
 	out := new(MsgDestroyPoolResponse)
-	err := c.cc.Invoke(ctx, "/irismod.farm.Msg/DestroyPool", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.farm.Msg/DestroyPool", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -951,7 +951,7 @@ func (c *msgClient) DestroyPool(ctx context.Context, in *MsgDestroyPool, opts ..
 
 func (c *msgClient) AdjustPool(ctx context.Context, in *MsgAdjustPool, opts ...grpc.CallOption) (*MsgAdjustPoolResponse, error) {
 	out := new(MsgAdjustPoolResponse)
-	err := c.cc.Invoke(ctx, "/irismod.farm.Msg/AdjustPool", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.farm.Msg/AdjustPool", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -960,7 +960,7 @@ func (c *msgClient) AdjustPool(ctx context.Context, in *MsgAdjustPool, opts ...g
 
 func (c *msgClient) Stake(ctx context.Context, in *MsgStake, opts ...grpc.CallOption) (*MsgStakeResponse, error) {
 	out := new(MsgStakeResponse)
-	err := c.cc.Invoke(ctx, "/irismod.farm.Msg/Stake", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.farm.Msg/Stake", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -969,7 +969,7 @@ func (c *msgClient) Stake(ctx context.Context, in *MsgStake, opts ...grpc.CallOp
 
 func (c *msgClient) Unstake(ctx context.Context, in *MsgUnstake, opts ...grpc.CallOption) (*MsgUnstakeResponse, error) {
 	out := new(MsgUnstakeResponse)
-	err := c.cc.Invoke(ctx, "/irismod.farm.Msg/Unstake", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.farm.Msg/Unstake", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -978,7 +978,7 @@ func (c *msgClient) Unstake(ctx context.Context, in *MsgUnstake, opts ...grpc.Ca
 
 func (c *msgClient) Harvest(ctx context.Context, in *MsgHarvest, opts ...grpc.CallOption) (*MsgHarvestResponse, error) {
 	out := new(MsgHarvestResponse)
-	err := c.cc.Invoke(ctx, "/irismod.farm.Msg/Harvest", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.farm.Msg/Harvest", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -1044,7 +1044,7 @@ func _Msg_CreatePool_Handler(srv interface{}, ctx context.Context, dec func(inte
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.farm.Msg/CreatePool",
+		FullMethod: "/furymod.farm.Msg/CreatePool",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).CreatePool(ctx, req.(*MsgCreatePool))
@@ -1062,7 +1062,7 @@ func _Msg_CreatePoolWithCommunityPool_Handler(srv interface{}, ctx context.Conte
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.farm.Msg/CreatePoolWithCommunityPool",
+		FullMethod: "/furymod.farm.Msg/CreatePoolWithCommunityPool",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).CreatePoolWithCommunityPool(ctx, req.(*MsgCreatePoolWithCommunityPool))
@@ -1080,7 +1080,7 @@ func _Msg_DestroyPool_Handler(srv interface{}, ctx context.Context, dec func(int
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.farm.Msg/DestroyPool",
+		FullMethod: "/furymod.farm.Msg/DestroyPool",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).DestroyPool(ctx, req.(*MsgDestroyPool))
@@ -1098,7 +1098,7 @@ func _Msg_AdjustPool_Handler(srv interface{}, ctx context.Context, dec func(inte
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.farm.Msg/AdjustPool",
+		FullMethod: "/furymod.farm.Msg/AdjustPool",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).AdjustPool(ctx, req.(*MsgAdjustPool))
@@ -1116,7 +1116,7 @@ func _Msg_Stake_Handler(srv interface{}, ctx context.Context, dec func(interface
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.farm.Msg/Stake",
+		FullMethod: "/furymod.farm.Msg/Stake",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).Stake(ctx, req.(*MsgStake))
@@ -1134,7 +1134,7 @@ func _Msg_Unstake_Handler(srv interface{}, ctx context.Context, dec func(interfa
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.farm.Msg/Unstake",
+		FullMethod: "/furymod.farm.Msg/Unstake",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).Unstake(ctx, req.(*MsgUnstake))
@@ -1152,7 +1152,7 @@ func _Msg_Harvest_Handler(srv interface{}, ctx context.Context, dec func(interfa
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.farm.Msg/Harvest",
+		FullMethod: "/furymod.farm.Msg/Harvest",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).Harvest(ctx, req.(*MsgHarvest))
@@ -1161,7 +1161,7 @@ func _Msg_Harvest_Handler(srv interface{}, ctx context.Context, dec func(interfa
 }
 
 var _Msg_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "irismod.farm.Msg",
+	ServiceName: "furymod.farm.Msg",
 	HandlerType: (*MsgServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

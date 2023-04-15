@@ -6,12 +6,12 @@ import (
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
 	paramstypes "github.com/cosmos/cosmos-sdk/x/params/types"
 
-	"github.com/irisnet/irismod/modules/farm/types"
+	"github.com/furynet/furymod/modules/farm/types"
 )
 
 // Parameter store keys
 var (
-	DefaultPoolCreationFee = sdk.NewCoin("uiris", sdkmath.NewIntWithDecimal(2000, 6))
+	DefaultPoolCreationFee = sdk.NewCoin("ufury", sdkmath.NewIntWithDecimal(2000, 6))
 	DefaultTaxRate         = sdk.NewDecWithPrec(4, 1)
 )
 

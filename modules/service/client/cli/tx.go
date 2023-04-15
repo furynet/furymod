@@ -15,7 +15,7 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/version"
 
-	"github.com/irisnet/irismod/modules/service/types"
+	"github.com/furynet/furymod/modules/service/types"
 )
 
 // NewTxCmd returns the transaction commands for this module
@@ -841,7 +841,7 @@ func GetCmdUpdateRequestContext() *cobra.Command {
 		Example: fmt.Sprintf(
 			"$ %s tx service update <request-context-id> "+
 				"--providers=<new providers> "+
-				"--service-fee-cap=2iris "+
+				"--service-fee-cap=2fury "+
 				"--timeout=0 "+
 				"--frequency=200 "+
 				"--total=200 "+

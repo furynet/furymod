@@ -145,9 +145,9 @@ func (m *Balance) XXX_DiscardUnknown() {
 var xxx_messageInfo_Balance proto.InternalMessageInfo
 
 func init() {
-	proto.RegisterType((*Denom)(nil), "irismod.mt.Denom")
-	proto.RegisterType((*MT)(nil), "irismod.mt.MT")
-	proto.RegisterType((*Balance)(nil), "irismod.mt.Balance")
+	proto.RegisterType((*Denom)(nil), "furymod.mt.Denom")
+	proto.RegisterType((*MT)(nil), "furymod.mt.MT")
+	proto.RegisterType((*Balance)(nil), "furymod.mt.Balance")
 }
 
 func init() { proto.RegisterFile("mt/mt.proto", fileDescriptor_862c3429ff751bfb) }

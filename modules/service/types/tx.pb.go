@@ -1143,34 +1143,34 @@ func (m *MsgWithdrawEarnedFeesResponse) XXX_DiscardUnknown() {
 var xxx_messageInfo_MsgWithdrawEarnedFeesResponse proto.InternalMessageInfo
 
 func init() {
-	proto.RegisterType((*MsgDefineService)(nil), "irismod.service.MsgDefineService")
-	proto.RegisterType((*MsgDefineServiceResponse)(nil), "irismod.service.MsgDefineServiceResponse")
-	proto.RegisterType((*MsgBindService)(nil), "irismod.service.MsgBindService")
-	proto.RegisterType((*MsgBindServiceResponse)(nil), "irismod.service.MsgBindServiceResponse")
-	proto.RegisterType((*MsgUpdateServiceBinding)(nil), "irismod.service.MsgUpdateServiceBinding")
-	proto.RegisterType((*MsgUpdateServiceBindingResponse)(nil), "irismod.service.MsgUpdateServiceBindingResponse")
-	proto.RegisterType((*MsgSetWithdrawAddress)(nil), "irismod.service.MsgSetWithdrawAddress")
-	proto.RegisterType((*MsgSetWithdrawAddressResponse)(nil), "irismod.service.MsgSetWithdrawAddressResponse")
-	proto.RegisterType((*MsgDisableServiceBinding)(nil), "irismod.service.MsgDisableServiceBinding")
-	proto.RegisterType((*MsgDisableServiceBindingResponse)(nil), "irismod.service.MsgDisableServiceBindingResponse")
-	proto.RegisterType((*MsgEnableServiceBinding)(nil), "irismod.service.MsgEnableServiceBinding")
-	proto.RegisterType((*MsgEnableServiceBindingResponse)(nil), "irismod.service.MsgEnableServiceBindingResponse")
-	proto.RegisterType((*MsgRefundServiceDeposit)(nil), "irismod.service.MsgRefundServiceDeposit")
-	proto.RegisterType((*MsgRefundServiceDepositResponse)(nil), "irismod.service.MsgRefundServiceDepositResponse")
-	proto.RegisterType((*MsgCallService)(nil), "irismod.service.MsgCallService")
-	proto.RegisterType((*MsgCallServiceResponse)(nil), "irismod.service.MsgCallServiceResponse")
-	proto.RegisterType((*MsgRespondService)(nil), "irismod.service.MsgRespondService")
-	proto.RegisterType((*MsgRespondServiceResponse)(nil), "irismod.service.MsgRespondServiceResponse")
-	proto.RegisterType((*MsgPauseRequestContext)(nil), "irismod.service.MsgPauseRequestContext")
-	proto.RegisterType((*MsgPauseRequestContextResponse)(nil), "irismod.service.MsgPauseRequestContextResponse")
-	proto.RegisterType((*MsgStartRequestContext)(nil), "irismod.service.MsgStartRequestContext")
-	proto.RegisterType((*MsgStartRequestContextResponse)(nil), "irismod.service.MsgStartRequestContextResponse")
-	proto.RegisterType((*MsgKillRequestContext)(nil), "irismod.service.MsgKillRequestContext")
-	proto.RegisterType((*MsgKillRequestContextResponse)(nil), "irismod.service.MsgKillRequestContextResponse")
-	proto.RegisterType((*MsgUpdateRequestContext)(nil), "irismod.service.MsgUpdateRequestContext")
-	proto.RegisterType((*MsgUpdateRequestContextResponse)(nil), "irismod.service.MsgUpdateRequestContextResponse")
-	proto.RegisterType((*MsgWithdrawEarnedFees)(nil), "irismod.service.MsgWithdrawEarnedFees")
-	proto.RegisterType((*MsgWithdrawEarnedFeesResponse)(nil), "irismod.service.MsgWithdrawEarnedFeesResponse")
+	proto.RegisterType((*MsgDefineService)(nil), "furymod.service.MsgDefineService")
+	proto.RegisterType((*MsgDefineServiceResponse)(nil), "furymod.service.MsgDefineServiceResponse")
+	proto.RegisterType((*MsgBindService)(nil), "furymod.service.MsgBindService")
+	proto.RegisterType((*MsgBindServiceResponse)(nil), "furymod.service.MsgBindServiceResponse")
+	proto.RegisterType((*MsgUpdateServiceBinding)(nil), "furymod.service.MsgUpdateServiceBinding")
+	proto.RegisterType((*MsgUpdateServiceBindingResponse)(nil), "furymod.service.MsgUpdateServiceBindingResponse")
+	proto.RegisterType((*MsgSetWithdrawAddress)(nil), "furymod.service.MsgSetWithdrawAddress")
+	proto.RegisterType((*MsgSetWithdrawAddressResponse)(nil), "furymod.service.MsgSetWithdrawAddressResponse")
+	proto.RegisterType((*MsgDisableServiceBinding)(nil), "furymod.service.MsgDisableServiceBinding")
+	proto.RegisterType((*MsgDisableServiceBindingResponse)(nil), "furymod.service.MsgDisableServiceBindingResponse")
+	proto.RegisterType((*MsgEnableServiceBinding)(nil), "furymod.service.MsgEnableServiceBinding")
+	proto.RegisterType((*MsgEnableServiceBindingResponse)(nil), "furymod.service.MsgEnableServiceBindingResponse")
+	proto.RegisterType((*MsgRefundServiceDeposit)(nil), "furymod.service.MsgRefundServiceDeposit")
+	proto.RegisterType((*MsgRefundServiceDepositResponse)(nil), "furymod.service.MsgRefundServiceDepositResponse")
+	proto.RegisterType((*MsgCallService)(nil), "furymod.service.MsgCallService")
+	proto.RegisterType((*MsgCallServiceResponse)(nil), "furymod.service.MsgCallServiceResponse")
+	proto.RegisterType((*MsgRespondService)(nil), "furymod.service.MsgRespondService")
+	proto.RegisterType((*MsgRespondServiceResponse)(nil), "furymod.service.MsgRespondServiceResponse")
+	proto.RegisterType((*MsgPauseRequestContext)(nil), "furymod.service.MsgPauseRequestContext")
+	proto.RegisterType((*MsgPauseRequestContextResponse)(nil), "furymod.service.MsgPauseRequestContextResponse")
+	proto.RegisterType((*MsgStartRequestContext)(nil), "furymod.service.MsgStartRequestContext")
+	proto.RegisterType((*MsgStartRequestContextResponse)(nil), "furymod.service.MsgStartRequestContextResponse")
+	proto.RegisterType((*MsgKillRequestContext)(nil), "furymod.service.MsgKillRequestContext")
+	proto.RegisterType((*MsgKillRequestContextResponse)(nil), "furymod.service.MsgKillRequestContextResponse")
+	proto.RegisterType((*MsgUpdateRequestContext)(nil), "furymod.service.MsgUpdateRequestContext")
+	proto.RegisterType((*MsgUpdateRequestContextResponse)(nil), "furymod.service.MsgUpdateRequestContextResponse")
+	proto.RegisterType((*MsgWithdrawEarnedFees)(nil), "furymod.service.MsgWithdrawEarnedFees")
+	proto.RegisterType((*MsgWithdrawEarnedFeesResponse)(nil), "furymod.service.MsgWithdrawEarnedFeesResponse")
 }
 
 func init() { proto.RegisterFile("service/tx.proto", fileDescriptor_0564fcd82d845f97) }
@@ -1310,7 +1310,7 @@ func NewMsgClient(cc grpc1.ClientConn) MsgClient {
 
 func (c *msgClient) DefineService(ctx context.Context, in *MsgDefineService, opts ...grpc.CallOption) (*MsgDefineServiceResponse, error) {
 	out := new(MsgDefineServiceResponse)
-	err := c.cc.Invoke(ctx, "/irismod.service.Msg/DefineService", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.service.Msg/DefineService", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -1319,7 +1319,7 @@ func (c *msgClient) DefineService(ctx context.Context, in *MsgDefineService, opt
 
 func (c *msgClient) BindService(ctx context.Context, in *MsgBindService, opts ...grpc.CallOption) (*MsgBindServiceResponse, error) {
 	out := new(MsgBindServiceResponse)
-	err := c.cc.Invoke(ctx, "/irismod.service.Msg/BindService", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.service.Msg/BindService", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -1328,7 +1328,7 @@ func (c *msgClient) BindService(ctx context.Context, in *MsgBindService, opts ..
 
 func (c *msgClient) UpdateServiceBinding(ctx context.Context, in *MsgUpdateServiceBinding, opts ...grpc.CallOption) (*MsgUpdateServiceBindingResponse, error) {
 	out := new(MsgUpdateServiceBindingResponse)
-	err := c.cc.Invoke(ctx, "/irismod.service.Msg/UpdateServiceBinding", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.service.Msg/UpdateServiceBinding", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -1337,7 +1337,7 @@ func (c *msgClient) UpdateServiceBinding(ctx context.Context, in *MsgUpdateServi
 
 func (c *msgClient) SetWithdrawAddress(ctx context.Context, in *MsgSetWithdrawAddress, opts ...grpc.CallOption) (*MsgSetWithdrawAddressResponse, error) {
 	out := new(MsgSetWithdrawAddressResponse)
-	err := c.cc.Invoke(ctx, "/irismod.service.Msg/SetWithdrawAddress", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.service.Msg/SetWithdrawAddress", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -1346,7 +1346,7 @@ func (c *msgClient) SetWithdrawAddress(ctx context.Context, in *MsgSetWithdrawAd
 
 func (c *msgClient) EnableServiceBinding(ctx context.Context, in *MsgEnableServiceBinding, opts ...grpc.CallOption) (*MsgEnableServiceBindingResponse, error) {
 	out := new(MsgEnableServiceBindingResponse)
-	err := c.cc.Invoke(ctx, "/irismod.service.Msg/EnableServiceBinding", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.service.Msg/EnableServiceBinding", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -1355,7 +1355,7 @@ func (c *msgClient) EnableServiceBinding(ctx context.Context, in *MsgEnableServi
 
 func (c *msgClient) DisableServiceBinding(ctx context.Context, in *MsgDisableServiceBinding, opts ...grpc.CallOption) (*MsgDisableServiceBindingResponse, error) {
 	out := new(MsgDisableServiceBindingResponse)
-	err := c.cc.Invoke(ctx, "/irismod.service.Msg/DisableServiceBinding", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.service.Msg/DisableServiceBinding", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -1364,7 +1364,7 @@ func (c *msgClient) DisableServiceBinding(ctx context.Context, in *MsgDisableSer
 
 func (c *msgClient) RefundServiceDeposit(ctx context.Context, in *MsgRefundServiceDeposit, opts ...grpc.CallOption) (*MsgRefundServiceDepositResponse, error) {
 	out := new(MsgRefundServiceDepositResponse)
-	err := c.cc.Invoke(ctx, "/irismod.service.Msg/RefundServiceDeposit", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.service.Msg/RefundServiceDeposit", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -1373,7 +1373,7 @@ func (c *msgClient) RefundServiceDeposit(ctx context.Context, in *MsgRefundServi
 
 func (c *msgClient) CallService(ctx context.Context, in *MsgCallService, opts ...grpc.CallOption) (*MsgCallServiceResponse, error) {
 	out := new(MsgCallServiceResponse)
-	err := c.cc.Invoke(ctx, "/irismod.service.Msg/CallService", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.service.Msg/CallService", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -1382,7 +1382,7 @@ func (c *msgClient) CallService(ctx context.Context, in *MsgCallService, opts ..
 
 func (c *msgClient) RespondService(ctx context.Context, in *MsgRespondService, opts ...grpc.CallOption) (*MsgRespondServiceResponse, error) {
 	out := new(MsgRespondServiceResponse)
-	err := c.cc.Invoke(ctx, "/irismod.service.Msg/RespondService", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.service.Msg/RespondService", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -1391,7 +1391,7 @@ func (c *msgClient) RespondService(ctx context.Context, in *MsgRespondService, o
 
 func (c *msgClient) PauseRequestContext(ctx context.Context, in *MsgPauseRequestContext, opts ...grpc.CallOption) (*MsgPauseRequestContextResponse, error) {
 	out := new(MsgPauseRequestContextResponse)
-	err := c.cc.Invoke(ctx, "/irismod.service.Msg/PauseRequestContext", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.service.Msg/PauseRequestContext", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -1400,7 +1400,7 @@ func (c *msgClient) PauseRequestContext(ctx context.Context, in *MsgPauseRequest
 
 func (c *msgClient) StartRequestContext(ctx context.Context, in *MsgStartRequestContext, opts ...grpc.CallOption) (*MsgStartRequestContextResponse, error) {
 	out := new(MsgStartRequestContextResponse)
-	err := c.cc.Invoke(ctx, "/irismod.service.Msg/StartRequestContext", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.service.Msg/StartRequestContext", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -1409,7 +1409,7 @@ func (c *msgClient) StartRequestContext(ctx context.Context, in *MsgStartRequest
 
 func (c *msgClient) KillRequestContext(ctx context.Context, in *MsgKillRequestContext, opts ...grpc.CallOption) (*MsgKillRequestContextResponse, error) {
 	out := new(MsgKillRequestContextResponse)
-	err := c.cc.Invoke(ctx, "/irismod.service.Msg/KillRequestContext", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.service.Msg/KillRequestContext", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -1418,7 +1418,7 @@ func (c *msgClient) KillRequestContext(ctx context.Context, in *MsgKillRequestCo
 
 func (c *msgClient) UpdateRequestContext(ctx context.Context, in *MsgUpdateRequestContext, opts ...grpc.CallOption) (*MsgUpdateRequestContextResponse, error) {
 	out := new(MsgUpdateRequestContextResponse)
-	err := c.cc.Invoke(ctx, "/irismod.service.Msg/UpdateRequestContext", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.service.Msg/UpdateRequestContext", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -1427,7 +1427,7 @@ func (c *msgClient) UpdateRequestContext(ctx context.Context, in *MsgUpdateReque
 
 func (c *msgClient) WithdrawEarnedFees(ctx context.Context, in *MsgWithdrawEarnedFees, opts ...grpc.CallOption) (*MsgWithdrawEarnedFeesResponse, error) {
 	out := new(MsgWithdrawEarnedFeesResponse)
-	err := c.cc.Invoke(ctx, "/irismod.service.Msg/WithdrawEarnedFees", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.service.Msg/WithdrawEarnedFees", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -1527,7 +1527,7 @@ func _Msg_DefineService_Handler(srv interface{}, ctx context.Context, dec func(i
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.service.Msg/DefineService",
+		FullMethod: "/furymod.service.Msg/DefineService",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).DefineService(ctx, req.(*MsgDefineService))
@@ -1545,7 +1545,7 @@ func _Msg_BindService_Handler(srv interface{}, ctx context.Context, dec func(int
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.service.Msg/BindService",
+		FullMethod: "/furymod.service.Msg/BindService",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).BindService(ctx, req.(*MsgBindService))
@@ -1563,7 +1563,7 @@ func _Msg_UpdateServiceBinding_Handler(srv interface{}, ctx context.Context, dec
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.service.Msg/UpdateServiceBinding",
+		FullMethod: "/furymod.service.Msg/UpdateServiceBinding",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).UpdateServiceBinding(ctx, req.(*MsgUpdateServiceBinding))
@@ -1581,7 +1581,7 @@ func _Msg_SetWithdrawAddress_Handler(srv interface{}, ctx context.Context, dec f
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.service.Msg/SetWithdrawAddress",
+		FullMethod: "/furymod.service.Msg/SetWithdrawAddress",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).SetWithdrawAddress(ctx, req.(*MsgSetWithdrawAddress))
@@ -1599,7 +1599,7 @@ func _Msg_EnableServiceBinding_Handler(srv interface{}, ctx context.Context, dec
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.service.Msg/EnableServiceBinding",
+		FullMethod: "/furymod.service.Msg/EnableServiceBinding",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).EnableServiceBinding(ctx, req.(*MsgEnableServiceBinding))
@@ -1617,7 +1617,7 @@ func _Msg_DisableServiceBinding_Handler(srv interface{}, ctx context.Context, de
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.service.Msg/DisableServiceBinding",
+		FullMethod: "/furymod.service.Msg/DisableServiceBinding",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).DisableServiceBinding(ctx, req.(*MsgDisableServiceBinding))
@@ -1635,7 +1635,7 @@ func _Msg_RefundServiceDeposit_Handler(srv interface{}, ctx context.Context, dec
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.service.Msg/RefundServiceDeposit",
+		FullMethod: "/furymod.service.Msg/RefundServiceDeposit",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).RefundServiceDeposit(ctx, req.(*MsgRefundServiceDeposit))
@@ -1653,7 +1653,7 @@ func _Msg_CallService_Handler(srv interface{}, ctx context.Context, dec func(int
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.service.Msg/CallService",
+		FullMethod: "/furymod.service.Msg/CallService",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).CallService(ctx, req.(*MsgCallService))
@@ -1671,7 +1671,7 @@ func _Msg_RespondService_Handler(srv interface{}, ctx context.Context, dec func(
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.service.Msg/RespondService",
+		FullMethod: "/furymod.service.Msg/RespondService",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).RespondService(ctx, req.(*MsgRespondService))
@@ -1689,7 +1689,7 @@ func _Msg_PauseRequestContext_Handler(srv interface{}, ctx context.Context, dec 
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.service.Msg/PauseRequestContext",
+		FullMethod: "/furymod.service.Msg/PauseRequestContext",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).PauseRequestContext(ctx, req.(*MsgPauseRequestContext))
@@ -1707,7 +1707,7 @@ func _Msg_StartRequestContext_Handler(srv interface{}, ctx context.Context, dec 
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.service.Msg/StartRequestContext",
+		FullMethod: "/furymod.service.Msg/StartRequestContext",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).StartRequestContext(ctx, req.(*MsgStartRequestContext))
@@ -1725,7 +1725,7 @@ func _Msg_KillRequestContext_Handler(srv interface{}, ctx context.Context, dec f
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.service.Msg/KillRequestContext",
+		FullMethod: "/furymod.service.Msg/KillRequestContext",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).KillRequestContext(ctx, req.(*MsgKillRequestContext))
@@ -1743,7 +1743,7 @@ func _Msg_UpdateRequestContext_Handler(srv interface{}, ctx context.Context, dec
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.service.Msg/UpdateRequestContext",
+		FullMethod: "/furymod.service.Msg/UpdateRequestContext",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).UpdateRequestContext(ctx, req.(*MsgUpdateRequestContext))
@@ -1761,7 +1761,7 @@ func _Msg_WithdrawEarnedFees_Handler(srv interface{}, ctx context.Context, dec f
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.service.Msg/WithdrawEarnedFees",
+		FullMethod: "/furymod.service.Msg/WithdrawEarnedFees",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).WithdrawEarnedFees(ctx, req.(*MsgWithdrawEarnedFees))
@@ -1770,7 +1770,7 @@ func _Msg_WithdrawEarnedFees_Handler(srv interface{}, ctx context.Context, dec f
 }
 
 var _Msg_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "irismod.service.Msg",
+	ServiceName: "furymod.service.Msg",
 	HandlerType: (*MsgServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

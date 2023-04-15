@@ -18,9 +18,9 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	minttypes "github.com/cosmos/cosmos-sdk/x/mint/types"
 
-	"github.com/irisnet/irismod/modules/service/keeper"
-	"github.com/irisnet/irismod/modules/service/types"
-	"github.com/irisnet/irismod/simapp"
+	"github.com/furynet/furymod/modules/service/keeper"
+	"github.com/furynet/furymod/modules/service/types"
+	"github.com/furynet/furymod/simapp"
 )
 
 var (

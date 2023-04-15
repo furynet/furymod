@@ -10,7 +10,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/testutil"
 	clitestutil "github.com/cosmos/cosmos-sdk/testutil/cli"
 
-	mtcli "github.com/irisnet/irismod/modules/mt/client/cli"
+	mtcli "github.com/furynet/furymod/modules/mt/client/cli"
 )
 
 // IssueDenomExec creates a redelegate message.

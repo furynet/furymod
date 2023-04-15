@@ -22,13 +22,13 @@ func init() {
 // RegisterLegacyAminoCodec registers the necessary x/bank interfaces and concrete types
 // on the provided Amino codec. These types are used for Amino JSON serialization.
 func RegisterLegacyAminoCodec(cdc *codec.LegacyAmino) {
-	cdc.RegisterConcrete(&MsgCreateFeed{}, "irismod/oracle/MsgCreateFeed", nil)
-	cdc.RegisterConcrete(&MsgStartFeed{}, "irismod/oracle/MsgStartFeed", nil)
-	cdc.RegisterConcrete(&MsgPauseFeed{}, "irismod/oracle/MsgPauseFeed", nil)
-	cdc.RegisterConcrete(&MsgEditFeed{}, "irismod/oracle/MsgEditFeed", nil)
+	cdc.RegisterConcrete(&MsgCreateFeed{}, "furymod/oracle/MsgCreateFeed", nil)
+	cdc.RegisterConcrete(&MsgStartFeed{}, "furymod/oracle/MsgStartFeed", nil)
+	cdc.RegisterConcrete(&MsgPauseFeed{}, "furymod/oracle/MsgPauseFeed", nil)
+	cdc.RegisterConcrete(&MsgEditFeed{}, "furymod/oracle/MsgEditFeed", nil)
 
-	cdc.RegisterConcrete(&Feed{}, "irismod/oracle/Feed", nil)
-	cdc.RegisterConcrete(&FeedContext{}, "irismod/oracle/FeedContext", nil)
+	cdc.RegisterConcrete(&Feed{}, "furymod/oracle/Feed", nil)
+	cdc.RegisterConcrete(&FeedContext{}, "furymod/oracle/FeedContext", nil)
 }
 
 func RegisterInterfaces(registry types.InterfaceRegistry) {

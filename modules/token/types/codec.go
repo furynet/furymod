@@ -22,14 +22,14 @@ func init() {
 func RegisterLegacyAminoCodec(cdc *codec.LegacyAmino) {
 	cdc.RegisterInterface((*TokenI)(nil), nil)
 
-	cdc.RegisterConcrete(&Token{}, "irismod/token/Token", nil)
+	cdc.RegisterConcrete(&Token{}, "furymod/token/Token", nil)
 
-	cdc.RegisterConcrete(&MsgIssueToken{}, "irismod/token/MsgIssueToken", nil)
-	cdc.RegisterConcrete(&MsgEditToken{}, "irismod/token/MsgEditToken", nil)
-	cdc.RegisterConcrete(&MsgMintToken{}, "irismod/token/MsgMintToken", nil)
-	cdc.RegisterConcrete(&MsgBurnToken{}, "irismod/token/MsgBurnToken", nil)
-	cdc.RegisterConcrete(&MsgTransferTokenOwner{}, "irismod/token/MsgTransferTokenOwner", nil)
-	cdc.RegisterConcrete(&MsgSwapFeeToken{}, "irismod/token/MsgSwapFeeToken", nil)
+	cdc.RegisterConcrete(&MsgIssueToken{}, "furymod/token/MsgIssueToken", nil)
+	cdc.RegisterConcrete(&MsgEditToken{}, "furymod/token/MsgEditToken", nil)
+	cdc.RegisterConcrete(&MsgMintToken{}, "furymod/token/MsgMintToken", nil)
+	cdc.RegisterConcrete(&MsgBurnToken{}, "furymod/token/MsgBurnToken", nil)
+	cdc.RegisterConcrete(&MsgTransferTokenOwner{}, "furymod/token/MsgTransferTokenOwner", nil)
+	cdc.RegisterConcrete(&MsgSwapFeeToken{}, "furymod/token/MsgSwapFeeToken", nil)
 }
 
 func RegisterInterfaces(registry types.InterfaceRegistry) {
@@ -42,7 +42,7 @@ func RegisterInterfaces(registry types.InterfaceRegistry) {
 		&MsgSwapFeeToken{},
 	)
 	registry.RegisterInterface(
-		"irismod.token.TokenI",
+		"furymod.token.TokenI",
 		(*TokenI)(nil),
 		&Token{},
 	)

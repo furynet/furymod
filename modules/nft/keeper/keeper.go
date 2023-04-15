@@ -11,7 +11,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/x/nft"
 	nftkeeper "github.com/cosmos/cosmos-sdk/x/nft/keeper"
 
-	"github.com/irisnet/irismod/modules/nft/types"
+	"github.com/furynet/furymod/modules/nft/types"
 )
 
 // Keeper maintains the link to data storage and exposes getter/setter methods for the various parts of the state machine
@@ -41,5 +41,5 @@ func (k Keeper) NFTkeeper() nftkeeper.Keeper {
 
 // Logger returns a module-specific logger.
 func (k Keeper) Logger(ctx sdk.Context) log.Logger {
-	return ctx.Logger().With("module", fmt.Sprintf("irismod/%s", types.ModuleName))
+	return ctx.Logger().With("module", fmt.Sprintf("furymod/%s", types.ModuleName))
 }

@@ -514,18 +514,18 @@ func (m *MsgTransferDenomResponse) XXX_DiscardUnknown() {
 var xxx_messageInfo_MsgTransferDenomResponse proto.InternalMessageInfo
 
 func init() {
-	proto.RegisterType((*MsgIssueDenom)(nil), "irismod.nft.MsgIssueDenom")
-	proto.RegisterType((*MsgIssueDenomResponse)(nil), "irismod.nft.MsgIssueDenomResponse")
-	proto.RegisterType((*MsgTransferNFT)(nil), "irismod.nft.MsgTransferNFT")
-	proto.RegisterType((*MsgTransferNFTResponse)(nil), "irismod.nft.MsgTransferNFTResponse")
-	proto.RegisterType((*MsgEditNFT)(nil), "irismod.nft.MsgEditNFT")
-	proto.RegisterType((*MsgEditNFTResponse)(nil), "irismod.nft.MsgEditNFTResponse")
-	proto.RegisterType((*MsgMintNFT)(nil), "irismod.nft.MsgMintNFT")
-	proto.RegisterType((*MsgMintNFTResponse)(nil), "irismod.nft.MsgMintNFTResponse")
-	proto.RegisterType((*MsgBurnNFT)(nil), "irismod.nft.MsgBurnNFT")
-	proto.RegisterType((*MsgBurnNFTResponse)(nil), "irismod.nft.MsgBurnNFTResponse")
-	proto.RegisterType((*MsgTransferDenom)(nil), "irismod.nft.MsgTransferDenom")
-	proto.RegisterType((*MsgTransferDenomResponse)(nil), "irismod.nft.MsgTransferDenomResponse")
+	proto.RegisterType((*MsgIssueDenom)(nil), "furymod.nft.MsgIssueDenom")
+	proto.RegisterType((*MsgIssueDenomResponse)(nil), "furymod.nft.MsgIssueDenomResponse")
+	proto.RegisterType((*MsgTransferNFT)(nil), "furymod.nft.MsgTransferNFT")
+	proto.RegisterType((*MsgTransferNFTResponse)(nil), "furymod.nft.MsgTransferNFTResponse")
+	proto.RegisterType((*MsgEditNFT)(nil), "furymod.nft.MsgEditNFT")
+	proto.RegisterType((*MsgEditNFTResponse)(nil), "furymod.nft.MsgEditNFTResponse")
+	proto.RegisterType((*MsgMintNFT)(nil), "furymod.nft.MsgMintNFT")
+	proto.RegisterType((*MsgMintNFTResponse)(nil), "furymod.nft.MsgMintNFTResponse")
+	proto.RegisterType((*MsgBurnNFT)(nil), "furymod.nft.MsgBurnNFT")
+	proto.RegisterType((*MsgBurnNFTResponse)(nil), "furymod.nft.MsgBurnNFTResponse")
+	proto.RegisterType((*MsgTransferDenom)(nil), "furymod.nft.MsgTransferDenom")
+	proto.RegisterType((*MsgTransferDenomResponse)(nil), "furymod.nft.MsgTransferDenomResponse")
 }
 
 func init() { proto.RegisterFile("nft/tx.proto", fileDescriptor_09d30374d974e015) }
@@ -858,7 +858,7 @@ func NewMsgClient(cc grpc1.ClientConn) MsgClient {
 
 func (c *msgClient) IssueDenom(ctx context.Context, in *MsgIssueDenom, opts ...grpc.CallOption) (*MsgIssueDenomResponse, error) {
 	out := new(MsgIssueDenomResponse)
-	err := c.cc.Invoke(ctx, "/irismod.nft.Msg/IssueDenom", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.nft.Msg/IssueDenom", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -867,7 +867,7 @@ func (c *msgClient) IssueDenom(ctx context.Context, in *MsgIssueDenom, opts ...g
 
 func (c *msgClient) MintNFT(ctx context.Context, in *MsgMintNFT, opts ...grpc.CallOption) (*MsgMintNFTResponse, error) {
 	out := new(MsgMintNFTResponse)
-	err := c.cc.Invoke(ctx, "/irismod.nft.Msg/MintNFT", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.nft.Msg/MintNFT", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -876,7 +876,7 @@ func (c *msgClient) MintNFT(ctx context.Context, in *MsgMintNFT, opts ...grpc.Ca
 
 func (c *msgClient) EditNFT(ctx context.Context, in *MsgEditNFT, opts ...grpc.CallOption) (*MsgEditNFTResponse, error) {
 	out := new(MsgEditNFTResponse)
-	err := c.cc.Invoke(ctx, "/irismod.nft.Msg/EditNFT", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.nft.Msg/EditNFT", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -885,7 +885,7 @@ func (c *msgClient) EditNFT(ctx context.Context, in *MsgEditNFT, opts ...grpc.Ca
 
 func (c *msgClient) TransferNFT(ctx context.Context, in *MsgTransferNFT, opts ...grpc.CallOption) (*MsgTransferNFTResponse, error) {
 	out := new(MsgTransferNFTResponse)
-	err := c.cc.Invoke(ctx, "/irismod.nft.Msg/TransferNFT", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.nft.Msg/TransferNFT", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -894,7 +894,7 @@ func (c *msgClient) TransferNFT(ctx context.Context, in *MsgTransferNFT, opts ..
 
 func (c *msgClient) BurnNFT(ctx context.Context, in *MsgBurnNFT, opts ...grpc.CallOption) (*MsgBurnNFTResponse, error) {
 	out := new(MsgBurnNFTResponse)
-	err := c.cc.Invoke(ctx, "/irismod.nft.Msg/BurnNFT", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.nft.Msg/BurnNFT", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -903,7 +903,7 @@ func (c *msgClient) BurnNFT(ctx context.Context, in *MsgBurnNFT, opts ...grpc.Ca
 
 func (c *msgClient) TransferDenom(ctx context.Context, in *MsgTransferDenom, opts ...grpc.CallOption) (*MsgTransferDenomResponse, error) {
 	out := new(MsgTransferDenomResponse)
-	err := c.cc.Invoke(ctx, "/irismod.nft.Msg/TransferDenom", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.nft.Msg/TransferDenom", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -963,7 +963,7 @@ func _Msg_IssueDenom_Handler(srv interface{}, ctx context.Context, dec func(inte
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.nft.Msg/IssueDenom",
+		FullMethod: "/furymod.nft.Msg/IssueDenom",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).IssueDenom(ctx, req.(*MsgIssueDenom))
@@ -981,7 +981,7 @@ func _Msg_MintNFT_Handler(srv interface{}, ctx context.Context, dec func(interfa
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.nft.Msg/MintNFT",
+		FullMethod: "/furymod.nft.Msg/MintNFT",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).MintNFT(ctx, req.(*MsgMintNFT))
@@ -999,7 +999,7 @@ func _Msg_EditNFT_Handler(srv interface{}, ctx context.Context, dec func(interfa
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.nft.Msg/EditNFT",
+		FullMethod: "/furymod.nft.Msg/EditNFT",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).EditNFT(ctx, req.(*MsgEditNFT))
@@ -1017,7 +1017,7 @@ func _Msg_TransferNFT_Handler(srv interface{}, ctx context.Context, dec func(int
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.nft.Msg/TransferNFT",
+		FullMethod: "/furymod.nft.Msg/TransferNFT",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).TransferNFT(ctx, req.(*MsgTransferNFT))
@@ -1035,7 +1035,7 @@ func _Msg_BurnNFT_Handler(srv interface{}, ctx context.Context, dec func(interfa
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.nft.Msg/BurnNFT",
+		FullMethod: "/furymod.nft.Msg/BurnNFT",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).BurnNFT(ctx, req.(*MsgBurnNFT))
@@ -1053,7 +1053,7 @@ func _Msg_TransferDenom_Handler(srv interface{}, ctx context.Context, dec func(i
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.nft.Msg/TransferDenom",
+		FullMethod: "/furymod.nft.Msg/TransferDenom",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).TransferDenom(ctx, req.(*MsgTransferDenom))
@@ -1062,7 +1062,7 @@ func _Msg_TransferDenom_Handler(srv interface{}, ctx context.Context, dec func(i
 }
 
 var _Msg_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "irismod.nft.Msg",
+	ServiceName: "furymod.nft.Msg",
 	HandlerType: (*MsgServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

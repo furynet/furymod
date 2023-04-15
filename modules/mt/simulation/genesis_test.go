@@ -2,7 +2,7 @@ package simulation
 
 import (
 	"encoding/json"
-	mt "github.com/irisnet/irismod/modules/mt/types"
+	mt "github.com/furynet/furymod/modules/mt/types"
 	"math/rand"
 	"testing"
 

@@ -3,7 +3,7 @@ package keeper
 import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	v2 "github.com/irisnet/irismod/modules/nft/migrations/v2"
+	v2 "github.com/furynet/furymod/modules/nft/migrations/v2"
 )
 
 // Migrator is a struct for handling in-place store migrations.

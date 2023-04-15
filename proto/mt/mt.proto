@@ -1,9 +1,9 @@
 syntax = "proto3";
-package irismod.mt;
+package furymod.mt;
 
 import "gogoproto/gogo.proto";
 
-option go_package = "github.com/irisnet/irismod/modules/mt/types";
+option go_package = "github.com/furynet/furymod/modules/mt/types";
 option (gogoproto.goproto_getters_all) = false;
 
 // Denom defines a class of MTs

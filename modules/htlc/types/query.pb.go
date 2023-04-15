@@ -377,14 +377,14 @@ func (m *QueryParamsResponse) GetParams() Params {
 }
 
 func init() {
-	proto.RegisterType((*QueryHTLCRequest)(nil), "irismod.htlc.QueryHTLCRequest")
-	proto.RegisterType((*QueryHTLCResponse)(nil), "irismod.htlc.QueryHTLCResponse")
-	proto.RegisterType((*QueryAssetSupplyRequest)(nil), "irismod.htlc.QueryAssetSupplyRequest")
-	proto.RegisterType((*QueryAssetSupplyResponse)(nil), "irismod.htlc.QueryAssetSupplyResponse")
-	proto.RegisterType((*QueryAssetSuppliesRequest)(nil), "irismod.htlc.QueryAssetSuppliesRequest")
-	proto.RegisterType((*QueryAssetSuppliesResponse)(nil), "irismod.htlc.QueryAssetSuppliesResponse")
-	proto.RegisterType((*QueryParamsRequest)(nil), "irismod.htlc.QueryParamsRequest")
-	proto.RegisterType((*QueryParamsResponse)(nil), "irismod.htlc.QueryParamsResponse")
+	proto.RegisterType((*QueryHTLCRequest)(nil), "furymod.htlc.QueryHTLCRequest")
+	proto.RegisterType((*QueryHTLCResponse)(nil), "furymod.htlc.QueryHTLCResponse")
+	proto.RegisterType((*QueryAssetSupplyRequest)(nil), "furymod.htlc.QueryAssetSupplyRequest")
+	proto.RegisterType((*QueryAssetSupplyResponse)(nil), "furymod.htlc.QueryAssetSupplyResponse")
+	proto.RegisterType((*QueryAssetSuppliesRequest)(nil), "furymod.htlc.QueryAssetSuppliesRequest")
+	proto.RegisterType((*QueryAssetSuppliesResponse)(nil), "furymod.htlc.QueryAssetSuppliesResponse")
+	proto.RegisterType((*QueryParamsRequest)(nil), "furymod.htlc.QueryParamsRequest")
+	proto.RegisterType((*QueryParamsResponse)(nil), "furymod.htlc.QueryParamsResponse")
 }
 
 func init() { proto.RegisterFile("htlc/query.proto", fileDescriptor_a99e89fd1d8bb804) }
@@ -459,7 +459,7 @@ func NewQueryClient(cc grpc1.ClientConn) QueryClient {
 
 func (c *queryClient) HTLC(ctx context.Context, in *QueryHTLCRequest, opts ...grpc.CallOption) (*QueryHTLCResponse, error) {
 	out := new(QueryHTLCResponse)
-	err := c.cc.Invoke(ctx, "/irismod.htlc.Query/HTLC", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.htlc.Query/HTLC", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -468,7 +468,7 @@ func (c *queryClient) HTLC(ctx context.Context, in *QueryHTLCRequest, opts ...gr
 
 func (c *queryClient) AssetSupply(ctx context.Context, in *QueryAssetSupplyRequest, opts ...grpc.CallOption) (*QueryAssetSupplyResponse, error) {
 	out := new(QueryAssetSupplyResponse)
-	err := c.cc.Invoke(ctx, "/irismod.htlc.Query/AssetSupply", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.htlc.Query/AssetSupply", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -477,7 +477,7 @@ func (c *queryClient) AssetSupply(ctx context.Context, in *QueryAssetSupplyReque
 
 func (c *queryClient) AssetSupplies(ctx context.Context, in *QueryAssetSuppliesRequest, opts ...grpc.CallOption) (*QueryAssetSuppliesResponse, error) {
 	out := new(QueryAssetSuppliesResponse)
-	err := c.cc.Invoke(ctx, "/irismod.htlc.Query/AssetSupplies", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.htlc.Query/AssetSupplies", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -486,7 +486,7 @@ func (c *queryClient) AssetSupplies(ctx context.Context, in *QueryAssetSuppliesR
 
 func (c *queryClient) Params(ctx context.Context, in *QueryParamsRequest, opts ...grpc.CallOption) (*QueryParamsResponse, error) {
 	out := new(QueryParamsResponse)
-	err := c.cc.Invoke(ctx, "/irismod.htlc.Query/Params", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.htlc.Query/Params", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -536,7 +536,7 @@ func _Query_HTLC_Handler(srv interface{}, ctx context.Context, dec func(interfac
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.htlc.Query/HTLC",
+		FullMethod: "/furymod.htlc.Query/HTLC",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).HTLC(ctx, req.(*QueryHTLCRequest))
@@ -554,7 +554,7 @@ func _Query_AssetSupply_Handler(srv interface{}, ctx context.Context, dec func(i
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.htlc.Query/AssetSupply",
+		FullMethod: "/furymod.htlc.Query/AssetSupply",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).AssetSupply(ctx, req.(*QueryAssetSupplyRequest))
@@ -572,7 +572,7 @@ func _Query_AssetSupplies_Handler(srv interface{}, ctx context.Context, dec func
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.htlc.Query/AssetSupplies",
+		FullMethod: "/furymod.htlc.Query/AssetSupplies",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).AssetSupplies(ctx, req.(*QueryAssetSuppliesRequest))
@@ -590,7 +590,7 @@ func _Query_Params_Handler(srv interface{}, ctx context.Context, dec func(interf
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.htlc.Query/Params",
+		FullMethod: "/furymod.htlc.Query/Params",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).Params(ctx, req.(*QueryParamsRequest))
@@ -599,7 +599,7 @@ func _Query_Params_Handler(srv interface{}, ctx context.Context, dec func(interf
 }
 
 var _Query_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "irismod.htlc.Query",
+	ServiceName: "furymod.htlc.Query",
 	HandlerType: (*QueryServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

@@ -97,7 +97,7 @@ func (m *GenesisState) GetPreviousBlockTime() time.Time {
 }
 
 func init() {
-	proto.RegisterType((*GenesisState)(nil), "irismod.htlc.GenesisState")
+	proto.RegisterType((*GenesisState)(nil), "furymod.htlc.GenesisState")
 }
 
 func init() { proto.RegisterFile("htlc/genesis.proto", fileDescriptor_0ebc20432ba713fe) }

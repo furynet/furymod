@@ -1,11 +1,11 @@
 syntax = "proto3";
-package irismod.htlc;
+package furymod.htlc;
 
 import "gogoproto/gogo.proto";
 import "htlc/htlc.proto";
 import "google/protobuf/timestamp.proto";
 
-option go_package = "github.com/irisnet/irismod/modules/htlc/types";
+option go_package = "github.com/furynet/furymod/modules/htlc/types";
 
 // GenesisState defines the HTLC module's genesis state
 message GenesisState {

@@ -86,7 +86,7 @@ func (m *GenesisState) GetBurnedCoins() []types.Coin {
 }
 
 func init() {
-	proto.RegisterType((*GenesisState)(nil), "irismod.token.GenesisState")
+	proto.RegisterType((*GenesisState)(nil), "furymod.token.GenesisState")
 }
 
 func init() { proto.RegisterFile("token/genesis.proto", fileDescriptor_7d637ba3268cd6c3) }

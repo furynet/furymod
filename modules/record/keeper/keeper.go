@@ -13,7 +13,7 @@ import (
 	storetypes "github.com/cosmos/cosmos-sdk/store/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/irisnet/irismod/modules/record/types"
+	"github.com/furynet/furymod/modules/record/types"
 )
 
 // Keeper of the record store
@@ -33,7 +33,7 @@ func NewKeeper(cdc codec.Codec, key storetypes.StoreKey) Keeper {
 
 // Logger returns a module-specific logger.
 func (k Keeper) Logger(ctx sdk.Context) log.Logger {
-	return ctx.Logger().With("module", fmt.Sprintf("irismod/%s", types.ModuleName))
+	return ctx.Logger().With("module", fmt.Sprintf("furymod/%s", types.ModuleName))
 }
 
 // AddRecord adds a record

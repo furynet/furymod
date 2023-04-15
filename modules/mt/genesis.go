@@ -3,8 +3,8 @@ package mt
 import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
-	"github.com/irisnet/irismod/modules/mt/keeper"
-	"github.com/irisnet/irismod/modules/mt/types"
+	"github.com/furynet/furymod/modules/mt/keeper"
+	"github.com/furynet/furymod/modules/mt/types"
 )
 
 // InitGenesis stores the MT genesis.

@@ -502,18 +502,18 @@ func (m *MsgSwapFeeTokenResponse) XXX_DiscardUnknown() {
 var xxx_messageInfo_MsgSwapFeeTokenResponse proto.InternalMessageInfo
 
 func init() {
-	proto.RegisterType((*MsgIssueToken)(nil), "irismod.token.MsgIssueToken")
-	proto.RegisterType((*MsgIssueTokenResponse)(nil), "irismod.token.MsgIssueTokenResponse")
-	proto.RegisterType((*MsgTransferTokenOwner)(nil), "irismod.token.MsgTransferTokenOwner")
-	proto.RegisterType((*MsgTransferTokenOwnerResponse)(nil), "irismod.token.MsgTransferTokenOwnerResponse")
-	proto.RegisterType((*MsgEditToken)(nil), "irismod.token.MsgEditToken")
-	proto.RegisterType((*MsgEditTokenResponse)(nil), "irismod.token.MsgEditTokenResponse")
-	proto.RegisterType((*MsgMintToken)(nil), "irismod.token.MsgMintToken")
-	proto.RegisterType((*MsgMintTokenResponse)(nil), "irismod.token.MsgMintTokenResponse")
-	proto.RegisterType((*MsgBurnToken)(nil), "irismod.token.MsgBurnToken")
-	proto.RegisterType((*MsgBurnTokenResponse)(nil), "irismod.token.MsgBurnTokenResponse")
-	proto.RegisterType((*MsgSwapFeeToken)(nil), "irismod.token.MsgSwapFeeToken")
-	proto.RegisterType((*MsgSwapFeeTokenResponse)(nil), "irismod.token.MsgSwapFeeTokenResponse")
+	proto.RegisterType((*MsgIssueToken)(nil), "furymod.token.MsgIssueToken")
+	proto.RegisterType((*MsgIssueTokenResponse)(nil), "furymod.token.MsgIssueTokenResponse")
+	proto.RegisterType((*MsgTransferTokenOwner)(nil), "furymod.token.MsgTransferTokenOwner")
+	proto.RegisterType((*MsgTransferTokenOwnerResponse)(nil), "furymod.token.MsgTransferTokenOwnerResponse")
+	proto.RegisterType((*MsgEditToken)(nil), "furymod.token.MsgEditToken")
+	proto.RegisterType((*MsgEditTokenResponse)(nil), "furymod.token.MsgEditTokenResponse")
+	proto.RegisterType((*MsgMintToken)(nil), "furymod.token.MsgMintToken")
+	proto.RegisterType((*MsgMintTokenResponse)(nil), "furymod.token.MsgMintTokenResponse")
+	proto.RegisterType((*MsgBurnToken)(nil), "furymod.token.MsgBurnToken")
+	proto.RegisterType((*MsgBurnTokenResponse)(nil), "furymod.token.MsgBurnTokenResponse")
+	proto.RegisterType((*MsgSwapFeeToken)(nil), "furymod.token.MsgSwapFeeToken")
+	proto.RegisterType((*MsgSwapFeeTokenResponse)(nil), "furymod.token.MsgSwapFeeTokenResponse")
 }
 
 func init() { proto.RegisterFile("token/tx.proto", fileDescriptor_ef78f47708126356) }
@@ -605,7 +605,7 @@ func NewMsgClient(cc grpc1.ClientConn) MsgClient {
 
 func (c *msgClient) IssueToken(ctx context.Context, in *MsgIssueToken, opts ...grpc.CallOption) (*MsgIssueTokenResponse, error) {
 	out := new(MsgIssueTokenResponse)
-	err := c.cc.Invoke(ctx, "/irismod.token.Msg/IssueToken", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.token.Msg/IssueToken", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -614,7 +614,7 @@ func (c *msgClient) IssueToken(ctx context.Context, in *MsgIssueToken, opts ...g
 
 func (c *msgClient) EditToken(ctx context.Context, in *MsgEditToken, opts ...grpc.CallOption) (*MsgEditTokenResponse, error) {
 	out := new(MsgEditTokenResponse)
-	err := c.cc.Invoke(ctx, "/irismod.token.Msg/EditToken", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.token.Msg/EditToken", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -623,7 +623,7 @@ func (c *msgClient) EditToken(ctx context.Context, in *MsgEditToken, opts ...grp
 
 func (c *msgClient) MintToken(ctx context.Context, in *MsgMintToken, opts ...grpc.CallOption) (*MsgMintTokenResponse, error) {
 	out := new(MsgMintTokenResponse)
-	err := c.cc.Invoke(ctx, "/irismod.token.Msg/MintToken", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.token.Msg/MintToken", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -632,7 +632,7 @@ func (c *msgClient) MintToken(ctx context.Context, in *MsgMintToken, opts ...grp
 
 func (c *msgClient) BurnToken(ctx context.Context, in *MsgBurnToken, opts ...grpc.CallOption) (*MsgBurnTokenResponse, error) {
 	out := new(MsgBurnTokenResponse)
-	err := c.cc.Invoke(ctx, "/irismod.token.Msg/BurnToken", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.token.Msg/BurnToken", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -641,7 +641,7 @@ func (c *msgClient) BurnToken(ctx context.Context, in *MsgBurnToken, opts ...grp
 
 func (c *msgClient) TransferTokenOwner(ctx context.Context, in *MsgTransferTokenOwner, opts ...grpc.CallOption) (*MsgTransferTokenOwnerResponse, error) {
 	out := new(MsgTransferTokenOwnerResponse)
-	err := c.cc.Invoke(ctx, "/irismod.token.Msg/TransferTokenOwner", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.token.Msg/TransferTokenOwner", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -650,7 +650,7 @@ func (c *msgClient) TransferTokenOwner(ctx context.Context, in *MsgTransferToken
 
 func (c *msgClient) SwapFeeToken(ctx context.Context, in *MsgSwapFeeToken, opts ...grpc.CallOption) (*MsgSwapFeeTokenResponse, error) {
 	out := new(MsgSwapFeeTokenResponse)
-	err := c.cc.Invoke(ctx, "/irismod.token.Msg/SwapFeeToken", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.token.Msg/SwapFeeToken", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -710,7 +710,7 @@ func _Msg_IssueToken_Handler(srv interface{}, ctx context.Context, dec func(inte
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.token.Msg/IssueToken",
+		FullMethod: "/furymod.token.Msg/IssueToken",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).IssueToken(ctx, req.(*MsgIssueToken))
@@ -728,7 +728,7 @@ func _Msg_EditToken_Handler(srv interface{}, ctx context.Context, dec func(inter
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.token.Msg/EditToken",
+		FullMethod: "/furymod.token.Msg/EditToken",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).EditToken(ctx, req.(*MsgEditToken))
@@ -746,7 +746,7 @@ func _Msg_MintToken_Handler(srv interface{}, ctx context.Context, dec func(inter
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.token.Msg/MintToken",
+		FullMethod: "/furymod.token.Msg/MintToken",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).MintToken(ctx, req.(*MsgMintToken))
@@ -764,7 +764,7 @@ func _Msg_BurnToken_Handler(srv interface{}, ctx context.Context, dec func(inter
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.token.Msg/BurnToken",
+		FullMethod: "/furymod.token.Msg/BurnToken",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).BurnToken(ctx, req.(*MsgBurnToken))
@@ -782,7 +782,7 @@ func _Msg_TransferTokenOwner_Handler(srv interface{}, ctx context.Context, dec f
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.token.Msg/TransferTokenOwner",
+		FullMethod: "/furymod.token.Msg/TransferTokenOwner",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).TransferTokenOwner(ctx, req.(*MsgTransferTokenOwner))
@@ -800,7 +800,7 @@ func _Msg_SwapFeeToken_Handler(srv interface{}, ctx context.Context, dec func(in
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.token.Msg/SwapFeeToken",
+		FullMethod: "/furymod.token.Msg/SwapFeeToken",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).SwapFeeToken(ctx, req.(*MsgSwapFeeToken))
@@ -809,7 +809,7 @@ func _Msg_SwapFeeToken_Handler(srv interface{}, ctx context.Context, dec func(in
 }
 
 var _Msg_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "irismod.token.Msg",
+	ServiceName: "furymod.token.Msg",
 	HandlerType: (*MsgServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

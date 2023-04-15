@@ -17,10 +17,10 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	banktestutil "github.com/cosmos/cosmos-sdk/x/bank/client/testutil"
 
-	htlccli "github.com/irisnet/irismod/modules/htlc/client/cli"
-	htlctestutil "github.com/irisnet/irismod/modules/htlc/client/testutil"
-	htlctypes "github.com/irisnet/irismod/modules/htlc/types"
-	"github.com/irisnet/irismod/simapp"
+	htlccli "github.com/furynet/furymod/modules/htlc/client/cli"
+	htlctestutil "github.com/furynet/furymod/modules/htlc/client/testutil"
+	htlctypes "github.com/furynet/furymod/modules/htlc/types"
+	"github.com/furynet/furymod/simapp"
 )
 
 const (

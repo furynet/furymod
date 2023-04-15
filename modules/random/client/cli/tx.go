@@ -11,7 +11,7 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/version"
 
-	"github.com/irisnet/irismod/modules/random/types"
+	"github.com/furynet/furymod/modules/random/types"
 )
 
 // NewTxCmd returns the transaction commands for the random module.
@@ -35,7 +35,7 @@ func GetCmdRequestRandom() *cobra.Command {
 		Use:   "request",
 		Short: "Request a random number with an optional block interval",
 		Example: fmt.Sprintf(
-			"%s tx random request [--block-interval=10] [--oracle=true --service-fee-cap=1iris]",
+			"%s tx random request [--block-interval=10] [--oracle=true --service-fee-cap=1fury]",
 			version.AppName,
 		),
 		RunE: func(cmd *cobra.Command, args []string) error {

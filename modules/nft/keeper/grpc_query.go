@@ -10,7 +10,7 @@ import (
 	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
 	"github.com/cosmos/cosmos-sdk/x/nft"
 
-	"github.com/irisnet/irismod/modules/nft/types"
+	"github.com/furynet/furymod/modules/nft/types"
 )
 
 var _ types.QueryServer = Keeper{}

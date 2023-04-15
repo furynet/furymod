@@ -18,8 +18,8 @@ import (
 	simtypes "github.com/cosmos/cosmos-sdk/types/simulation"
 	"github.com/cosmos/cosmos-sdk/x/simulation"
 
-	"github.com/irisnet/irismod/modules/coinswap/keeper"
-	"github.com/irisnet/irismod/modules/coinswap/types"
+	"github.com/furynet/furymod/modules/coinswap/keeper"
+	"github.com/furynet/furymod/modules/coinswap/types"
 )
 
 // Simulation operation weights constants
@@ -605,7 +605,7 @@ func SimulateMsgRemoveUnilateralLiquidity(k keeper.Keeper, ak types.AccountKeepe
 			return simtypes.NoOpMsg(types.ModuleName, types.TypeMsgRemoveUnilateralLiquidity, "insufficient funds"), nil, nil
 		}
 
-		// pick a pool: if target token is iris, select the pool-1
+		// pick a pool: if target token is grid, select the pool-1
 		standardDenom := k.GetStandardDenom(ctx)
 		if targetToken.Denom == standardDenom {
 			return simtypes.NoOpMsg(types.ModuleName, types.TypeMsgRemoveUnilateralLiquidity, "tokenDenom should not be standardDenom"), nil, err

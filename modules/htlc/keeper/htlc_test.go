@@ -12,10 +12,10 @@ import (
 	"github.com/cosmos/cosmos-sdk/codec"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/irisnet/irismod/modules/htlc"
-	"github.com/irisnet/irismod/modules/htlc/keeper"
-	"github.com/irisnet/irismod/modules/htlc/types"
-	"github.com/irisnet/irismod/simapp"
+	"github.com/furynet/furymod/modules/htlc"
+	"github.com/furynet/furymod/modules/htlc/keeper"
+	"github.com/furynet/furymod/modules/htlc/types"
+	"github.com/furynet/furymod/simapp"
 )
 
 const (

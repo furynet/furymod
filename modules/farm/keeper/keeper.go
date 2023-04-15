@@ -10,7 +10,7 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	paramstypes "github.com/cosmos/cosmos-sdk/x/params/types"
 
-	"github.com/irisnet/irismod/modules/farm/types"
+	"github.com/furynet/furymod/modules/farm/types"
 )
 
 // Keeper of the farm store
@@ -111,7 +111,7 @@ func (k Keeper) GetRewardRules(ctx sdk.Context, poolId string) (rules types.Rewa
 }
 
 func (k Keeper) Logger(ctx sdk.Context) log.Logger {
-	return ctx.Logger().With("module", "irismod/farm")
+	return ctx.Logger().With("module", "furymod/farm")
 }
 
 func (k Keeper) IteratorRewardRules(ctx sdk.Context, poolId string, fun func(r types.RewardRule)) {

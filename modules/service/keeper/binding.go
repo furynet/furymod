@@ -10,7 +10,7 @@ import (
 	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
 	v042 "github.com/cosmos/cosmos-sdk/x/auth/migrations/v042"
 
-	"github.com/irisnet/irismod/modules/service/types"
+	"github.com/furynet/furymod/modules/service/types"
 )
 
 // AddServiceBinding creates a new service binding

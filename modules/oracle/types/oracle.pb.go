@@ -174,8 +174,8 @@ func (m *FeedValue) GetTimestamp() time.Time {
 }
 
 func init() {
-	proto.RegisterType((*Feed)(nil), "irismod.oracle.Feed")
-	proto.RegisterType((*FeedValue)(nil), "irismod.oracle.FeedValue")
+	proto.RegisterType((*Feed)(nil), "furymod.oracle.Feed")
+	proto.RegisterType((*FeedValue)(nil), "furymod.oracle.FeedValue")
 }
 
 func init() { proto.RegisterFile("oracle/oracle.proto", fileDescriptor_dc470b50b143d488) }

@@ -21,10 +21,10 @@ import (
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
 
-	coinswaptypes "github.com/irisnet/irismod/modules/coinswap/types"
-	tokencli "github.com/irisnet/irismod/modules/token/client/cli"
-	tokentestutil "github.com/irisnet/irismod/modules/token/client/testutil"
-	"github.com/irisnet/irismod/simapp"
+	coinswaptypes "github.com/furynet/furymod/modules/coinswap/types"
+	tokencli "github.com/furynet/furymod/modules/token/client/cli"
+	tokentestutil "github.com/furynet/furymod/modules/token/client/testutil"
+	"github.com/furynet/furymod/simapp"
 )
 
 type IntegrationTestSuite struct {
@@ -179,7 +179,7 @@ func (s *IntegrationTestSuite) TestCoinswap() {
 	s.Require().Equal("1000", coins.AmountOf(lptDenom).String())
 
 	queryPoolResponse := proto.Message(&coinswaptypes.QueryLiquidityPoolResponse{})
-	url := fmt.Sprintf("%s/irismod/coinswap/pools/%s", baseURL, lptDenom)
+	url := fmt.Sprintf("%s/furymod/coinswap/pools/%s", baseURL, lptDenom)
 	resp, err := rest.GetRequest(url)
 	s.Require().NoError(err)
 	s.Require().NoError(clientCtx.Codec.UnmarshalJSON(resp, queryPoolResponse))
@@ -249,7 +249,7 @@ func (s *IntegrationTestSuite) TestCoinswap() {
 	s.Require().Equal("399978955", coins.AmountOf(sdk.DefaultBondDenom).String())
 	s.Require().Equal("3000", coins.AmountOf(lptDenom).String())
 
-	url = fmt.Sprintf("%s/irismod/coinswap/pools/%s", baseURL, lptDenom)
+	url = fmt.Sprintf("%s/furymod/coinswap/pools/%s", baseURL, lptDenom)
 	resp, err = rest.GetRequest(url)
 	s.Require().NoError(err)
 	s.Require().NoError(clientCtx.Codec.UnmarshalJSON(resp, queryPoolResponse))
@@ -319,7 +319,7 @@ func (s *IntegrationTestSuite) TestCoinswap() {
 	s.Require().Equal("399979693", coins.AmountOf(sdk.DefaultBondDenom).String())
 	s.Require().Equal("3000", coins.AmountOf(lptDenom).String())
 
-	url = fmt.Sprintf("%s/irismod/coinswap/pools/%s", baseURL, lptDenom)
+	url = fmt.Sprintf("%s/furymod/coinswap/pools/%s", baseURL, lptDenom)
 	resp, err = rest.GetRequest(url)
 	s.Require().NoError(err)
 	s.Require().NoError(clientCtx.Codec.UnmarshalJSON(resp, queryPoolResponse))
@@ -389,7 +389,7 @@ func (s *IntegrationTestSuite) TestCoinswap() {
 	s.Require().Equal("399978930", coins.AmountOf(sdk.DefaultBondDenom).String())
 	s.Require().Equal("3000", coins.AmountOf(lptDenom).String())
 
-	url = fmt.Sprintf("%s/irismod/coinswap/pools/%s", baseURL, lptDenom)
+	url = fmt.Sprintf("%s/furymod/coinswap/pools/%s", baseURL, lptDenom)
 	resp, err = rest.GetRequest(url)
 	s.Require().NoError(err)
 	s.Require().NoError(clientCtx.Codec.UnmarshalJSON(resp, queryPoolResponse))
@@ -454,7 +454,7 @@ func (s *IntegrationTestSuite) TestCoinswap() {
 	s.Require().Equal("399980923", coins.AmountOf(sdk.DefaultBondDenom).String())
 	s.Require().Equal("1000", coins.AmountOf(lptDenom).String())
 
-	url = fmt.Sprintf("%s/irismod/coinswap/pools/%s", baseURL, lptDenom)
+	url = fmt.Sprintf("%s/furymod/coinswap/pools/%s", baseURL, lptDenom)
 	resp, err = rest.GetRequest(url)
 	s.Require().NoError(err)
 	s.Require().NoError(clientCtx.Codec.UnmarshalJSON(resp, queryPoolResponse))
@@ -519,7 +519,7 @@ func (s *IntegrationTestSuite) TestCoinswap() {
 	s.Require().Equal("399981915", coins.AmountOf(sdk.DefaultBondDenom).String())
 	s.Require().Equal("0", coins.AmountOf(lptDenom).String())
 
-	url = fmt.Sprintf("%s/irismod/coinswap/pools/%s", baseURL, lptDenom)
+	url = fmt.Sprintf("%s/furymod/coinswap/pools/%s", baseURL, lptDenom)
 	resp, err = rest.GetRequest(url)
 	s.Require().NoError(err)
 	s.Require().NoError(clientCtx.Codec.UnmarshalJSON(resp, queryPoolResponse))
@@ -529,7 +529,7 @@ func (s *IntegrationTestSuite) TestCoinswap() {
 	s.Require().Equal("0", queryPool.Pool.Lpt.Amount.String())
 
 	queryPoolsResponse := proto.Message(&coinswaptypes.QueryLiquidityPoolsResponse{})
-	url = fmt.Sprintf("%s/irismod/coinswap/pools", baseURL)
+	url = fmt.Sprintf("%s/furymod/coinswap/pools", baseURL)
 	resp, err = rest.GetRequest(url)
 	s.Require().NoError(err)
 	s.Require().NoError(clientCtx.Codec.UnmarshalJSON(resp, queryPoolsResponse))

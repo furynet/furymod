@@ -1,10 +1,10 @@
 syntax = "proto3";
-package irismod.oracle;
+package furymod.oracle;
 
 import "gogoproto/gogo.proto";
 import "google/protobuf/timestamp.proto";
 
-option go_package = "github.com/irisnet/irismod/modules/oracle/types";
+option go_package = "github.com/furynet/furymod/modules/oracle/types";
 
 // Feed defines the feed standard
 message Feed {

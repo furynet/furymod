@@ -19,10 +19,10 @@ import (
 	simtypes "github.com/cosmos/cosmos-sdk/types/simulation"
 	sdkbftsim "github.com/cosmos/cosmos-sdk/x/nft/simulation"
 
-	"github.com/irisnet/irismod/modules/nft/client/cli"
-	"github.com/irisnet/irismod/modules/nft/keeper"
-	"github.com/irisnet/irismod/modules/nft/simulation"
-	"github.com/irisnet/irismod/modules/nft/types"
+	"github.com/furynet/furymod/modules/nft/client/cli"
+	"github.com/furynet/furymod/modules/nft/keeper"
+	"github.com/furynet/furymod/modules/nft/simulation"
+	"github.com/furynet/furymod/modules/nft/types"
 )
 
 var (

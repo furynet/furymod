@@ -114,9 +114,9 @@ func (m *Requests) GetRequests() []Request {
 }
 
 func init() {
-	proto.RegisterType((*GenesisState)(nil), "irismod.random.GenesisState")
-	proto.RegisterMapType((map[string]Requests)(nil), "irismod.random.GenesisState.PendingRandomRequestsEntry")
-	proto.RegisterType((*Requests)(nil), "irismod.random.Requests")
+	proto.RegisterType((*GenesisState)(nil), "furymod.random.GenesisState")
+	proto.RegisterMapType((map[string]Requests)(nil), "furymod.random.GenesisState.PendingRandomRequestsEntry")
+	proto.RegisterType((*Requests)(nil), "furymod.random.Requests")
 }
 
 func init() { proto.RegisterFile("random/genesis.proto", fileDescriptor_55381a259c753e1a) }

@@ -15,7 +15,7 @@ import (
 	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
 	paramstypes "github.com/cosmos/cosmos-sdk/x/params/types"
 
-	"github.com/irisnet/irismod/modules/coinswap/types"
+	"github.com/furynet/furymod/modules/coinswap/types"
 )
 
 // Keeper of the coinswap store
@@ -147,7 +147,7 @@ func (k Keeper) AddLiquidity(ctx sdk.Context, msg *types.MsgAddLiquidity) (sdk.C
 		return sdk.Coin{}, err
 	}
 
-	//pool exist but has no balances,so do same operations as firist addLiquidity(but without creating pool)
+	//pool exist but has no balances,so do same operations as ffuryt addLiquidity(but without creating pool)
 	if balances == nil || balances.IsZero() {
 		mintLiquidityAmt = msg.ExactStandardAmt
 		if mintLiquidityAmt.LT(msg.MinLiquidity) {
@@ -345,15 +345,15 @@ func (k Keeper) RemoveLiquidity(ctx sdk.Context, msg *types.MsgRemoveLiquidity) 
 
 	// calculate amount of UNI to be burned for sender
 	// and coin amount to be returned
-	irisWithdrawnAmt := msg.WithdrawLiquidity.Amount.Mul(standardReserveAmt).Quo(liquidityReserve)
+	furyWithdrawnAmt := msg.WithdrawLiquidity.Amount.Mul(standardReserveAmt).Quo(liquidityReserve)
 	tokenWithdrawnAmt := msg.WithdrawLiquidity.Amount.Mul(tokenReserveAmt).Quo(liquidityReserve)
 
-	irisWithdrawCoin := sdk.NewCoin(standardDenom, irisWithdrawnAmt)
+	furyWithdrawCoin := sdk.NewCoin(standardDenom, furyWithdrawnAmt)
 	tokenWithdrawCoin := sdk.NewCoin(minTokenDenom, tokenWithdrawnAmt)
 	deductUniCoin := msg.WithdrawLiquidity
 
-	if irisWithdrawCoin.Amount.LT(msg.MinStandardAmt) {
-		return nil, sdkerrors.Wrapf(types.ErrConstraintNotMet, "iris amount not met, user expected: no less than %s, actual: %s", sdk.NewCoin(standardDenom, msg.MinStandardAmt).String(), irisWithdrawCoin.String())
+	if furyWithdrawCoin.Amount.LT(msg.MinStandardAmt) {
+		return nil, sdkerrors.Wrapf(types.ErrConstraintNotMet, "grid amount not met, user expected: no less than %s, actual: %s", sdk.NewCoin(standardDenom, msg.MinStandardAmt).String(), furyWithdrawCoin.String())
 	}
 	if tokenWithdrawCoin.Amount.LT(msg.MinToken) {
 		return nil, sdkerrors.Wrapf(types.ErrConstraintNotMet, "token amount not met, user expected: no less than %s, actual: %s", sdk.NewCoin(minTokenDenom, msg.MinToken).String(), tokenWithdrawCoin.String())
@@ -372,10 +372,10 @@ func (k Keeper) RemoveLiquidity(ctx sdk.Context, msg *types.MsgRemoveLiquidity) 
 		return nil, err
 	}
 
-	return k.removeLiquidity(ctx, poolAddr, sender, deductUniCoin, irisWithdrawCoin, tokenWithdrawCoin)
+	return k.removeLiquidity(ctx, poolAddr, sender, deductUniCoin, furyWithdrawCoin, tokenWithdrawCoin)
 }
 
-func (k Keeper) removeLiquidity(ctx sdk.Context, poolAddr, sender sdk.AccAddress, deductUniCoin, irisWithdrawCoin, tokenWithdrawCoin sdk.Coin) (sdk.Coins, error) {
+func (k Keeper) removeLiquidity(ctx sdk.Context, poolAddr, sender sdk.AccAddress, deductUniCoin, furyWithdrawCoin, tokenWithdrawCoin sdk.Coin) (sdk.Coins, error) {
 	deltaCoins := sdk.NewCoins(deductUniCoin)
 
 	// send liquidity vouchers to be burned from sender account to module account
@@ -388,7 +388,7 @@ func (k Keeper) removeLiquidity(ctx sdk.Context, poolAddr, sender sdk.AccAddress
 	}
 
 	// transfer withdrawn liquidity from coinswap reserve pool account to sender account
-	coins := sdk.NewCoins(irisWithdrawCoin, tokenWithdrawCoin)
+	coins := sdk.NewCoins(furyWithdrawCoin, tokenWithdrawCoin)
 
 	return coins, k.bk.SendCoins(ctx, poolAddr, sender, coins)
 }

@@ -1,10 +1,10 @@
 syntax = "proto3";
-package irismod.nft;
+package furymod.nft;
 
 import "gogoproto/gogo.proto";
 import "nft/nft.proto";
 
-option go_package = "github.com/irisnet/irismod/modules/nft/types";
+option go_package = "github.com/furynet/furymod/modules/nft/types";
 
 // GenesisState defines the NFT module's genesis state
 message GenesisState {

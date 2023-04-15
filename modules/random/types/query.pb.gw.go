@@ -260,9 +260,9 @@ func RegisterQueryHandlerClient(ctx context.Context, mux *runtime.ServeMux, clie
 }
 
 var (
-	pattern_Query_Random_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3}, []string{"irismod", "random", "randoms", "req_id"}, "", runtime.AssumeColonVerbOpt(false)))
+	pattern_Query_Random_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3}, []string{"furymod", "random", "randoms", "req_id"}, "", runtime.AssumeColonVerbOpt(false)))
 
-	pattern_Query_RandomRequestQueue_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2}, []string{"irismod", "random", "queue"}, "", runtime.AssumeColonVerbOpt(false)))
+	pattern_Query_RandomRequestQueue_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2}, []string{"furymod", "random", "queue"}, "", runtime.AssumeColonVerbOpt(false)))
 )
 
 var (

@@ -10,9 +10,9 @@ import (
 	simtypes "github.com/cosmos/cosmos-sdk/types/simulation"
 	"github.com/cosmos/cosmos-sdk/x/simulation"
 
-	"github.com/irisnet/irismod/modules/random/keeper"
-	"github.com/irisnet/irismod/modules/random/types"
-	irishelpers "github.com/irisnet/irismod/simapp/helpers"
+	"github.com/furynet/furymod/modules/random/keeper"
+	"github.com/furynet/furymod/modules/random/types"
+	furyhelpers "github.com/furynet/furymod/simapp/helpers"
 )
 
 // WeightedOperations generates a MsgRequestRandom with random values.
@@ -41,7 +41,7 @@ func WeightedOperations(k keeper.Keeper, ak types.AccountKeeper, bk types.BankKe
 				}
 
 				txConfig := simappparams.MakeTestEncodingConfig().TxConfig
-				tx, err := irishelpers.GenTx(
+				tx, err := furyhelpers.GenTx(
 					r,
 					txConfig,
 					[]sdk.Msg{msg},

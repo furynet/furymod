@@ -69,7 +69,7 @@ func (m *GenesisState) GetCollections() []Collection {
 }
 
 func init() {
-	proto.RegisterType((*GenesisState)(nil), "irismod.nft.GenesisState")
+	proto.RegisterType((*GenesisState)(nil), "furymod.nft.GenesisState")
 }
 
 func init() { proto.RegisterFile("nft/genesis.proto", fileDescriptor_e09d07ea8a68e765) }

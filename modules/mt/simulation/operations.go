@@ -10,8 +10,8 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	simtypes "github.com/cosmos/cosmos-sdk/types/simulation"
 	"github.com/cosmos/cosmos-sdk/x/simulation"
-	"github.com/irisnet/irismod/modules/mt/keeper"
-	mt "github.com/irisnet/irismod/modules/mt/types"
+	"github.com/furynet/furymod/modules/mt/keeper"
+	mt "github.com/furynet/furymod/modules/mt/types"
 )
 
 // Simulation operation weights constants

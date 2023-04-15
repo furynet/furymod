@@ -20,11 +20,11 @@ func init() {
 
 // RegisterLegacyAminoCodec registers concrete types on the codec.
 func RegisterLegacyAminoCodec(cdc *codec.LegacyAmino) {
-	cdc.RegisterConcrete(&MsgSwapOrder{}, "irismod/coinswap/MsgSwapOrder", nil)
-	cdc.RegisterConcrete(&MsgAddLiquidity{}, "irismod/coinswap/MsgAddLiquidity", nil)
-	cdc.RegisterConcrete(&MsgRemoveLiquidity{}, "irismod/coinswap/MsgRemoveLiquidity", nil)
-	cdc.RegisterConcrete(&MsgAddUnilateralLiquidity{}, "irismod/coinswap/MsgAddUnilateralLiquidity", nil)
-	cdc.RegisterConcrete(&MsgRemoveUnilateralLiquidity{}, "irismod/coinswap/MsgRemoveUnilateralLiquidity", nil)
+	cdc.RegisterConcrete(&MsgSwapOrder{}, "furymod/coinswap/MsgSwapOrder", nil)
+	cdc.RegisterConcrete(&MsgAddLiquidity{}, "furymod/coinswap/MsgAddLiquidity", nil)
+	cdc.RegisterConcrete(&MsgRemoveLiquidity{}, "furymod/coinswap/MsgRemoveLiquidity", nil)
+	cdc.RegisterConcrete(&MsgAddUnilateralLiquidity{}, "furymod/coinswap/MsgAddUnilateralLiquidity", nil)
+	cdc.RegisterConcrete(&MsgRemoveUnilateralLiquidity{}, "furymod/coinswap/MsgRemoveUnilateralLiquidity", nil)
 }
 
 func RegisterInterfaces(registry types.InterfaceRegistry) {

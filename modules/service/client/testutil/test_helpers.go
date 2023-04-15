@@ -10,7 +10,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/testutil"
 	clitestutil "github.com/cosmos/cosmos-sdk/testutil/cli"
 
-	servicecli "github.com/irisnet/irismod/modules/service/client/cli"
+	servicecli "github.com/furynet/furymod/modules/service/client/cli"
 )
 
 func DefineServiceExec(clientCtx client.Context, from string, extraArgs ...string) (testutil.BufferWriter, error) {

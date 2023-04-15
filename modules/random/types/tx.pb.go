@@ -138,8 +138,8 @@ func (m *MsgRequestRandomResponse) XXX_DiscardUnknown() {
 var xxx_messageInfo_MsgRequestRandomResponse proto.InternalMessageInfo
 
 func init() {
-	proto.RegisterType((*MsgRequestRandom)(nil), "irismod.random.MsgRequestRandom")
-	proto.RegisterType((*MsgRequestRandomResponse)(nil), "irismod.random.MsgRequestRandomResponse")
+	proto.RegisterType((*MsgRequestRandom)(nil), "furymod.random.MsgRequestRandom")
+	proto.RegisterType((*MsgRequestRandomResponse)(nil), "furymod.random.MsgRequestRandomResponse")
 }
 
 func init() { proto.RegisterFile("random/tx.proto", fileDescriptor_8734007206ce5490) }
@@ -199,7 +199,7 @@ func NewMsgClient(cc grpc1.ClientConn) MsgClient {
 
 func (c *msgClient) RequestRandom(ctx context.Context, in *MsgRequestRandom, opts ...grpc.CallOption) (*MsgRequestRandomResponse, error) {
 	out := new(MsgRequestRandomResponse)
-	err := c.cc.Invoke(ctx, "/irismod.random.Msg/RequestRandom", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.random.Msg/RequestRandom", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -234,7 +234,7 @@ func _Msg_RequestRandom_Handler(srv interface{}, ctx context.Context, dec func(i
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.random.Msg/RequestRandom",
+		FullMethod: "/furymod.random.Msg/RequestRandom",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).RequestRandom(ctx, req.(*MsgRequestRandom))
@@ -243,7 +243,7 @@ func _Msg_RequestRandom_Handler(srv interface{}, ctx context.Context, dec func(i
 }
 
 var _Msg_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "irismod.random.Msg",
+	ServiceName: "furymod.random.Msg",
 	HandlerType: (*MsgServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

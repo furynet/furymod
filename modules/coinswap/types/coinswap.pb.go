@@ -189,10 +189,10 @@ func (m *Params) XXX_DiscardUnknown() {
 var xxx_messageInfo_Params proto.InternalMessageInfo
 
 func init() {
-	proto.RegisterType((*Input)(nil), "irismod.coinswap.Input")
-	proto.RegisterType((*Output)(nil), "irismod.coinswap.Output")
-	proto.RegisterType((*Pool)(nil), "irismod.coinswap.Pool")
-	proto.RegisterType((*Params)(nil), "irismod.coinswap.Params")
+	proto.RegisterType((*Input)(nil), "furymod.coinswap.Input")
+	proto.RegisterType((*Output)(nil), "furymod.coinswap.Output")
+	proto.RegisterType((*Pool)(nil), "furymod.coinswap.Pool")
+	proto.RegisterType((*Params)(nil), "furymod.coinswap.Params")
 }
 
 func init() { proto.RegisterFile("coinswap/coinswap.proto", fileDescriptor_ac63172e3bfc925a) }

@@ -15,9 +15,9 @@ import (
 	simtypes "github.com/cosmos/cosmos-sdk/types/simulation"
 	"github.com/cosmos/cosmos-sdk/x/simulation"
 
-	"github.com/irisnet/irismod/modules/service/keeper"
-	"github.com/irisnet/irismod/modules/service/types"
-	irishelpers "github.com/irisnet/irismod/simapp/helpers"
+	"github.com/furynet/furymod/modules/service/keeper"
+	"github.com/furynet/furymod/modules/service/types"
+	furyhelpers "github.com/furynet/furymod/simapp/helpers"
 )
 
 // Simulation operation weights constants
@@ -715,7 +715,7 @@ func SimulateMsgCallService(ak types.AccountKeeper, bk types.BankKeeper, k keepe
 		}
 
 		txConfig := cosmossimappparams.MakeTestEncodingConfig().TxConfig
-		tx, err := irishelpers.GenTx(
+		tx, err := furyhelpers.GenTx(
 			r,
 			txConfig,
 			[]sdk.Msg{msg},

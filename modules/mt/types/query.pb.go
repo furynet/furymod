@@ -734,20 +734,20 @@ func (m *QueryBalancesResponse) GetPagination() *query.PageResponse {
 }
 
 func init() {
-	proto.RegisterType((*QuerySupplyRequest)(nil), "irismod.mt.QuerySupplyRequest")
-	proto.RegisterType((*QuerySupplyResponse)(nil), "irismod.mt.QuerySupplyResponse")
-	proto.RegisterType((*QueryDenomsRequest)(nil), "irismod.mt.QueryDenomsRequest")
-	proto.RegisterType((*QueryDenomsResponse)(nil), "irismod.mt.QueryDenomsResponse")
-	proto.RegisterType((*QueryDenomRequest)(nil), "irismod.mt.QueryDenomRequest")
-	proto.RegisterType((*QueryDenomResponse)(nil), "irismod.mt.QueryDenomResponse")
-	proto.RegisterType((*QueryMTSupplyRequest)(nil), "irismod.mt.QueryMTSupplyRequest")
-	proto.RegisterType((*QueryMTSupplyResponse)(nil), "irismod.mt.QueryMTSupplyResponse")
-	proto.RegisterType((*QueryMTsRequest)(nil), "irismod.mt.QueryMTsRequest")
-	proto.RegisterType((*QueryMTsResponse)(nil), "irismod.mt.QueryMTsResponse")
-	proto.RegisterType((*QueryMTRequest)(nil), "irismod.mt.QueryMTRequest")
-	proto.RegisterType((*QueryMTResponse)(nil), "irismod.mt.QueryMTResponse")
-	proto.RegisterType((*QueryBalancesRequest)(nil), "irismod.mt.QueryBalancesRequest")
-	proto.RegisterType((*QueryBalancesResponse)(nil), "irismod.mt.QueryBalancesResponse")
+	proto.RegisterType((*QuerySupplyRequest)(nil), "furymod.mt.QuerySupplyRequest")
+	proto.RegisterType((*QuerySupplyResponse)(nil), "furymod.mt.QuerySupplyResponse")
+	proto.RegisterType((*QueryDenomsRequest)(nil), "furymod.mt.QueryDenomsRequest")
+	proto.RegisterType((*QueryDenomsResponse)(nil), "furymod.mt.QueryDenomsResponse")
+	proto.RegisterType((*QueryDenomRequest)(nil), "furymod.mt.QueryDenomRequest")
+	proto.RegisterType((*QueryDenomResponse)(nil), "furymod.mt.QueryDenomResponse")
+	proto.RegisterType((*QueryMTSupplyRequest)(nil), "furymod.mt.QueryMTSupplyRequest")
+	proto.RegisterType((*QueryMTSupplyResponse)(nil), "furymod.mt.QueryMTSupplyResponse")
+	proto.RegisterType((*QueryMTsRequest)(nil), "furymod.mt.QueryMTsRequest")
+	proto.RegisterType((*QueryMTsResponse)(nil), "furymod.mt.QueryMTsResponse")
+	proto.RegisterType((*QueryMTRequest)(nil), "furymod.mt.QueryMTRequest")
+	proto.RegisterType((*QueryMTResponse)(nil), "furymod.mt.QueryMTResponse")
+	proto.RegisterType((*QueryBalancesRequest)(nil), "furymod.mt.QueryBalancesRequest")
+	proto.RegisterType((*QueryBalancesResponse)(nil), "furymod.mt.QueryBalancesResponse")
 }
 
 func init() { proto.RegisterFile("mt/query.proto", fileDescriptor_862656a34079b2a1) }
@@ -842,7 +842,7 @@ func NewQueryClient(cc grpc1.ClientConn) QueryClient {
 
 func (c *queryClient) Supply(ctx context.Context, in *QuerySupplyRequest, opts ...grpc.CallOption) (*QuerySupplyResponse, error) {
 	out := new(QuerySupplyResponse)
-	err := c.cc.Invoke(ctx, "/irismod.mt.Query/Supply", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.mt.Query/Supply", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -851,7 +851,7 @@ func (c *queryClient) Supply(ctx context.Context, in *QuerySupplyRequest, opts .
 
 func (c *queryClient) Denoms(ctx context.Context, in *QueryDenomsRequest, opts ...grpc.CallOption) (*QueryDenomsResponse, error) {
 	out := new(QueryDenomsResponse)
-	err := c.cc.Invoke(ctx, "/irismod.mt.Query/Denoms", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.mt.Query/Denoms", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -860,7 +860,7 @@ func (c *queryClient) Denoms(ctx context.Context, in *QueryDenomsRequest, opts .
 
 func (c *queryClient) Denom(ctx context.Context, in *QueryDenomRequest, opts ...grpc.CallOption) (*QueryDenomResponse, error) {
 	out := new(QueryDenomResponse)
-	err := c.cc.Invoke(ctx, "/irismod.mt.Query/Denom", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.mt.Query/Denom", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -869,7 +869,7 @@ func (c *queryClient) Denom(ctx context.Context, in *QueryDenomRequest, opts ...
 
 func (c *queryClient) MTSupply(ctx context.Context, in *QueryMTSupplyRequest, opts ...grpc.CallOption) (*QueryMTSupplyResponse, error) {
 	out := new(QueryMTSupplyResponse)
-	err := c.cc.Invoke(ctx, "/irismod.mt.Query/MTSupply", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.mt.Query/MTSupply", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -878,7 +878,7 @@ func (c *queryClient) MTSupply(ctx context.Context, in *QueryMTSupplyRequest, op
 
 func (c *queryClient) MTs(ctx context.Context, in *QueryMTsRequest, opts ...grpc.CallOption) (*QueryMTsResponse, error) {
 	out := new(QueryMTsResponse)
-	err := c.cc.Invoke(ctx, "/irismod.mt.Query/MTs", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.mt.Query/MTs", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -887,7 +887,7 @@ func (c *queryClient) MTs(ctx context.Context, in *QueryMTsRequest, opts ...grpc
 
 func (c *queryClient) MT(ctx context.Context, in *QueryMTRequest, opts ...grpc.CallOption) (*QueryMTResponse, error) {
 	out := new(QueryMTResponse)
-	err := c.cc.Invoke(ctx, "/irismod.mt.Query/MT", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.mt.Query/MT", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -896,7 +896,7 @@ func (c *queryClient) MT(ctx context.Context, in *QueryMTRequest, opts ...grpc.C
 
 func (c *queryClient) Balances(ctx context.Context, in *QueryBalancesRequest, opts ...grpc.CallOption) (*QueryBalancesResponse, error) {
 	out := new(QueryBalancesResponse)
-	err := c.cc.Invoke(ctx, "/irismod.mt.Query/Balances", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.mt.Query/Balances", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -961,7 +961,7 @@ func _Query_Supply_Handler(srv interface{}, ctx context.Context, dec func(interf
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.mt.Query/Supply",
+		FullMethod: "/furymod.mt.Query/Supply",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).Supply(ctx, req.(*QuerySupplyRequest))
@@ -979,7 +979,7 @@ func _Query_Denoms_Handler(srv interface{}, ctx context.Context, dec func(interf
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.mt.Query/Denoms",
+		FullMethod: "/furymod.mt.Query/Denoms",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).Denoms(ctx, req.(*QueryDenomsRequest))
@@ -997,7 +997,7 @@ func _Query_Denom_Handler(srv interface{}, ctx context.Context, dec func(interfa
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.mt.Query/Denom",
+		FullMethod: "/furymod.mt.Query/Denom",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).Denom(ctx, req.(*QueryDenomRequest))
@@ -1015,7 +1015,7 @@ func _Query_MTSupply_Handler(srv interface{}, ctx context.Context, dec func(inte
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.mt.Query/MTSupply",
+		FullMethod: "/furymod.mt.Query/MTSupply",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).MTSupply(ctx, req.(*QueryMTSupplyRequest))
@@ -1033,7 +1033,7 @@ func _Query_MTs_Handler(srv interface{}, ctx context.Context, dec func(interface
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.mt.Query/MTs",
+		FullMethod: "/furymod.mt.Query/MTs",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).MTs(ctx, req.(*QueryMTsRequest))
@@ -1051,7 +1051,7 @@ func _Query_MT_Handler(srv interface{}, ctx context.Context, dec func(interface{
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.mt.Query/MT",
+		FullMethod: "/furymod.mt.Query/MT",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).MT(ctx, req.(*QueryMTRequest))
@@ -1069,7 +1069,7 @@ func _Query_Balances_Handler(srv interface{}, ctx context.Context, dec func(inte
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.mt.Query/Balances",
+		FullMethod: "/furymod.mt.Query/Balances",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).Balances(ctx, req.(*QueryBalancesRequest))
@@ -1078,7 +1078,7 @@ func _Query_Balances_Handler(srv interface{}, ctx context.Context, dec func(inte
 }
 
 var _Query_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "irismod.mt.Query",
+	ServiceName: "furymod.mt.Query",
 	HandlerType: (*QueryServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

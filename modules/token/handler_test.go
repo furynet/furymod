@@ -13,10 +13,10 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	bankkeeper "github.com/cosmos/cosmos-sdk/x/bank/keeper"
 
-	tokenmodule "github.com/irisnet/irismod/modules/token"
-	tokenkeeper "github.com/irisnet/irismod/modules/token/keeper"
-	"github.com/irisnet/irismod/modules/token/types"
-	"github.com/irisnet/irismod/simapp"
+	tokenmodule "github.com/furynet/furymod/modules/token"
+	tokenkeeper "github.com/furynet/furymod/modules/token/keeper"
+	"github.com/furynet/furymod/modules/token/types"
+	"github.com/furynet/furymod/simapp"
 )
 
 const (

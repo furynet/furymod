@@ -23,13 +23,13 @@ func init() {
 }
 
 func RegisterLegacyAminoCodec(cdc *codec.LegacyAmino) {
-	cdc.RegisterConcrete(&MsgCreatePool{}, "irismod/farm/MsgCreatePool", nil)
-	cdc.RegisterConcrete(&MsgCreatePoolWithCommunityPool{}, "irismod/farm/MsgCreatePoolWithCommunityPool", nil)
-	cdc.RegisterConcrete(&MsgDestroyPool{}, "irismod/farm/MsgDestroyPool", nil)
-	cdc.RegisterConcrete(&MsgAdjustPool{}, "irismod/farm/MsgAdjustPool", nil)
-	cdc.RegisterConcrete(&MsgStake{}, "irismod/farm/MsgStake", nil)
-	cdc.RegisterConcrete(&MsgUnstake{}, "irismod/farm/MsgUnstake", nil)
-	cdc.RegisterConcrete(&MsgHarvest{}, "irismod/farm/MsgHarvest", nil)
+	cdc.RegisterConcrete(&MsgCreatePool{}, "furymod/farm/MsgCreatePool", nil)
+	cdc.RegisterConcrete(&MsgCreatePoolWithCommunityPool{}, "furymod/farm/MsgCreatePoolWithCommunityPool", nil)
+	cdc.RegisterConcrete(&MsgDestroyPool{}, "furymod/farm/MsgDestroyPool", nil)
+	cdc.RegisterConcrete(&MsgAdjustPool{}, "furymod/farm/MsgAdjustPool", nil)
+	cdc.RegisterConcrete(&MsgStake{}, "furymod/farm/MsgStake", nil)
+	cdc.RegisterConcrete(&MsgUnstake{}, "furymod/farm/MsgUnstake", nil)
+	cdc.RegisterConcrete(&MsgHarvest{}, "furymod/farm/MsgHarvest", nil)
 }
 
 // RegisterInterfaces registers the interface

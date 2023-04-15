@@ -13,8 +13,8 @@ import (
 	simtypes "github.com/cosmos/cosmos-sdk/types/simulation"
 	"github.com/cosmos/cosmos-sdk/x/simulation"
 
-	"github.com/irisnet/irismod/modules/nft/keeper"
-	"github.com/irisnet/irismod/modules/nft/types"
+	"github.com/furynet/furymod/modules/nft/keeper"
+	"github.com/furynet/furymod/modules/nft/types"
 )
 
 // Simulation operation weights constants
@@ -30,7 +30,7 @@ const (
 var (
 	data = []string{
 		"{\"key1\":\"value1\",\"key2\":\"value2\"}",
-		"{\"irismod:key1\":\"value1\",\"irismod:key2\":\"value2\"}",
+		"{\"furymod:key1\":\"value1\",\"furymod:key2\":\"value2\"}",
 	}
 )
 

@@ -14,10 +14,10 @@ import (
 	"github.com/cosmos/cosmos-sdk/testutil/rest"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	tokencli "github.com/irisnet/irismod/modules/token/client/cli"
-	tokentestutil "github.com/irisnet/irismod/modules/token/client/testutil"
-	tokentypes "github.com/irisnet/irismod/modules/token/types"
-	"github.com/irisnet/irismod/simapp"
+	tokencli "github.com/furynet/furymod/modules/token/client/cli"
+	tokentestutil "github.com/furynet/furymod/modules/token/client/testutil"
+	tokentypes "github.com/furynet/furymod/modules/token/types"
+	"github.com/furynet/furymod/simapp"
 )
 
 type IntegrationTestSuite struct {
@@ -92,7 +92,7 @@ func (s *IntegrationTestSuite) TestToken() {
 	tokenSymbol := gjson.Get(txResp.RawLog, "0.events.4.attributes.0.value").String()
 
 	//------test GetCmdQueryTokens()-------------
-	url := fmt.Sprintf("%s/irismod/token/tokens", baseURL)
+	url := fmt.Sprintf("%s/furymod/token/tokens", baseURL)
 	resp, err := rest.GetRequest(url)
 	respType = proto.Message(&tokentypes.QueryTokensResponse{})
 	s.Require().NoError(err)
@@ -101,7 +101,7 @@ func (s *IntegrationTestSuite) TestToken() {
 	s.Require().Equal(2, len(tokensResp.Tokens))
 
 	//------test GetCmdQueryToken()-------------
-	url = fmt.Sprintf("%s/irismod/token/tokens/%s", baseURL, tokenSymbol)
+	url = fmt.Sprintf("%s/furymod/token/tokens/%s", baseURL, tokenSymbol)
 	resp, err = rest.GetRequest(url)
 	respType = proto.Message(&tokentypes.QueryTokenResponse{})
 	var token tokentypes.TokenI
@@ -115,7 +115,7 @@ func (s *IntegrationTestSuite) TestToken() {
 	s.Require().Equal(uint64(initialSupply), token.GetInitialSupply())
 
 	//------test GetCmdQueryFee()-------------
-	url = fmt.Sprintf("%s/irismod/token/tokens/%s/fees", baseURL, tokenSymbol)
+	url = fmt.Sprintf("%s/furymod/token/tokens/%s/fees", baseURL, tokenSymbol)
 	resp, err = rest.GetRequest(url)
 	respType = proto.Message(&tokentypes.QueryFeesResponse{})
 	s.Require().NoError(err)
@@ -126,7 +126,7 @@ func (s *IntegrationTestSuite) TestToken() {
 	s.Require().Equal(expectedFeeResp, string(result))
 
 	//------test GetCmdQueryParams()-------------
-	url = fmt.Sprintf("%s/irismod/token/params", baseURL)
+	url = fmt.Sprintf("%s/furymod/token/params", baseURL)
 	resp, err = rest.GetRequest(url)
 	respType = proto.Message(&tokentypes.QueryParamsResponse{})
 	s.Require().NoError(err)

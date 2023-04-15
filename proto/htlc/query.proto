@@ -1,33 +1,33 @@
 syntax = "proto3";
-package irismod.htlc;
+package furymod.htlc;
 
 import "google/api/annotations.proto";
 import "gogoproto/gogo.proto";
 import "htlc/htlc.proto";
 
-option go_package = "github.com/irisnet/irismod/modules/htlc/types";
+option go_package = "github.com/furynet/furymod/modules/htlc/types";
 
 // Query provides defines the gRPC querier service
 service Query {
   // HTLC queries the HTLC by the specified hash lock
   rpc HTLC(QueryHTLCRequest) returns (QueryHTLCResponse) {
-    option (google.api.http).get = "/irismod/htlc/htlcs/{id}";
+    option (google.api.http).get = "/furymod/htlc/htlcs/{id}";
   }
 
   // AssetSupply queries the supply of an asset
   rpc AssetSupply(QueryAssetSupplyRequest) returns (QueryAssetSupplyResponse) {
-    option (google.api.http).get = "/irismod/htlc/supplies/{denom}";
+    option (google.api.http).get = "/furymod/htlc/supplies/{denom}";
   }
 
   // AssetSupplies queries the supplies of all assets
   rpc AssetSupplies(QueryAssetSuppliesRequest)
       returns (QueryAssetSuppliesResponse) {
-    option (google.api.http).get = "/irismod/htlc/supplies";
+    option (google.api.http).get = "/furymod/htlc/supplies";
   }
 
   // Params queries the htlc parameters
   rpc Params(QueryParamsRequest) returns (QueryParamsResponse) {
-    option (google.api.http).get = "/irismod/htlc/params";
+    option (google.api.http).get = "/furymod/htlc/params";
   }
 }
 

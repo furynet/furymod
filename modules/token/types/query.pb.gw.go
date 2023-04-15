@@ -479,15 +479,15 @@ func RegisterQueryHandlerClient(ctx context.Context, mux *runtime.ServeMux, clie
 }
 
 var (
-	pattern_Query_Token_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3}, []string{"irismod", "token", "tokens", "denom"}, "", runtime.AssumeColonVerbOpt(false)))
+	pattern_Query_Token_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3}, []string{"furymod", "token", "tokens", "denom"}, "", runtime.AssumeColonVerbOpt(false)))
 
-	pattern_Query_Tokens_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2}, []string{"irismod", "token", "tokens"}, "", runtime.AssumeColonVerbOpt(false)))
+	pattern_Query_Tokens_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2}, []string{"furymod", "token", "tokens"}, "", runtime.AssumeColonVerbOpt(false)))
 
-	pattern_Query_Fees_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3, 2, 4}, []string{"irismod", "token", "tokens", "symbol", "fees"}, "", runtime.AssumeColonVerbOpt(false)))
+	pattern_Query_Fees_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3, 2, 4}, []string{"furymod", "token", "tokens", "symbol", "fees"}, "", runtime.AssumeColonVerbOpt(false)))
 
-	pattern_Query_Params_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2}, []string{"irismod", "token", "params"}, "", runtime.AssumeColonVerbOpt(false)))
+	pattern_Query_Params_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2}, []string{"furymod", "token", "params"}, "", runtime.AssumeColonVerbOpt(false)))
 
-	pattern_Query_TotalBurn_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2}, []string{"irismod", "token", "total_burn"}, "", runtime.AssumeColonVerbOpt(false)))
+	pattern_Query_TotalBurn_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2}, []string{"furymod", "token", "total_burn"}, "", runtime.AssumeColonVerbOpt(false)))
 )
 
 var (

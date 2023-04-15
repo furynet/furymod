@@ -2,7 +2,7 @@ package types
 
 import (
 	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
-	"github.com/irisnet/irismod/modules/mt/exported"
+	"github.com/furynet/furymod/modules/mt/exported"
 )
 
 // NewGenesisState creates a new genesis state.

@@ -236,10 +236,10 @@ func (m *DenomBalance) GetBalances() []Balance {
 }
 
 func init() {
-	proto.RegisterType((*GenesisState)(nil), "irismod.mt.GenesisState")
-	proto.RegisterType((*Collection)(nil), "irismod.mt.Collection")
-	proto.RegisterType((*Owner)(nil), "irismod.mt.Owner")
-	proto.RegisterType((*DenomBalance)(nil), "irismod.mt.DenomBalance")
+	proto.RegisterType((*GenesisState)(nil), "furymod.mt.GenesisState")
+	proto.RegisterType((*Collection)(nil), "furymod.mt.Collection")
+	proto.RegisterType((*Owner)(nil), "furymod.mt.Owner")
+	proto.RegisterType((*DenomBalance)(nil), "furymod.mt.DenomBalance")
 }
 
 func init() { proto.RegisterFile("mt/genesis.proto", fileDescriptor_5dcdde9845f52b93) }

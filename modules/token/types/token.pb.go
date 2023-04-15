@@ -109,8 +109,8 @@ func (m *Params) XXX_DiscardUnknown() {
 var xxx_messageInfo_Params proto.InternalMessageInfo
 
 func init() {
-	proto.RegisterType((*Token)(nil), "irismod.token.Token")
-	proto.RegisterType((*Params)(nil), "irismod.token.Params")
+	proto.RegisterType((*Token)(nil), "furymod.token.Token")
+	proto.RegisterType((*Params)(nil), "furymod.token.Params")
 }
 
 func init() { proto.RegisterFile("token/token.proto", fileDescriptor_6e2ef433bb3fdc80) }

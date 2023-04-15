@@ -10,7 +10,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/testutil"
 	clitestutil "github.com/cosmos/cosmos-sdk/testutil/cli"
 
-	nftcli "github.com/irisnet/irismod/modules/nft/client/cli"
+	nftcli "github.com/furynet/furymod/modules/nft/client/cli"
 )
 
 // IssueDenomExec creates a redelegate message.

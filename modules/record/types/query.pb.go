@@ -119,8 +119,8 @@ func (m *QueryRecordResponse) GetRecord() *Record {
 }
 
 func init() {
-	proto.RegisterType((*QueryRecordRequest)(nil), "irismod.record.QueryRecordRequest")
-	proto.RegisterType((*QueryRecordResponse)(nil), "irismod.record.QueryRecordResponse")
+	proto.RegisterType((*QueryRecordRequest)(nil), "furymod.record.QueryRecordRequest")
+	proto.RegisterType((*QueryRecordResponse)(nil), "furymod.record.QueryRecordResponse")
 }
 
 func init() { proto.RegisterFile("record/query.proto", fileDescriptor_45fc26642889837f) }
@@ -173,7 +173,7 @@ func NewQueryClient(cc grpc1.ClientConn) QueryClient {
 
 func (c *queryClient) Record(ctx context.Context, in *QueryRecordRequest, opts ...grpc.CallOption) (*QueryRecordResponse, error) {
 	out := new(QueryRecordResponse)
-	err := c.cc.Invoke(ctx, "/irismod.record.Query/Record", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furymod.record.Query/Record", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -208,7 +208,7 @@ func _Query_Record_Handler(srv interface{}, ctx context.Context, dec func(interf
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/irismod.record.Query/Record",
+		FullMethod: "/furymod.record.Query/Record",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).Record(ctx, req.(*QueryRecordRequest))
@@ -217,7 +217,7 @@ func _Query_Record_Handler(srv interface{}, ctx context.Context, dec func(interf
 }
 
 var _Query_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "irismod.record.Query",
+	ServiceName: "furymod.record.Query",
 	HandlerType: (*QueryServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

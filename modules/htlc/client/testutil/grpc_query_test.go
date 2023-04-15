@@ -13,9 +13,9 @@ import (
 	"github.com/cosmos/cosmos-sdk/testutil/network"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	htlccli "github.com/irisnet/irismod/modules/htlc/client/cli"
-	htlctestutil "github.com/irisnet/irismod/modules/htlc/client/testutil"
-	"github.com/irisnet/irismod/simapp"
+	htlccli "github.com/furynet/furymod/modules/htlc/client/cli"
+	htlctestutil "github.com/furynet/furymod/modules/htlc/client/testutil"
+	"github.com/furynet/furymod/simapp"
 )
 
 type IntegrationTestSuite struct {
@@ -87,7 +87,7 @@ func (s *IntegrationTestSuite) TestHtlc() {
 	s.Require().Equal(expectedCode, txResp.Code)
 
 	//------test GetCmdQueryHTLC()-------------
-	//url := fmt.Sprintf("%s/irismod/htlc/htlcs/%s", baseURL, hashLock)
+	//url := fmt.Sprintf("%s/furymod/htlc/htlcs/%s", baseURL, hashLock)
 	//resp, err := rest.GetRequest(url)
 	//respType = proto.Message(&htlctypes.QueryHTLCResponse{})
 	//s.Require().NoError(err)

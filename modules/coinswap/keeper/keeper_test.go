@@ -15,8 +15,8 @@ import (
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
 
-	"github.com/irisnet/irismod/modules/coinswap/types"
-	"github.com/irisnet/irismod/simapp"
+	"github.com/furynet/furymod/modules/coinswap/types"
+	"github.com/furynet/furymod/simapp"
 )
 
 const (
@@ -377,10 +377,10 @@ func (suite *TestSuite) TestLiquidity3() {
 
 	// 2.3 accountBalances
 	lptAmt, _ := sdkmath.NewIntFromString("5000000000000000000")
-	irisAmt, _ := sdkmath.NewIntFromString("19999999999999995000")
+	furyAmt, _ := sdkmath.NewIntFromString("19999999999999995000")
 	expCoins = sdk.NewCoins(
 		sdk.NewInt64Coin(denomBTC, 2999999974),
-		sdk.NewCoin(denomStandard, irisAmt),
+		sdk.NewCoin(denomStandard, furyAmt),
 		sdk.NewCoin(pool.LptDenom, lptAmt),
 	)
 	suite.Equal(expCoins.Sort().String(), sender1Balances.Sort().String())

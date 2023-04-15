@@ -13,10 +13,10 @@ import (
 	"github.com/cosmos/cosmos-sdk/testutil/rest"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	recordcli "github.com/irisnet/irismod/modules/record/client/cli"
-	recordtestutil "github.com/irisnet/irismod/modules/record/client/testutil"
-	recordtypes "github.com/irisnet/irismod/modules/record/types"
-	"github.com/irisnet/irismod/simapp"
+	recordcli "github.com/furynet/furymod/modules/record/client/cli"
+	recordtestutil "github.com/furynet/furymod/modules/record/client/testutil"
+	recordtypes "github.com/furynet/furymod/modules/record/types"
+	"github.com/furynet/furymod/simapp"
 )
 
 type IntegrationTestSuite struct {
@@ -86,7 +86,7 @@ func (s *IntegrationTestSuite) TestQueryRecordGRPC() {
 	// ---------------------------------------------------------------------------
 
 	baseURL := val.APIAddress
-	url := fmt.Sprintf("%s/irismod/record/records/%s", baseURL, recordID)
+	url := fmt.Sprintf("%s/furymod/record/records/%s", baseURL, recordID)
 
 	respType = proto.Message(&recordtypes.QueryRecordResponse{})
 	expectedContents := []recordtypes.Content{{

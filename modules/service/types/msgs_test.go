@@ -36,7 +36,7 @@ var (
 
 	testConsumer      = sdk.AccAddress(tmhash.SumTruncated([]byte("test-consumer"))).String()
 	testProviders     = []string{testProvider}
-	testInput         = `{"header":{},"body":{"pair":"iris-usdt"}}`
+	testInput         = `{"header":{},"body":{"pair":"grid-usdt"}}`
 	testServiceFeeCap = sdk.NewCoins(testCoin2)
 	testTimeout       = int64(100)
 	testRepeatedFreq  = uint64(120)
@@ -130,7 +130,7 @@ func TestMsgDefineServiceGetSignBytes(t *testing.T) {
 	msg := NewMsgDefineService(testServiceName, testServiceDesc, testServiceTags, testAuthor, testAuthorDesc, testSchemas)
 	res := msg.GetSignBytes()
 
-	expected := `{"type":"irismod/service/MsgDefineService","value":{"author":"cosmos1tkelht5u9ywfaww3fehvdtvncwwhf539w406rh","author_description":"test-author-desc","description":"test-service-desc","name":"test-service","schemas":"{\"input\":{\"type\":\"object\"},\"output\":{\"type\":\"object\"}}","tags":["tag1","tag2"]}}`
+	expected := `{"type":"furymod/service/MsgDefineService","value":{"author":"cosmos1tkelht5u9ywfaww3fehvdtvncwwhf539w406rh","author_description":"test-author-desc","description":"test-service-desc","name":"test-service","schemas":"{\"input\":{\"type\":\"object\"},\"output\":{\"type\":\"object\"}}","tags":["tag1","tag2"]}}`
 	require.Equal(t, expected, string(res))
 }
 
@@ -222,7 +222,7 @@ func TestMsgBindServiceGetSignBytes(t *testing.T) {
 	msg := NewMsgBindService(testServiceName, testProvider, testDeposit, testPricing, testQoS, testOptions, testOwner)
 	res := msg.GetSignBytes()
 
-	expected := `{"type":"irismod/service/MsgBindService","value":{"deposit":[{"amount":"10000","denom":"stake"}],"options":"{}","owner":"cosmos1dtrajkx72qwf8gesp2z4rjz6p7klycmmh2lnvn","pricing":"{\"price\":\"1stake\"}","provider":"cosmos10yajkmnug9d2nvccgs7ul3xkur0l9as348gmwe","qos":"50","service_name":"test-service"}}`
+	expected := `{"type":"furymod/service/MsgBindService","value":{"deposit":[{"amount":"10000","denom":"stake"}],"options":"{}","owner":"cosmos1dtrajkx72qwf8gesp2z4rjz6p7klycmmh2lnvn","pricing":"{\"price\":\"1stake\"}","provider":"cosmos10yajkmnug9d2nvccgs7ul3xkur0l9as348gmwe","qos":"50","service_name":"test-service"}}`
 	require.Equal(t, expected, string(res))
 }
 
@@ -314,7 +314,7 @@ func TestMsgUpdateServiceBindingGetSignBytes(t *testing.T) {
 	msg := NewMsgUpdateServiceBinding(testServiceName, testProvider, testAddedDeposit, "{\"price\":\"1\"}", 1, "", testOwner)
 	res := msg.GetSignBytes()
 
-	expected := `{"type":"irismod/service/MsgUpdateServiceBinding","value":{"deposit":[{"amount":"100","denom":"stake"}],"owner":"cosmos1dtrajkx72qwf8gesp2z4rjz6p7klycmmh2lnvn","pricing":"{\"price\":\"1\"}","provider":"cosmos10yajkmnug9d2nvccgs7ul3xkur0l9as348gmwe","qos":"1","service_name":"test-service"}}`
+	expected := `{"type":"furymod/service/MsgUpdateServiceBinding","value":{"deposit":[{"amount":"100","denom":"stake"}],"owner":"cosmos1dtrajkx72qwf8gesp2z4rjz6p7klycmmh2lnvn","pricing":"{\"price\":\"1\"}","provider":"cosmos10yajkmnug9d2nvccgs7ul3xkur0l9as348gmwe","qos":"1","service_name":"test-service"}}`
 	require.Equal(t, expected, string(res))
 }
 
@@ -372,7 +372,7 @@ func TestMsgSetWithdrawAddressGetSignBytes(t *testing.T) {
 	msg := NewMsgSetWithdrawAddress(testOwner, testWithdrawAddr)
 	res := msg.GetSignBytes()
 
-	expected := `{"type":"irismod/service/MsgSetWithdrawAddress","value":{"owner":"cosmos1dtrajkx72qwf8gesp2z4rjz6p7klycmmh2lnvn","withdraw_address":"cosmos19zz7wpde40ed545384w0xsrgkydq4pvzdwrupn"}}`
+	expected := `{"type":"furymod/service/MsgSetWithdrawAddress","value":{"owner":"cosmos1dtrajkx72qwf8gesp2z4rjz6p7klycmmh2lnvn","withdraw_address":"cosmos19zz7wpde40ed545384w0xsrgkydq4pvzdwrupn"}}`
 	require.Equal(t, expected, string(res))
 }
 
@@ -436,7 +436,7 @@ func TestMsgDisableServiceBindingGetSignBytes(t *testing.T) {
 	msg := NewMsgDisableServiceBinding(testServiceName, testProvider, testOwner)
 	res := msg.GetSignBytes()
 
-	expected := `{"type":"irismod/service/MsgDisableServiceBinding","value":{"owner":"cosmos1dtrajkx72qwf8gesp2z4rjz6p7klycmmh2lnvn","provider":"cosmos10yajkmnug9d2nvccgs7ul3xkur0l9as348gmwe","service_name":"test-service"}}`
+	expected := `{"type":"furymod/service/MsgDisableServiceBinding","value":{"owner":"cosmos1dtrajkx72qwf8gesp2z4rjz6p7klycmmh2lnvn","provider":"cosmos10yajkmnug9d2nvccgs7ul3xkur0l9as348gmwe","service_name":"test-service"}}`
 	require.Equal(t, expected, string(res))
 }
 
@@ -504,7 +504,7 @@ func TestMsgEnableServiceBindingGetSignBytes(t *testing.T) {
 	msg := NewMsgEnableServiceBinding(testServiceName, testProvider, testAddedDeposit, testOwner)
 	res := msg.GetSignBytes()
 
-	expected := `{"type":"irismod/service/MsgEnableServiceBinding","value":{"deposit":[{"amount":"100","denom":"stake"}],"owner":"cosmos1dtrajkx72qwf8gesp2z4rjz6p7klycmmh2lnvn","provider":"cosmos10yajkmnug9d2nvccgs7ul3xkur0l9as348gmwe","service_name":"test-service"}}`
+	expected := `{"type":"furymod/service/MsgEnableServiceBinding","value":{"deposit":[{"amount":"100","denom":"stake"}],"owner":"cosmos1dtrajkx72qwf8gesp2z4rjz6p7klycmmh2lnvn","provider":"cosmos10yajkmnug9d2nvccgs7ul3xkur0l9as348gmwe","service_name":"test-service"}}`
 	require.Equal(t, expected, string(res))
 }
 
@@ -568,7 +568,7 @@ func TestMsgRefundServiceDepositGetSignBytes(t *testing.T) {
 	msg := NewMsgRefundServiceDeposit(testServiceName, testProvider, testOwner)
 	res := msg.GetSignBytes()
 
-	expected := `{"type":"irismod/service/MsgRefundServiceDeposit","value":{"owner":"cosmos1dtrajkx72qwf8gesp2z4rjz6p7klycmmh2lnvn","provider":"cosmos10yajkmnug9d2nvccgs7ul3xkur0l9as348gmwe","service_name":"test-service"}}`
+	expected := `{"type":"furymod/service/MsgRefundServiceDeposit","value":{"owner":"cosmos1dtrajkx72qwf8gesp2z4rjz6p7klycmmh2lnvn","provider":"cosmos10yajkmnug9d2nvccgs7ul3xkur0l9as348gmwe","service_name":"test-service"}}`
 	require.Equal(t, expected, string(res))
 }
 
@@ -607,7 +607,7 @@ func TestMsgCallServiceValidation(t *testing.T) {
 	invalidDenomCoins := sdk.Coins{sdk.Coin{Denom: "eth+min", Amount: sdk.NewInt(1000)}}
 
 	invalidDuplicateProviders := []string{testProvider, testProvider}
-	invalidInput := "iris-usdt"
+	invalidInput := "grid-usdt"
 	invalidTimeout := int64(0)
 	invalidLessRepeatedFreq := uint64(testTimeout) - 10
 	invalidRepeatedTotal1 := int64(-2)
@@ -717,7 +717,7 @@ func TestMsgCallServiceGetSignBytes(t *testing.T) {
 	)
 	res := msg.GetSignBytes()
 
-	expected := `{"type":"irismod/service/MsgCallService","value":{"consumer":"cosmos1d8ydkv60gkj3sc98lvnxpddlfwwluvp6jc59a0","input":"{\"header\":{},\"body\":{\"pair\":\"iris-usdt\"}}","providers":["cosmos10yajkmnug9d2nvccgs7ul3xkur0l9as348gmwe"],"repeated":true,"repeated_frequency":"120","repeated_total":"100","service_fee_cap":[{"amount":"100","denom":"stake"}],"service_name":"test-service","timeout":"100"}}`
+	expected := `{"type":"furymod/service/MsgCallService","value":{"consumer":"cosmos1d8ydkv60gkj3sc98lvnxpddlfwwluvp6jc59a0","input":"{\"header\":{},\"body\":{\"pair\":\"grid-usdt\"}}","providers":["cosmos10yajkmnug9d2nvccgs7ul3xkur0l9as348gmwe"],"repeated":true,"repeated_frequency":"120","repeated_total":"100","service_fee_cap":[{"amount":"100","denom":"stake"}],"service_name":"test-service","timeout":"100"}}`
 	require.Equal(t, expected, string(res))
 }
 
@@ -806,7 +806,7 @@ func TestMsgRespondServiceGetSignBytes(t *testing.T) {
 	msg := NewMsgRespondService(testRequestID, testProvider, testResult, testOutput)
 	res := msg.GetSignBytes()
 
-	expected := `{"type":"irismod/service/MsgRespondService","value":{"output":"{\"header\":{},\"body\":{\"last\":\"100\"}}","provider":"cosmos10yajkmnug9d2nvccgs7ul3xkur0l9as348gmwe","request_id":"3DB0FA99DCB058BC86041BADBD614D6839F8FA20E17CF8AD3BA14C3F1BF613BD0000000000000000000000000000000100000000000000010001","result":"{\"code\":200,\"message\":\"\"}"}}`
+	expected := `{"type":"furymod/service/MsgRespondService","value":{"output":"{\"header\":{},\"body\":{\"last\":\"100\"}}","provider":"cosmos10yajkmnug9d2nvccgs7ul3xkur0l9as348gmwe","request_id":"3DB0FA99DCB058BC86041BADBD614D6839F8FA20E17CF8AD3BA14C3F1BF613BD0000000000000000000000000000000100000000000000010001","result":"{\"code\":200,\"message\":\"\"}"}}`
 	require.Equal(t, expected, string(res))
 }
 
@@ -868,7 +868,7 @@ func TestMsgPauseRequestContextGetSignBytes(t *testing.T) {
 	msg := NewMsgPauseRequestContext(testRequestContextID, testConsumer)
 	res := msg.GetSignBytes()
 
-	expected := `{"type":"irismod/service/MsgPauseRequestContext","value":{"consumer":"cosmos1d8ydkv60gkj3sc98lvnxpddlfwwluvp6jc59a0","request_context_id":"3DB0FA99DCB058BC86041BADBD614D6839F8FA20E17CF8AD3BA14C3F1BF613BD0000000000000000"}}`
+	expected := `{"type":"furymod/service/MsgPauseRequestContext","value":{"consumer":"cosmos1d8ydkv60gkj3sc98lvnxpddlfwwluvp6jc59a0","request_context_id":"3DB0FA99DCB058BC86041BADBD614D6839F8FA20E17CF8AD3BA14C3F1BF613BD0000000000000000"}}`
 	require.Equal(t, expected, string(res))
 }
 
@@ -928,7 +928,7 @@ func TestMsgStartRequestContextGetSignBytes(t *testing.T) {
 	msg := NewMsgStartRequestContext(testRequestContextID, testConsumer)
 	res := msg.GetSignBytes()
 
-	expected := `{"type":"irismod/service/MsgStartRequestContext","value":{"consumer":"cosmos1d8ydkv60gkj3sc98lvnxpddlfwwluvp6jc59a0","request_context_id":"3DB0FA99DCB058BC86041BADBD614D6839F8FA20E17CF8AD3BA14C3F1BF613BD0000000000000000"}}`
+	expected := `{"type":"furymod/service/MsgStartRequestContext","value":{"consumer":"cosmos1d8ydkv60gkj3sc98lvnxpddlfwwluvp6jc59a0","request_context_id":"3DB0FA99DCB058BC86041BADBD614D6839F8FA20E17CF8AD3BA14C3F1BF613BD0000000000000000"}}`
 	require.Equal(t, expected, string(res))
 }
 
@@ -988,7 +988,7 @@ func TestMsgKillRequestContextGetSignBytes(t *testing.T) {
 	msg := NewMsgKillRequestContext(testRequestContextID, testConsumer)
 	res := msg.GetSignBytes()
 
-	expected := `{"type":"irismod/service/MsgKillRequestContext","value":{"consumer":"cosmos1d8ydkv60gkj3sc98lvnxpddlfwwluvp6jc59a0","request_context_id":"3DB0FA99DCB058BC86041BADBD614D6839F8FA20E17CF8AD3BA14C3F1BF613BD0000000000000000"}}`
+	expected := `{"type":"furymod/service/MsgKillRequestContext","value":{"consumer":"cosmos1d8ydkv60gkj3sc98lvnxpddlfwwluvp6jc59a0","request_context_id":"3DB0FA99DCB058BC86041BADBD614D6839F8FA20E17CF8AD3BA14C3F1BF613BD0000000000000000"}}`
 	require.Equal(t, expected, string(res))
 }
 
@@ -1065,7 +1065,7 @@ func TestMsgUpdateRequestContextGetSignBytes(t *testing.T) {
 	msg := NewMsgUpdateRequestContext(testRequestContextID, testProviders, testServiceFeeCap, testTimeout, testRepeatedFreq, testRepeatedTotal, testConsumer)
 	res := msg.GetSignBytes()
 
-	expected := `{"type":"irismod/service/MsgUpdateRequestContext","value":{"consumer":"cosmos1d8ydkv60gkj3sc98lvnxpddlfwwluvp6jc59a0","providers":["cosmos10yajkmnug9d2nvccgs7ul3xkur0l9as348gmwe"],"repeated_frequency":"120","repeated_total":"100","request_context_id":"3DB0FA99DCB058BC86041BADBD614D6839F8FA20E17CF8AD3BA14C3F1BF613BD0000000000000000","service_fee_cap":[{"amount":"100","denom":"stake"}],"timeout":"100"}}`
+	expected := `{"type":"furymod/service/MsgUpdateRequestContext","value":{"consumer":"cosmos1d8ydkv60gkj3sc98lvnxpddlfwwluvp6jc59a0","providers":["cosmos10yajkmnug9d2nvccgs7ul3xkur0l9as348gmwe"],"repeated_frequency":"120","repeated_total":"100","request_context_id":"3DB0FA99DCB058BC86041BADBD614D6839F8FA20E17CF8AD3BA14C3F1BF613BD0000000000000000","service_fee_cap":[{"amount":"100","denom":"stake"}],"timeout":"100"}}`
 	require.Equal(t, expected, string(res))
 }
 
@@ -1123,7 +1123,7 @@ func TestMsgWithdrawEarnedFeesGetSignBytes(t *testing.T) {
 	msg := NewMsgWithdrawEarnedFees(testOwner, testProvider)
 	res := msg.GetSignBytes()
 
-	expected := `{"type":"irismod/service/MsgWithdrawEarnedFees","value":{"owner":"cosmos1dtrajkx72qwf8gesp2z4rjz6p7klycmmh2lnvn","provider":"cosmos10yajkmnug9d2nvccgs7ul3xkur0l9as348gmwe"}}`
+	expected := `{"type":"furymod/service/MsgWithdrawEarnedFees","value":{"owner":"cosmos1dtrajkx72qwf8gesp2z4rjz6p7klycmmh2lnvn","provider":"cosmos10yajkmnug9d2nvccgs7ul3xkur0l9as348gmwe"}}`
 	require.Equal(t, expected, string(res))
 }
 
